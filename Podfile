@@ -17,6 +17,7 @@ target 'pi-chan' do
   pod 'Siren'
   pod 'SwiftMoment'
   pod 'DZNEmptyDataSet'
+  pod 'XCGLogger', '~> 3.2'
 end
 
 target 'pi-chanTests' do
