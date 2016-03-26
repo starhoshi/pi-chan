@@ -385,8 +385,6 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ViewController.swift</string>
 			<key>path</key>
 			<string>ViewController.swift</string>
 			<key>sourceTree</key>
@@ -1126,10 +1124,7 @@ fi
 		<key>E3A7F52C1CA5B2C400890FD1</key>
 		<dict>
 			<key>children</key>
-			<array>
-				<string>E36DBA7E1CA44B700070E77C</string>
-				<string>E36DBA791CA44B700070E77C</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>path</key>
@@ -1140,7 +1135,10 @@ fi
 		<key>E3A7F52D1CA5B2CC00890FD1</key>
 		<dict>
 			<key>children</key>
-			<array/>
+			<array>
+				<string>E36DBA7E1CA44B700070E77C</string>
+				<string>E36DBA791CA44B700070E77C</string>
+			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>path</key>
