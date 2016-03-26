@@ -40,7 +40,7 @@
 		7EAE055C991271DDC9E01C80 /* Pods-pi-chan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-chan.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan.release.xcconfig"; sourceTree = "<group>"; };
 		E36DBA721CA44B700070E77C /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36DBA751CA44B700070E77C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E36DBA771CA44B700070E77C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E36DBA771CA44B700070E77C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		E36DBA7A1CA44B700070E77C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E36DBA7C1CA44B700070E77C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E36DBA7F1CA44B700070E77C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,12 +90,12 @@
 		E36DBA691CA44B6F0070E77C = {
 			isa = PBXGroup;
 			children = (
+				2B567D076429A23416FED958 /* Frameworks */,
+				FB493CC76EA6F8FCFB3FC2B9 /* Pods */,
+				E36DBA731CA44B700070E77C /* Products */,
 				E36DBA741CA44B700070E77C /* pi-chan */,
 				E36DBA891CA44B700070E77C /* pi-chanTests */,
 				E36DBA941CA44B700070E77C /* pi-chanUITests */,
-				E36DBA731CA44B700070E77C /* Products */,
-				FB493CC76EA6F8FCFB3FC2B9 /* Pods */,
-				2B567D076429A23416FED958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,12 +112,11 @@
 		E36DBA741CA44B700070E77C /* pi-chan */ = {
 			isa = PBXGroup;
 			children = (
+				E3A7F52C1CA5B2C400890FD1 /* Models */,
+				E3A7F5261CA58E6100890FD1 /* Resources */,
+				E3A7F52E1CA5B2D300890FD1 /* ViewControllers */,
+				E3A7F52D1CA5B2CC00890FD1 /* Views */,
 				E36DBA751CA44B700070E77C /* AppDelegate.swift */,
-				E36DBA771CA44B700070E77C /* ViewController.swift */,
-				E36DBA791CA44B700070E77C /* Main.storyboard */,
-				E36DBA7C1CA44B700070E77C /* Assets.xcassets */,
-				E36DBA7E1CA44B700070E77C /* LaunchScreen.storyboard */,
-				E36DBA811CA44B700070E77C /* Info.plist */,
 			);
 			path = "pi-chan";
 			sourceTree = "<group>";
@@ -125,8 +124,8 @@
 		E36DBA891CA44B700070E77C /* pi-chanTests */ = {
 			isa = PBXGroup;
 			children = (
-				E36DBA8A1CA44B700070E77C /* pi_chanTests.swift */,
 				E36DBA8C1CA44B700070E77C /* Info.plist */,
+				E36DBA8A1CA44B700070E77C /* pi_chanTests.swift */,
 			);
 			path = "pi-chanTests";
 			sourceTree = "<group>";
@@ -134,10 +133,43 @@
 		E36DBA941CA44B700070E77C /* pi-chanUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E36DBA951CA44B700070E77C /* pi_chanUITests.swift */,
 				E36DBA971CA44B700070E77C /* Info.plist */,
+				E36DBA951CA44B700070E77C /* pi_chanUITests.swift */,
 			);
 			path = "pi-chanUITests";
+			sourceTree = "<group>";
+		};
+		E3A7F5261CA58E6100890FD1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E36DBA7C1CA44B700070E77C /* Assets.xcassets */,
+				E36DBA811CA44B700070E77C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E3A7F52C1CA5B2C400890FD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E36DBA7E1CA44B700070E77C /* LaunchScreen.storyboard */,
+				E36DBA791CA44B700070E77C /* Main.storyboard */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3A7F52D1CA5B2CC00890FD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E3A7F52E1CA5B2D300890FD1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E36DBA771CA44B700070E77C /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FB493CC76EA6F8FCFB3FC2B9 /* Pods */ = {
@@ -374,6 +406,7 @@
 				E36DBA7A1CA44B700070E77C /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../.;
 			sourceTree = "<group>";
 		};
 		E36DBA7E1CA44B700070E77C /* LaunchScreen.storyboard */ = {
@@ -382,6 +415,7 @@
 				E36DBA7F1CA44B700070E77C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../.;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -475,7 +509,7 @@
 			baseConfigurationReference = 1AEC8ECA838D3F4950AAA2A2 /* Pods-pi-chan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "pi-chan/Info.plist";
+				INFOPLIST_FILE = "pi-chan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.starhoshi.pi-chan";
@@ -488,7 +522,7 @@
 			baseConfigurationReference = 7EAE055C991271DDC9E01C80 /* Pods-pi-chan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "pi-chan/Info.plist";
+				INFOPLIST_FILE = "pi-chan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.starhoshi.pi-chan";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,7 +7,6 @@ target 'pi-chan' do
   pod 'Font-Awesome-Swift'
   pod 'DGElasticPullToRefresh'
   pod 'SVProgressHUD'
-  pod 'SDWebImage'
   pod 'VTAcknowledgementsViewController'
   pod 'Alamofire'
   pod 'Dollar'
@@ -18,6 +17,7 @@ target 'pi-chan' do
   pod 'SwiftMoment'
   pod 'DZNEmptyDataSet'
   pod 'XCGLogger', '~> 3.2'
+  pod 'Kingfisher', '~> 2.2'
 end
 
 target 'pi-chanTests' do
