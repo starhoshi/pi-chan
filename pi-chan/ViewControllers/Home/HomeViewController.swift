@@ -16,12 +16,8 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
-    
     stbNextView = UIStoryboard(name: "Login", bundle: nil)
     nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
-    
-    
   }
   
   override func didReceiveMemoryWarning() {
@@ -36,17 +32,4 @@ class HomeViewController: UIViewController {
   @IBAction func nextView(sender: AnyObject) {
     self.presentViewController(nvcNextViewCtrl, animated:true, completion: nil)
   }
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
-  
-  
 }
