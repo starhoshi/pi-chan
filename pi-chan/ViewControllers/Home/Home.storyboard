@@ -11,7 +11,7 @@
                 <viewControllerPlaceholder storyboardName="Posts" id="3Ia-si-7ez" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-Hx-BLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-77.5" y="146"/>
+            <point key="canvasLocation" x="599" y="349"/>
         </scene>
         <!--Home-->
         <scene sceneID="bE8-dh-erF">
