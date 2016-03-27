@@ -5,14 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Posts-->
-        <scene sceneID="3Eh-XI-AUd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Posts" id="3Ia-si-7ez" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-Hx-BLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="599" y="349"/>
-        </scene>
         <!--Home-->
         <scene sceneID="bE8-dh-erF">
             <objects>
@@ -29,7 +21,7 @@
                                 <rect key="frame" x="38" y="110" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="3Ia-si-7ez" kind="show" id="eoh-ug-d5Q"/>
+                                    <action selector="nextView:" destination="r46-aO-JOG" eventType="touchUpInside" id="qtb-EE-K8D"/>
                                 </connections>
                             </button>
                         </subviews>

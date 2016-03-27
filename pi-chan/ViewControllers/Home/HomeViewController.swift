@@ -10,10 +10,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
   
+  var stbNextView: UIStoryboard!
+  var nvcNextViewCtrl: UINavigationController!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    
+    stbNextView = UIStoryboard(name: "Login", bundle: nil)
+    nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
+    
+    
   }
   
   override func didReceiveMemoryWarning() {
@@ -21,6 +29,13 @@ class HomeViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  override func viewDidAppear(animated: Bool) {
+    log?.info("viewDidAppear")
+  }
+  
+  @IBAction func nextView(sender: AnyObject) {
+    self.presentViewController(nvcNextViewCtrl, animated:true, completion: nil)
+  }
   
   /*
    // MARK: - Navigation

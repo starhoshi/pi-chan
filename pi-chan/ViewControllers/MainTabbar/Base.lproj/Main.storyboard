@@ -15,10 +15,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="etc-RE-OQf" kind="relationship" relationship="viewControllers" id="jky-vw-HI6"/>
                         <segue destination="B1D-X1-mdZ" kind="relationship" relationship="viewControllers" id="R6F-rI-n5S"/>
                         <segue destination="INe-VB-4xi" kind="relationship" relationship="viewControllers" id="TA7-y7-TBb"/>
                         <segue destination="mz9-JA-cqY" kind="relationship" relationship="viewControllers" id="CDm-k3-uIm"/>
-                        <segue destination="etc-RE-OQf" kind="relationship" relationship="viewControllers" id="jky-vw-HI6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgf-c7-U4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
