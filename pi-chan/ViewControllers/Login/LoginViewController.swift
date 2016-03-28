@@ -24,7 +24,4 @@ class LoginViewController: UIViewController {
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }
-  
-  
-  
 }

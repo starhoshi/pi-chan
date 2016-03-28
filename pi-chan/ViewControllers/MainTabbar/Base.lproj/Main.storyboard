@@ -13,6 +13,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="etc-RE-OQf" kind="relationship" relationship="viewControllers" id="jky-vw-HI6"/>
@@ -30,9 +35,14 @@
             <objects>
                 <navigationController id="etc-RE-OQf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" id="gtt-WR-aqk"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjY-CG-874">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Zht-Qo-Fpu" kind="relationship" relationship="rootViewController" id="ng3-tX-MqM"/>
@@ -57,9 +67,14 @@
             <objects>
                 <navigationController id="B1D-X1-mdZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Comments" id="qMt-z6-uSD"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gFt-w2-akF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="gd7-ef-JVr" kind="relationship" relationship="rootViewController" id="afT-fv-eac"/>
@@ -84,9 +99,14 @@
             <objects>
                 <navigationController id="INe-VB-4xi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Teams" id="5Nb-qw-G0b"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L2H-nZ-DHx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="40Y-PP-5VB" kind="relationship" relationship="rootViewController" id="eZJ-9Y-4eg"/>
@@ -111,9 +131,14 @@
             <objects>
                 <navigationController id="mz9-JA-cqY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="gWe-od-nbn"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uVS-d9-UTq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="n9H-NS-7wR" kind="relationship" relationship="rootViewController" id="wJi-ZA-tPz"/>

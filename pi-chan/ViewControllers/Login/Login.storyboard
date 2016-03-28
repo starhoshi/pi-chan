@@ -8,16 +8,20 @@
         <!--Navigation Controller-->
         <scene sceneID="ldn-hm-qM3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jLR-OE-tJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="LoginNavigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ia5-e8-20S" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BhO-1s-bnx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="0uY-OQ-eWE" kind="relationship" relationship="rootViewController" id="EKu-DP-aPJ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLR-OE-tJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-568" y="356"/>
         </scene>
@@ -52,6 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="7c3-ec-IiM">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="0Wk-BV-wjU">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="close:" destination="0uY-OQ-eWE" id="r24-SZ-Clz"/>
                             </connections>

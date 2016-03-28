@@ -7,29 +7,20 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
+    self.tabBar.items?[0].setFAIcon(.FAHome)
+    self.tabBar.items?[1].setFAIcon(.FACommentO)
+    self.tabBar.items?[2].setFAIcon(.FASmileO)
+    self.tabBar.items?[3].setFAIcon(.FAGear)
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
-  
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
   
 }
