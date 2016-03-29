@@ -18,6 +18,7 @@ target 'pi-chan' do
   pod 'DZNEmptyDataSet'
   pod 'XCGLogger', '~> 3.2'
   pod 'Kingfisher', '~> 2.2'
+  pod 'APIKit', '~> 1.3.0'
 end
 
 target 'pi-chanTests' do
