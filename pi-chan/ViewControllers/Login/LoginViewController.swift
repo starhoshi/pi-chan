@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APIKit
 
 class LoginViewController: UIViewController {
   
@@ -26,6 +27,20 @@ class LoginViewController: UIViewController {
   @IBAction func login(sender: AnyObject) {
     KeychainManager.setToken(tokenField.text!)
     KeychainManager.setTeamName(teamField.text!)
+    
+    let request = GetRateLimitRequest()
+    
+    Session.sendRequest(request) { result in
+      switch result {
+      case .Success(let rateLimit):
+        print("count: \(rateLimit.count)")
+        print("resetDate: \(rateLimit.resetDate)")
+        
+      case .Failure(let error):
+        print("error: \(error)")
+      }
+    }
+    
   }
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)

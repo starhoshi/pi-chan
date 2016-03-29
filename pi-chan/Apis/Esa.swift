@@ -16,6 +16,4 @@ public struct Esa{
     self.token = token
     self.currentTeam = currentTeam
   }
-
-  
 }
