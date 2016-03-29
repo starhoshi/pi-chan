@@ -10,10 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
   
+  @IBOutlet weak var tokenField: UITextField!
+  @IBOutlet weak var teamField: UITextField!
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
+    tokenField.text = KeychainManager.getToken()
+    teamField.text = KeychainManager.getTeamName()
   }
   
   override func didReceiveMemoryWarning() {
@@ -21,8 +23,11 @@ class LoginViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  @IBAction func login(sender: AnyObject) {
+    KeychainManager.setToken(tokenField.text!)
+    KeychainManager.setTeamName(teamField.text!)
+  }
   @IBAction func close(sender: AnyObject) {
-    //    self.dismissViewControllerAnimated(true, completion: nil)
-    
+    self.dismissViewControllerAnimated(true, completion: nil)
   }
 }

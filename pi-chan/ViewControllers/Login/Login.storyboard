@@ -50,6 +50,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONS-zm-kZe">
                                 <rect key="frame" x="64" y="243" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="login:" destination="0uY-OQ-eWE" eventType="touchUpInside" id="Nr6-YG-Gr4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,6 +65,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="teamField" destination="FUN-AO-5vG" id="f28-pk-sVo"/>
+                        <outlet property="tokenField" destination="y3m-T9-7e7" id="yLi-2L-RUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhd-TJ-dmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
