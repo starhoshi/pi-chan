@@ -8,12 +8,28 @@
 
 import Foundation
 
-public struct Esa{
-  public var token:String!
-  public var currentTeam:String!
+class Esa{
+  class var sharedInstance: Esa {
+    struct Static {
+      static let instance: Esa = Esa()
+    }
+    return Static.instance
+  }
   
-  public init(token: String, currentTeam: String) {
+  var token:String!
+  var currentTeam:String!
+  
+  func config(token: String, currentTeam: String) {
     self.token = token
     self.currentTeam = currentTeam
   }
+  
+  // MARK: - GET
+  
+  // チャットルームリスト取得
+  //  func getRooms(success: SuccessHandler, error: FailureHandler) {
+  //    self.getRequest("rooms", params: nil, success: success, error: error)
+  //  }
+  
+  
 }
