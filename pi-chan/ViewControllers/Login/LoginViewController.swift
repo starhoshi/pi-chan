@@ -25,8 +25,11 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func login(sender: AnyObject) {
+    
     KeychainManager.setToken(tokenField.text!)
     KeychainManager.setTeamName(teamField.text!)
+    Esa.sharedInstance.token = tokenField.text!
+    Esa.sharedInstance.currentTeam = teamField.text!
     
     let request = GetRateLimitRequest()
     

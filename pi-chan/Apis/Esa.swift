@@ -19,10 +19,10 @@ class Esa{
   var token:String!
   var currentTeam:String!
   
-  func config(token: String, currentTeam: String) {
-    self.token = token
-    self.currentTeam = currentTeam
-  }
+  //  func config(token: String, currentTeam: String) {
+  //    self.token = token
+  //    self.currentTeam = currentTeam
+  //  }
   
   // MARK: - GET
   
