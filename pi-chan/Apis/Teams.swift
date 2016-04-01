@@ -9,25 +9,15 @@
 import Foundation
 import APIKit
 
-protocol GitHubRequestType: RequestType {
-  
-}
-
-extension GitHubRequestType {
-  var baseURL: NSURL {
-    return NSURL(string: "https://api.github.com")!
-  }
-}
-
-struct GetRateLimitRequest: GitHubRequestType {
-  typealias Response = RateLimit
+struct GetTeamsLimitRequest: EsaRequestType {
+  typealias Response = Teams
   
   var method: HTTPMethod {
     return .GET
   }
   
   var path: String {
-    return "/rate_limit"
+    return "/teams"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
@@ -35,7 +25,7 @@ struct GetRateLimitRequest: GitHubRequestType {
       return nil
     }
     
-    guard let rateLimit = RateLimit(dictionary: dictionary) else {
+    guard let rateLimit = Teams(dictionary: dictionary) else {
       return nil
     }
     
@@ -43,7 +33,7 @@ struct GetRateLimitRequest: GitHubRequestType {
   }
 }
 
-struct RateLimit {
+struct Teams {
   let count: Int
   let resetDate: NSDate
   

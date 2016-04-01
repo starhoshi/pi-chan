@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import APIKit
 
 class Esa{
+  var token:String!
+  var currentTeam:String!
+  
   class var sharedInstance: Esa {
     struct Static {
       static let instance: Esa = Esa()
@@ -16,20 +20,19 @@ class Esa{
     return Static.instance
   }
   
-  var token:String!
-  var currentTeam:String!
+  func teams() -> NSURLSessionTask?{
+    let request = GetTeamsLimitRequest()
+    return Session.sendRequest(request)
+  }
   
-  //  func config(token: String, currentTeam: String) {
-  //    self.token = token
-  //    self.currentTeam = currentTeam
-  //  }
+}
+
+protocol EsaRequestType: RequestType {
   
-  // MARK: - GET
-  
-  // チャットルームリスト取得
-  //  func getRooms(success: SuccessHandler, error: FailureHandler) {
-  //    self.getRequest("rooms", params: nil, success: success, error: error)
-  //  }
-  
-  
+}
+
+extension EsaRequestType {
+  var baseURL: NSURL {
+    return NSURL(string: "https://api.esa.io/v1")!
+  }
 }
