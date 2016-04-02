@@ -2,22 +2,27 @@
 //  Team.swift
 //  pi-chan
 //
-//  Created by Kensuke Hoshikawa on 2016/03/30.
+//  Created by Kensuke Hoshikawa on 2016/04/03.
 //  Copyright © 2016年 star__hoshi. All rights reserved.
 //
 
 import Foundation
 import APIKit
 
-struct GetTeamsRequest: EsaRequestType {
-  typealias Response = Teams
+struct GetTeamRequest: EsaRequestType {
+  typealias Response = Team
+  let name: String
+  
+  init(name: String) {
+    self.name = name
+  }
   
   var method: HTTPMethod {
     return .GET
   }
   
   var path: String {
-    return "/teams"
+    return "/teams/" + self.name
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
@@ -25,7 +30,7 @@ struct GetTeamsRequest: EsaRequestType {
       return nil
     }
     
-    guard let rateLimit = Teams(dictionary: dictionary) else {
+    guard let rateLimit = Team(dictionary: dictionary) else {
       return nil
     }
     
@@ -33,7 +38,7 @@ struct GetTeamsRequest: EsaRequestType {
   }
 }
 
-struct Teams {
+struct Team {
   let count: Int
   let resetDate: NSDate
   

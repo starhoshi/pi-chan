@@ -31,9 +31,12 @@ class LoginViewController: UIViewController {
     Esa.sharedInstance.token = tokenField.text!
     Esa.sharedInstance.currentTeam = teamField.text!
     
-    let request = GetRateLimitRequest()
+    Esa.sharedInstance.teams(){_ in 
+      print("a")
+    }
     
-    Session.sendRequest(request) { result in
+    Esa.sharedInstance.teams(){ result in
+      log?.info("\(result)")
       switch result {
       case .Success(let rateLimit):
         print("count: \(rateLimit.count)")
@@ -43,7 +46,6 @@ class LoginViewController: UIViewController {
         print("error: \(error)")
       }
     }
-    
   }
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
