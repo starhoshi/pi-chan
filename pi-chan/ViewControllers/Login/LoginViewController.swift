@@ -8,6 +8,7 @@
 
 import UIKit
 import APIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
   
@@ -21,21 +22,22 @@ class LoginViewController: UIViewController {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   @IBAction func login(sender: AnyObject) {
-    
+    SVProgressHUD.showWithStatus("Loading...")
     Esa.sharedInstance.token = tokenField.text!
     Esa.sharedInstance.currentTeam = teamField.text!
     
     Esa.sharedInstance.teams(){ result in
       switch result {
       case .Success(let teams):
-        log?.debug("\(teams)")
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(teams)")
         KeychainManager.setToken(self.tokenField.text!)
         KeychainManager.setTeamName(self.teamField.text!)
       case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")
       }
     }
