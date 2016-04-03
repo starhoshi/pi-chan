@@ -8,6 +8,7 @@
 
 import Foundation
 import APIKit
+import Himotoki
 
 struct GetTeamsRequest: EsaRequestType {
   typealias Response = Teams
@@ -21,32 +22,27 @@ struct GetTeamsRequest: EsaRequestType {
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
-    guard let dictionary = object as? [String: AnyObject] else {
-      return nil
-    }
-    
-    guard let rateLimit = Teams(dictionary: dictionary) else {
-      return nil
-    }
-    
-    return rateLimit
+    return try? decodeValue(object)
   }
 }
 
+/**
+ *  Teams Model
+ */
 struct Teams {
-  let count: Int
-  let resetDate: NSDate
-  
-  init?(dictionary: [String: AnyObject]) {
-    guard let count = dictionary["rate"]?["limit"] as? Int else {
-      return nil
-    }
-    
-    guard let resetDateString = dictionary["rate"]?["reset"] as? NSTimeInterval else {
-      return nil
-    }
-    
-    self.count = count
-    self.resetDate = NSDate(timeIntervalSince1970: resetDateString)
+  let prevPage: Int?
+  let nextPage: Int?
+  let totalCount: Int
+  let teams: [Team]
+}
+
+extension Teams : Decodable {
+  static func decode(e: Extractor) throws -> Teams {
+    return try Teams(
+      prevPage: e <|? "prev_page",
+      nextPage: e <|? "next_page",
+      totalCount: e <| "total_count",
+      teams: e <|| "teams"
+    )
   }
 }

@@ -19,6 +19,7 @@ target 'pi-chan' do
   pod 'XCGLogger', '~> 3.2'
   pod 'Kingfisher', '~> 2.2'
   pod 'APIKit', '~> 1.3.0'
+  pod "Himotoki", "~> 1.7"
 end
 
 target 'pi-chanTests' do

@@ -26,6 +26,7 @@
 		E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335996B1CA9A681001A3C8D /* KeychainManager.swift */; };
 		E33599701CAAF218001A3C8D /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335996F1CAAF218001A3C8D /* Teams.swift */; };
 		E33599721CB030CC001A3C8D /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599711CB030CC001A3C8D /* Team.swift */; };
+		E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599731CB15E48001A3C8D /* Decodable+Extension.swift */; };
 		E38A0F6A1CA7D95200ED99B6 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F691CA7D95200ED99B6 /* team.swift */; };
 		E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */; };
 		E38A0F6E1CA7DE6700ED99B6 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F6D1CA7DE6700ED99B6 /* Storyboard.swift */; };
@@ -75,6 +76,7 @@
 		E335996B1CA9A681001A3C8D /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		E335996F1CAAF218001A3C8D /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		E33599711CB030CC001A3C8D /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		E33599731CB15E48001A3C8D /* Decodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
 		E38A0F691CA7D95200ED99B6 /* team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
 		E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Esa.swift; sourceTree = "<group>"; };
 		E38A0F6D1CA7DE6700ED99B6 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E38A0F6D1CA7DE6700ED99B6 /* Storyboard.swift */,
+				E33599731CB15E48001A3C8D /* Decodable+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
 				E33599551CA80325001A3C8D /* TeamsViewController.swift in Sources */,
 				E33599721CB030CC001A3C8D /* Team.swift in Sources */,
+				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,
 				E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */,
 				E38A0F6A1CA7D95200ED99B6 /* team.swift in Sources */,
 				E335995B1CA80392001A3C8D /* SettingsViewController.swift in Sources */,

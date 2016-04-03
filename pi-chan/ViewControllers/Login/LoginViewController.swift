@@ -26,27 +26,21 @@ class LoginViewController: UIViewController {
   
   @IBAction func login(sender: AnyObject) {
     
-    KeychainManager.setToken(tokenField.text!)
-    KeychainManager.setTeamName(teamField.text!)
     Esa.sharedInstance.token = tokenField.text!
     Esa.sharedInstance.currentTeam = teamField.text!
     
-    Esa.sharedInstance.teams(){_ in 
-      print("a")
-    }
-    
     Esa.sharedInstance.teams(){ result in
-      log?.info("\(result)")
       switch result {
-      case .Success(let rateLimit):
-        print("count: \(rateLimit.count)")
-        print("resetDate: \(rateLimit.resetDate)")
-        
+      case .Success(let teams):
+        log?.debug("\(teams)")
+        KeychainManager.setToken(self.tokenField.text!)
+        KeychainManager.setTeamName(self.teamField.text!)
       case .Failure(let error):
-        print("error: \(error)")
+        log?.error("\(error)")
       }
     }
   }
+  
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }

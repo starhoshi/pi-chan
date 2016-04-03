@@ -11,30 +11,26 @@ import APIKit
 import Result
 
 class Esa{
-  var token:String!
-  var currentTeam:String!
-  
-  class var sharedInstance: Esa {
-    struct Static {
-      static let instance: Esa = Esa()
-    }
-    return Static.instance
+  static let sharedInstance = Esa()
+  private init() {
   }
+  
+  var token:String = ""
+  var currentTeam:String = ""
   
   func teams(handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = GetTeamsRequest()
-    return Session.sendRequest(request)
+    return Session.sendRequest(request, handler:handler)
   }
   
-  func team(name:String,handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+  func team(name:String,handler:(Result<Team, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = GetTeamRequest(name: name)
-    return Session.sendRequest(request)
+    return Session.sendRequest(request, handler:handler)
   }
-  
 }
 
+
 protocol EsaRequestType: RequestType {
-  
 }
 
 extension EsaRequestType {
