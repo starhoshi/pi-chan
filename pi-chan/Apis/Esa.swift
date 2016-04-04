@@ -27,6 +27,16 @@ class Esa{
     let request = GetTeamRequest(name: name)
     return Session.sendRequest(request, handler:handler)
   }
+  
+  func posts(handler:(Result<Posts, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetPostsRequest()
+    return Session.sendRequest(request, handler:handler)
+  }
+  
+  func post(number:Int,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetPostRequest(number: number)
+    return Session.sendRequest(request, handler:handler)
+  }
 }
 
 
@@ -35,7 +45,7 @@ protocol EsaRequestType: RequestType {
 
 extension EsaRequestType {
   var baseURL: NSURL {
-    return NSURL(string: "https://api.esa.io/v1")!
+    return NSURL(string: "https://api.esa.io/v1/teams")!
   }
   var HTTPHeaderFields:[String:String] {
     return ["Authorization":"Bearer " + Esa.sharedInstance.token]

@@ -12,13 +12,18 @@ import Himotoki
 
 struct GetPostRequest: EsaRequestType {
   typealias Response = Post
+  let number: Int
+  
+  init(number: Int) {
+    self.number = number
+  }
   
   var method: HTTPMethod {
     return .GET
   }
   
   var path: String {
-    return "post"
+    return "posts/\(number)"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HomeViewController: UIViewController {
   
@@ -18,6 +19,7 @@ class HomeViewController: UIViewController {
     
     stbNextView = UIStoryboard(name: "Login", bundle: nil)
     nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
+    loadPostApi()
   }
   
   override func didReceiveMemoryWarning() {
@@ -27,5 +29,19 @@ class HomeViewController: UIViewController {
   
   override func viewDidAppear(animated: Bool) {
     log?.info("viewDidAppear")
+  }
+  
+  func loadPostApi(){
+    SVProgressHUD.showWithStatus("Loading...")
+    Esa.sharedInstance.posts(){ result in
+      switch result {
+      case .Success(let posts):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(posts)")
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.error("\(error)")
+      }
+    }
   }
 }

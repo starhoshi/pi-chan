@@ -13,7 +13,7 @@ struct Posts {
   let prevPage: Int?
   let nextPage: Int?
   let totalCount: Int
-  //  let posts: [Post]
+  let posts: [Post]
 }
 
 extension Posts : Decodable {
@@ -21,8 +21,8 @@ extension Posts : Decodable {
     return try Posts(
       prevPage: e <|? "prev_page",
       nextPage: e <|? "next_page",
-      totalCount: e <| "total_count"
-      //      posts: e <|| "posts"
+      totalCount: e <| "total_count",
+      posts: e <|| "posts"
     )
   }
 }

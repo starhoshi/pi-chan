@@ -18,7 +18,7 @@ struct GetPostsRequest: EsaRequestType {
   }
   
   var path: String {
-    return "posts"
+    return "\(Esa.sharedInstance.currentTeam)/posts"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
