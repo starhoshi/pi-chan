@@ -1,8 +1,8 @@
 //
-//  Team.swift
+//  posts.swift
 //  pi-chan
 //
-//  Created by Kensuke Hoshikawa on 2016/04/03.
+//  Created by Kensuke Hoshikawa on 2016/04/04.
 //  Copyright © 2016年 star__hoshi. All rights reserved.
 //
 
@@ -10,20 +10,15 @@ import Foundation
 import APIKit
 import Himotoki
 
-struct GetTeamRequest: EsaRequestType {
-  typealias Response = Team
-  let name: String
-  
-  init(name: String) {
-    self.name = name
-  }
+struct GetPostsRequest: EsaRequestType {
+  typealias Response = Posts
   
   var method: HTTPMethod {
     return .GET
   }
   
   var path: String {
-    return "/teams/" + self.name
+    return "posts"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

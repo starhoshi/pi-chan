@@ -28,8 +28,4 @@ class HomeViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     log?.info("viewDidAppear")
   }
-  
-  @IBAction func nextView(sender: AnyObject) {
-    self.presentViewController(nvcNextViewCtrl, animated:true, completion: nil)
-  }
 }

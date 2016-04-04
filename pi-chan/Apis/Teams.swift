@@ -26,23 +26,3 @@ struct GetTeamsRequest: EsaRequestType {
   }
 }
 
-/**
- *  Teams Model
- */
-struct Teams {
-  let prevPage: Int?
-  let nextPage: Int?
-  let totalCount: Int
-  let teams: [Team]
-}
-
-extension Teams : Decodable {
-  static func decode(e: Extractor) throws -> Teams {
-    return try Teams(
-      prevPage: e <|? "prev_page",
-      nextPage: e <|? "next_page",
-      totalCount: e <| "total_count",
-      teams: e <|| "teams"
-    )
-  }
-}

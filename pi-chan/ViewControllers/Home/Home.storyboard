@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
         <scene sceneID="bE8-dh-erF">
             <objects>
-                <viewController id="r46-aO-JOG" customClass="HomeViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zE-qo-RBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="r46-aO-JOG" customClass="HomeViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UsE-QW-c6y"/>
                         <viewControllerLayoutGuide type="bottom" id="a3A-y2-rLN"/>
@@ -17,21 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMh-ns-2mL">
-                                <rect key="frame" x="38" y="110" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextView:" destination="r46-aO-JOG" eventType="touchUpInside" id="qtb-EE-K8D"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-SB-QA3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ucX-SB-QA3" firstAttribute="top" secondItem="UsE-QW-c6y" secondAttribute="bottom" id="LqR-U9-Hr7"/>
+                            <constraint firstItem="ucX-SB-QA3" firstAttribute="leading" secondItem="pEq-Ct-af6" secondAttribute="leadingMargin" constant="-20" id="Xx4-d7-acF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ucX-SB-QA3" secondAttribute="trailing" constant="-20" id="hsx-0v-mcF"/>
+                            <constraint firstItem="a3A-y2-rLN" firstAttribute="top" secondItem="ucX-SB-QA3" secondAttribute="bottom" id="qV1-kC-G28"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="gSp-5m-i58"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0zE-qo-RBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159" y="535"/>
         </scene>
