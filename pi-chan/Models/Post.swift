@@ -53,7 +53,7 @@ extension Post : Decodable {
       revisionNumber: e <| "revision_number",
       createdBy: e <| "created_by",
       updatedBy: e <| "updated_by",
-      kind: Kind.init(rawValue: try e.value("privacy") as String)!,
+      kind: Kind.init(rawValue: try e.value("kind") as String)!,
       commentsCount: e <| "comments_count",
       tasksCount: e <| "tasks_count",
       doneTasksCount: e <| "doneTasks_count",
