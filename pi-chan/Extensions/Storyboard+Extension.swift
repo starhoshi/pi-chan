@@ -53,9 +53,7 @@ import UIKit
 }
 
 
-/// 
 private var flatAssociatedObjectKey: UInt8 = 0
-
 @IBDesignable extension UINavigationBar {
   @IBInspectable var flat: Bool {
     get {
