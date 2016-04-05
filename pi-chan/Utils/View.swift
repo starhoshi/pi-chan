@@ -12,7 +12,7 @@ import DGElasticPullToRefresh
 struct View {
   static func refreshLoading() -> DGElasticPullToRefreshLoadingViewCircle{
     let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-    loadingView.tintColor = UIColor.esaGreen()
+    loadingView.tintColor = UIColor.whiteColor()
     return loadingView
   }
 }

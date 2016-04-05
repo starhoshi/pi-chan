@@ -24,6 +24,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
     initTableView()
     loadPostApi()
+    //    navigationController?.navigationBar.translucent = false
+    //    navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+    //    navigationController?.navigationBar.shadowImage = UIImage()
+    //    navigationController?.navigationBar.barTintColor = UIColor.esaGreen()
   }
   
   func initTableView(){
@@ -35,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self?.tableView.dg_stopLoading()
       }, loadingView: View.refreshLoading())
-    tableView.dg_setPullToRefreshFillColor(UIColor.whiteColor())
+    tableView.dg_setPullToRefreshFillColor(UIColor.esaGreen())
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
   }
   
@@ -56,7 +60,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int  {
-    return 0
+    return 1
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
