@@ -18,7 +18,7 @@ struct GetTeamsRequest: EsaRequestType {
   }
   
   var path: String {
-    return "/teams"
+    return ""
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
