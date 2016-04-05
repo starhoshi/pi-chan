@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   var stbNextView: UIStoryboard!
   var nvcNextViewCtrl: UINavigationController!
+  var posts:[Post] = []
   
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
@@ -24,10 +25,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
     initTableView()
     loadPostApi()
-    //    navigationController?.navigationBar.translucent = false
-    //    navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-    //    navigationController?.navigationBar.shadowImage = UIImage()
-    //    navigationController?.navigationBar.barTintColor = UIColor.esaGreen()
   }
   
   func initTableView(){
