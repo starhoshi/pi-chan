@@ -13,13 +13,19 @@ import Himotoki
 struct GetPostRequest: EsaRequestType {
   typealias Response = Post
   let number: Int
+  let token: String
   
-  init(number: Int) {
+  init(token: String, number: Int) {
+    self.token = token
     self.number = number
   }
   
   var method: HTTPMethod {
     return .GET
+  }
+  
+  var HTTPHeaderFields:[String:String] {
+    return Esa.createHTTPHeaderFields(token)
   }
   
   var path: String {

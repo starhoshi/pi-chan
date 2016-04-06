@@ -12,13 +12,24 @@ import Himotoki
 
 struct GetPostsRequest: EsaRequestType {
   typealias Response = Posts
+  let token: String
+  let currentTeam: String
+  
+  init(token: String, currentTeam:String) {
+    self.token = token
+    self.currentTeam = currentTeam
+  }
   
   var method: HTTPMethod {
     return .GET
   }
   
+  var HTTPHeaderFields:[String:String] {
+    return Esa.createHTTPHeaderFields(token)
+  }
+  
   var path: String {
-    return "\(Esa.sharedInstance.currentTeam)/posts"
+    return "\(self.currentTeam)/posts"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

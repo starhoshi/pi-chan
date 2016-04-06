@@ -32,6 +32,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     self.tableView.dataSource = self
     self.tableView.emptyDataSetSource = self
     self.tableView.emptyDataSetDelegate = self
+    let postCellNib:UINib = UINib(nibName: "PostTableViewCell", bundle: nil)
+    tableView.registerNib(postCellNib, forCellReuseIdentifier: "PostCell")
     self.tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self?.tableView.dg_stopLoading()
@@ -57,20 +59,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int  {
-    return 1
+    return posts.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell")! as UITableViewCell
+    return cell
   }
   
   func loadPostApi(){
     SVProgressHUD.showWithStatus("Loading...")
-    Esa.sharedInstance.posts(){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(posts)")
+        self.posts = posts.posts
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")

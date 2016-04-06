@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     UpdateChecker.prompt()
-    Esa.sharedInstance.currentTeam = KeychainManager.getTeamName()!
-    Esa.sharedInstance.token = KeychainManager.getToken()!
     return true
   }
   
