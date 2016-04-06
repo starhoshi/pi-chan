@@ -20,22 +20,22 @@ class Esa{
   }
   
   func teams(handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetTeamsRequest(token: token)
+    let request = GetTeamsRequest(esa: self)
     return Session.sendRequest(request, handler:handler)
   }
   
   func team(name:String,handler:(Result<Team, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetTeamRequest(token: token, name: name)
+    let request = GetTeamRequest(esa: self, name: name)
     return Session.sendRequest(request, handler:handler)
   }
   
   func posts(handler:(Result<Posts, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetPostsRequest(token: token, currentTeam: currentTeam)
+    let request = GetPostsRequest(esa: self)
     return Session.sendRequest(request, handler:handler)
   }
   
   func post(number:Int,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetPostRequest(token: token, number: number)
+    let request = GetPostRequest(esa: self, number: number)
     return Session.sendRequest(request, handler:handler)
   }
   
