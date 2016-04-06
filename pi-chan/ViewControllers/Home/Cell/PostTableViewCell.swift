@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostTableViewCell: UITableViewCell {
   
@@ -17,13 +18,14 @@ class PostTableViewCell: UITableViewCell {
   @IBOutlet weak var createdBy: UILabel!
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-    
-    // Configure the view for the selected state
+  }
+  
+  func setItems(post:Post){
+    circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
   }
   
 }

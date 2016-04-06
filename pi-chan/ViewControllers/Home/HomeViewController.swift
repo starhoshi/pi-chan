@@ -26,6 +26,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     initTableView()
     loadPostApi()
   }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(true)
+    if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+      tableView.deselectRowAtIndexPath(indexPathForSelectedRow, animated: true)
+    }
+  }
   
   func initTableView(){
     self.tableView.delegate = self
@@ -34,16 +40,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     self.tableView.emptyDataSetDelegate = self
     let postCellNib:UINib = UINib(nibName: "PostTableViewCell", bundle: nil)
     tableView.registerNib(postCellNib, forCellReuseIdentifier: "PostCell")
+    tableView.estimatedRowHeight = 200.0
+    tableView.rowHeight = UITableViewAutomaticDimension
     self.tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-      self?.tableView.dg_stopLoading()
+      self!.tableView.dg_stopLoading()
+      self!.loadPostApi()
       }, loadingView: View.refreshLoading())
     tableView.dg_setPullToRefreshFillColor(UIColor.esaGreen())
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
-  }
-  
-  override func viewDidAppear(animated: Bool) {
-    log?.info("viewDidAppear")
   }
   
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
@@ -63,7 +68,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell")! as UITableViewCell
+    let cell:PostTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell")! as! PostTableViewCell
+    cell.setItems(posts[indexPath.row])
     return cell
   }
   
@@ -75,6 +81,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(posts)")
         self.posts = posts.posts
+        self.tableView.reloadData()
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")
