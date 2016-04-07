@@ -40,7 +40,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     self.tableView.emptyDataSetDelegate = self
     let postCellNib:UINib = UINib(nibName: "PostTableViewCell", bundle: nil)
     tableView.registerNib(postCellNib, forCellReuseIdentifier: "PostCell")
-    tableView.estimatedRowHeight = 200.0
+    tableView.estimatedRowHeight = 123
     tableView.rowHeight = UITableViewAutomaticDimension
     self.tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in

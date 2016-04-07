@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Font_Awesome_Swift
 
 class PostTableViewCell: UITableViewCell {
   
@@ -16,8 +17,17 @@ class PostTableViewCell: UITableViewCell {
   @IBOutlet weak var category: UILabel!
   @IBOutlet weak var title: UILabel!
   @IBOutlet weak var createdBy: UILabel!
+  @IBOutlet weak var starIcon: UILabel!
+  @IBOutlet weak var eyeIcon: UILabel!
+  @IBOutlet weak var commentsIcon: UILabel!
+  @IBOutlet weak var checkIcon: UILabel!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
+    starIcon.setFAIcon(.FAStar, iconSize: 16)
+    eyeIcon.setFAIcon(.FAEye, iconSize: 16)
+    commentsIcon.setFAIcon(.FAComments, iconSize: 16)
+    checkIcon.setFAIcon(.FACheckSquareO, iconSize: 16)
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
@@ -26,6 +36,7 @@ class PostTableViewCell: UITableViewCell {
   
   func setItems(post:Post){
     circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
+    
   }
   
 }
