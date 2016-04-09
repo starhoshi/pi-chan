@@ -51,6 +51,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
   }
   
+  
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
     return NSAttributedString(string: "取得結果0件\nもしくは取得失敗")
   }
