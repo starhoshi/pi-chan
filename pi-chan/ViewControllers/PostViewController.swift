@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class PostViewController: UIViewController {
   var postNumber:Int!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    loadApi()
     
     // Do any additional setup after loading the view.
   }
@@ -22,6 +24,19 @@ class PostViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  func loadApi(){
+    SVProgressHUD.showWithStatus("Loading...")
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).post(postNumber){ result in
+      switch result {
+      case .Success(let posts):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(posts)")
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.error("\(error)")
+      }
+    }
+  }
   
   /*
    // MARK: - Navigation
