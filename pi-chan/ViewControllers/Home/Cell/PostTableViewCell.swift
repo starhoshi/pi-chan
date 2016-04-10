@@ -36,6 +36,8 @@ class PostTableViewCell: UITableViewCell {
   
   func setItems(post:Post){
     circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
+    circleThumbnail.layer.cornerRadius = circleThumbnail.frame.size.width / 2;
+    circleThumbnail.clipsToBounds = true;
     wip.hidden = post.wip
     category.text = post.category
     title.text = post.name
