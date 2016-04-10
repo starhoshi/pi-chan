@@ -43,6 +43,8 @@
 		E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */; };
 		E38A0F6E1CA7DE6700ED99B6 /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F6D1CA7DE6700ED99B6 /* Storyboard+Extension.swift */; };
 		E3A9A8F81CBA222D0031FBAE /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3A9A8F71CBA222D0031FBAE /* Lato-Regular.ttf */; };
+		E3A9A8FB1CBAAF180031FBAE /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A9A8FA1CBAAF180031FBAE /* Post.storyboard */; };
+		E3A9A8FD1CBAAF250031FBAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9A8FC1CBAAF250031FBAE /* PostViewController.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -106,6 +108,8 @@
 		E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Esa.swift; sourceTree = "<group>"; };
 		E38A0F6D1CA7DE6700ED99B6 /* Storyboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
 		E3A9A8F71CBA222D0031FBAE /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		E3A9A8FA1CBAAF180031FBAE /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		E3A9A8FC1CBAAF250031FBAE /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E3A9A8F91CBAAEC80031FBAE /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				E3A9A8FA1CBAAF180031FBAE /* Post.storyboard */,
+				E3A9A8FC1CBAAF250031FBAE /* PostViewController.swift */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
 		E3D9A59A1CA7D29A00B43F37 = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +369,7 @@
 		E3D9A5D71CA7D6B600B43F37 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3A9A8F91CBAAEC80031FBAE /* Post */,
 				E335994F1CA801AD001A3C8D /* Comments */,
 				E335994C1CA8017D001A3C8D /* Home */,
 				E33599641CA8327B001A3C8D /* Login */,
@@ -490,6 +504,7 @@
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
 				E33599511CA80223001A3C8D /* Comments.storyboard in Resources */,
+				E3A9A8FB1CBAAF180031FBAE /* Post.storyboard in Resources */,
 				E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */,
 				E33599571CA80331001A3C8D /* Teams.storyboard in Resources */,
 				E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */,
@@ -591,6 +606,7 @@
 				E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */,
 				E33599721CB030CC001A3C8D /* GET_Team.swift in Sources */,
 				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,
+				E3A9A8FD1CBAAF250031FBAE /* PostViewController.swift in Sources */,
 				E33599781CB2C148001A3C8D /* GET_Post.swift in Sources */,
 				E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */,
 				E38A0F6A1CA7D95200ED99B6 /* Team.swift in Sources */,

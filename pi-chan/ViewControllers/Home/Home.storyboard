@@ -36,11 +36,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ucX-SB-QA3" id="fnc-cB-bB3"/>
+                        <segue destination="uCS-KD-RPS" kind="show" identifier="HomeToPost" id="QY3-ar-SVt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zE-qo-RBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="535"/>
+            <point key="canvasLocation" x="177" y="532"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="L2u-5v-m3R">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Post" id="uCS-KD-RPS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDp-xx-4DZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="532"/>
         </scene>
     </scenes>
 </document>

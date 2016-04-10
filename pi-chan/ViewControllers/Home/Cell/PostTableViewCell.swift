@@ -41,7 +41,7 @@ class PostTableViewCell: UITableViewCell {
     wip.hidden = !post.wip
     category.text = post.category
     title.text = post.name
-    createdBy.text = post.createdBy.name
+    createdBy.text = post.createdBy.screenName
   }
   
 }

@@ -92,6 +92,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     return cell
   }
   
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier("HomeToPost", sender: posts[indexPath.row].number)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let postViewController:PostViewController = segue.destinationViewController as! PostViewController
+    postViewController.postNumber = sender as! Int
+  }
+  
   func loadPostApi(){
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(){ result in
