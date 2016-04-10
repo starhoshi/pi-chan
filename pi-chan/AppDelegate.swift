@@ -17,8 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     UpdateChecker.prompt()
+    
+    // navigation bar settings
+    UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+    UINavigationBar.appearance().barTintColor = UIColor.esaGreen()
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+    
+    UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Lato-Regular", size: 19)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
+    
+    
+    // tabbar settings
+    let titleFontAll : UIFont = UIFont(name: "Lato-Regular", size: 12.0)!
+    let attributesNormal = [ NSForegroundColorAttributeName : UIColor.grayColor(), NSFontAttributeName : titleFontAll ]
+    let attributesSelected = [ NSForegroundColorAttributeName : UIColor.esaGreen(), NSFontAttributeName : titleFontAll ]
+    UITabBarItem.appearance().setTitleTextAttributes(attributesNormal, forState: .Normal)
+    UITabBarItem.appearance().setTitleTextAttributes(attributesSelected, forState: .Selected)
+    
     return true
   }
+  
   
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
