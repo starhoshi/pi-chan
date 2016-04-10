@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -25,10 +24,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ucX-SB-QA3" firstAttribute="top" secondItem="UsE-QW-c6y" secondAttribute="bottom" id="LqR-U9-Hr7"/>
-                            <constraint firstItem="ucX-SB-QA3" firstAttribute="leading" secondItem="pEq-Ct-af6" secondAttribute="leadingMargin" constant="-20" id="Xx4-d7-acF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ucX-SB-QA3" secondAttribute="trailing" constant="-20" id="hsx-0v-mcF"/>
-                            <constraint firstItem="a3A-y2-rLN" firstAttribute="top" secondItem="ucX-SB-QA3" secondAttribute="bottom" id="qV1-kC-G28"/>
+                            <constraint firstItem="ucX-SB-QA3" firstAttribute="leading" secondItem="pEq-Ct-af6" secondAttribute="leading" id="9Lc-fv-Pdg"/>
+                            <constraint firstAttribute="trailing" secondItem="ucX-SB-QA3" secondAttribute="trailing" id="Knn-ha-6Jv"/>
+                            <constraint firstItem="a3A-y2-rLN" firstAttribute="top" secondItem="ucX-SB-QA3" secondAttribute="bottom" id="Vqh-3P-Fim"/>
+                            <constraint firstItem="ucX-SB-QA3" firstAttribute="top" secondItem="UsE-QW-c6y" secondAttribute="bottom" id="hJE-HT-SlN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="gSp-5m-i58"/>

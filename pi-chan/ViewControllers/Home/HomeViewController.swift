@@ -11,11 +11,13 @@ import SVProgressHUD
 import DGElasticPullToRefresh
 import DZNEmptyDataSet
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
   
   var stbNextView: UIStoryboard!
   var nvcNextViewCtrl: UINavigationController!
   var posts:[Post] = []
+  //  var searchController:UISearchController!
+  let searchController = UISearchController(searchResultsController: nil)
   
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
@@ -25,12 +27,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
     initTableView()
     loadPostApi()
+    setSearchBar()
   }
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(true)
     if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
       tableView.deselectRowAtIndexPath(indexPathForSelectedRow, animated: true)
     }
+  }
+  
+  func setSearchBar(){
+    //    searchController.searchResultsUpdater = self
+    searchController.hidesNavigationBarDuringPresentation = false
+    searchController.dimsBackgroundDuringPresentation = false
+    searchController.obscuresBackgroundDuringPresentation = false
+    searchController.searchBar.searchBarStyle = UISearchBarStyle.Default
+    searchController.searchBar.sizeToFit()
+    searchController.searchBar.barTintColor = UIColor.esaGreen()
+    searchController.searchBar.tintColor = UIColor.whiteColor()
+    searchController.searchBar.layer.borderColor = UIColor.esaGreen().CGColor
+    searchController.searchBar.layer.borderWidth = 1
+    searchController.searchBar.layer.opacity = 1
+    //    tableView.extendedLayoutIncludesOpaqueBars = true
+    tableView.tableHeaderView = searchController.searchBar
   }
   
   func initTableView(){
@@ -50,7 +69,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     tableView.dg_setPullToRefreshFillColor(UIColor.esaGreen())
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
   }
-  
   
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
     return NSAttributedString(string: "取得結果0件\nもしくは取得失敗")
