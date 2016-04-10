@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     // tabbar settings
-    let titleFontAll : UIFont = UIFont(name: "Lato-Regular", size: 12.0)!
+    let titleFontAll : UIFont = UIFont(name: "Lato-Regular", size: 11.0)!
     let attributesNormal = [ NSForegroundColorAttributeName : UIColor.grayColor(), NSFontAttributeName : titleFontAll ]
     let attributesSelected = [ NSForegroundColorAttributeName : UIColor.esaGreen(), NSFontAttributeName : titleFontAll ]
     UITabBarItem.appearance().setTitleTextAttributes(attributesNormal, forState: .Normal)
