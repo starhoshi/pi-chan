@@ -28,24 +28,14 @@ class PostViewController: UIViewController {
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).post(postNumber){ result in
       switch result {
-      case .Success(let posts):
+      case .Success(let post):
         SVProgressHUD.showSuccessWithStatus("Success!")
-        log?.info("\(posts)")
+        log?.info("\(post)")
+        self.navigationItem.title = post.name
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")
       }
     }
   }
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-   // Get the new view controller using segue.destinationViewController.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
 }
