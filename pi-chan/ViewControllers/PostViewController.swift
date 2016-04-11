@@ -8,15 +8,32 @@
 
 import UIKit
 import SVProgressHUD
+import PagingMenuController
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, PagingMenuControllerDelegate {
   var postNumber:Int!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     loadApi()
     
-    // Do any additional setup after loading the view.
+    let previewViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PreviewViewController") as! PreviewViewController
+    previewViewController.title = "Preview"
+    let editViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EditViewController") as! EditViewController
+    editViewController.title = "Editor"
+    
+    let viewControllers = [previewViewController, editViewController]
+    
+    let options = PagingMenuOptions()
+    options.menuHeight = 30
+    options.menuPosition = .Top
+    options.animationDuration = 0.1
+    options.menuDisplayMode = .SegmentedControl
+    
+    let pagingMenuController = PagingMenuController(viewControllers: viewControllers, options: options)
+    self.addChildViewController(pagingMenuController)
+    self.view.addSubview(pagingMenuController.view)
+    pagingMenuController.didMoveToParentViewController(self)
   }
   
   override func didReceiveMemoryWarning() {
