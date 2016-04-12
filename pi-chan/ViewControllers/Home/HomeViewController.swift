@@ -93,12 +93,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("HomeToPost", sender: posts[indexPath.row].number)
+    performSegueWithIdentifier("HomeToPreview", sender: posts[indexPath.row].number)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let postViewController:PostViewController = segue.destinationViewController as! PostViewController
-    postViewController.postNumber = sender as! Int
+    let previewViewController:PreviewViewController = segue.destinationViewController as! PreviewViewController
+    previewViewController.postNumber = sender as! Int
   }
   
   func loadPostApi(){

@@ -39,14 +39,12 @@
 		E335997E1CB2CC23001A3C8D /* CreatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335997D1CB2CC23001A3C8D /* CreatedBy.swift */; };
 		E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */; };
 		E33599821CB2D2D0001A3C8D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599811CB2D2D0001A3C8D /* Posts.swift */; };
+		E37402C91CBD445D00E4659B /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37402C81CBD445D00E4659B /* PreviewViewController.swift */; };
+		E37402CB1CBD446A00E4659B /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37402CA1CBD446A00E4659B /* Preview.storyboard */; };
 		E38A0F6A1CA7D95200ED99B6 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F691CA7D95200ED99B6 /* Team.swift */; };
 		E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */; };
 		E38A0F6E1CA7DE6700ED99B6 /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F6D1CA7DE6700ED99B6 /* Storyboard+Extension.swift */; };
 		E3A9A8F81CBA222D0031FBAE /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3A9A8F71CBA222D0031FBAE /* Lato-Regular.ttf */; };
-		E3A9A8FB1CBAAF180031FBAE /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A9A8FA1CBAAF180031FBAE /* Post.storyboard */; };
-		E3A9A8FD1CBAAF250031FBAE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9A8FC1CBAAF250031FBAE /* PostViewController.swift */; };
-		E3A9A8FF1CBBF2340031FBAE /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9A8FE1CBBF2340031FBAE /* PreviewViewController.swift */; };
-		E3A9A9011CBBF32C0031FBAE /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9A9001CBBF32C0031FBAE /* EditViewController.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -106,14 +104,12 @@
 		E335997D1CB2CC23001A3C8D /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
 		E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		E33599811CB2D2D0001A3C8D /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		E37402C81CBD445D00E4659B /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		E37402CA1CBD446A00E4659B /* Preview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		E38A0F691CA7D95200ED99B6 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Esa.swift; sourceTree = "<group>"; };
 		E38A0F6D1CA7DE6700ED99B6 /* Storyboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
 		E3A9A8F71CBA222D0031FBAE /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		E3A9A8FA1CBAAF180031FBAE /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
-		E3A9A8FC1CBAAF250031FBAE /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		E3A9A8FE1CBBF2340031FBAE /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		E3A9A9001CBBF32C0031FBAE /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,6 +260,15 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		E37402C71CBD43CA00E4659B /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				E37402C81CBD445D00E4659B /* PreviewViewController.swift */,
+				E37402CA1CBD446A00E4659B /* Preview.storyboard */,
+			);
+			name = Preview;
+			sourceTree = "<group>";
+		};
 		E38A0F681CA7D74900ED99B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,17 +278,6 @@
 				E3D9A5AF1CA7D29B00B43F37 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		E3A9A8F91CBAAEC80031FBAE /* Post */ = {
-			isa = PBXGroup;
-			children = (
-				E3A9A8FA1CBAAF180031FBAE /* Post.storyboard */,
-				E3A9A8FC1CBAAF250031FBAE /* PostViewController.swift */,
-				E3A9A8FE1CBBF2340031FBAE /* PreviewViewController.swift */,
-				E3A9A9001CBBF32C0031FBAE /* EditViewController.swift */,
-			);
-			name = Post;
 			sourceTree = "<group>";
 		};
 		E3D9A59A1CA7D29A00B43F37 = {
@@ -375,7 +369,7 @@
 		E3D9A5D71CA7D6B600B43F37 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E3A9A8F91CBAAEC80031FBAE /* Post */,
+				E37402C71CBD43CA00E4659B /* Preview */,
 				E335994F1CA801AD001A3C8D /* Comments */,
 				E335994C1CA8017D001A3C8D /* Home */,
 				E33599641CA8327B001A3C8D /* Login */,
@@ -510,7 +504,6 @@
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
 				E33599511CA80223001A3C8D /* Comments.storyboard in Resources */,
-				E3A9A8FB1CBAAF180031FBAE /* Post.storyboard in Resources */,
 				E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */,
 				E33599571CA80331001A3C8D /* Teams.storyboard in Resources */,
 				E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */,
@@ -518,6 +511,7 @@
 				E33599591CA80385001A3C8D /* Settings.storyboard in Resources */,
 				E33599661CA8329F001A3C8D /* Login.storyboard in Resources */,
 				E3A9A8F81CBA222D0031FBAE /* Lato-Regular.ttf in Resources */,
+				E37402CB1CBD446A00E4659B /* Preview.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +590,7 @@
 				E33599681CA832D4001A3C8D /* LoginViewController.swift in Sources */,
 				E33599471CA7E373001A3C8D /* Logger.swift in Sources */,
 				E335996A1CA83680001A3C8D /* UpdateChecker.swift in Sources */,
+				E37402C91CBD445D00E4659B /* PreviewViewController.swift in Sources */,
 				E33599701CAAF218001A3C8D /* GET_Teams.swift in Sources */,
 				E33412C51CB8B5E000F455BE /* UIScrollView+Extension.swift in Sources */,
 				E38A0F6E1CA7DE6700ED99B6 /* Storyboard+Extension.swift in Sources */,
@@ -612,9 +607,6 @@
 				E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */,
 				E33599721CB030CC001A3C8D /* GET_Team.swift in Sources */,
 				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,
-				E3A9A8FD1CBAAF250031FBAE /* PostViewController.swift in Sources */,
-				E3A9A9011CBBF32C0031FBAE /* EditViewController.swift in Sources */,
-				E3A9A8FF1CBBF2340031FBAE /* PreviewViewController.swift in Sources */,
 				E33599781CB2C148001A3C8D /* GET_Post.swift in Sources */,
 				E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */,
 				E38A0F6A1CA7D95200ED99B6 /* Team.swift in Sources */,

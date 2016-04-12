@@ -36,20 +36,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ucX-SB-QA3" id="fnc-cB-bB3"/>
-                        <segue destination="uCS-KD-RPS" kind="show" identifier="HomeToPost" id="QY3-ar-SVt"/>
+                        <segue destination="XPB-ak-8gH" kind="show" identifier="HomeToPreview" id="Hy8-cm-Axk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zE-qo-RBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="532"/>
+            <point key="canvasLocation" x="219" y="591"/>
         </scene>
-        <!--Post-->
-        <scene sceneID="L2u-5v-m3R">
+        <!--Preview-->
+        <scene sceneID="7SF-IU-lrH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Post" id="uCS-KD-RPS" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wDp-xx-4DZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Preview" id="XPB-ak-8gH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydn-1Q-NKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="532"/>
+            <point key="canvasLocation" x="672" y="591"/>
         </scene>
     </scenes>
 </document>
