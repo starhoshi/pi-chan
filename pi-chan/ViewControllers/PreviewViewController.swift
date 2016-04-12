@@ -12,6 +12,7 @@ import SVProgressHUD
 class PreviewViewController: UIViewController {
   var postNumber:Int!
   
+  @IBOutlet weak var webView: UIWebView!
   override func viewDidLoad() {
     super.viewDidLoad()
     loadApi()
@@ -32,6 +33,7 @@ class PreviewViewController: UIViewController {
         SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(post)")
         self.navigationItem.title = post.name
+        self.webView.loadHTMLString(post.bodyHtml, baseURL: nil)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")
