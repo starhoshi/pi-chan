@@ -30,10 +30,14 @@
                             <constraint firstItem="r00-mL-oHm" firstAttribute="top" secondItem="qoI-Yx-lM5" secondAttribute="bottom" id="o3D-n1-b6s"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4p9-h6-zFV">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="dWJ-r8-3Cu"/>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="rightBarButton" destination="dWJ-r8-3Cu" id="XLy-py-7QM"/>
                         <outlet property="webView" destination="r00-mL-oHm" id="fKo-5d-MRN"/>
                     </connections>
                 </viewController>

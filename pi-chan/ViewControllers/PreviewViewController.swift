@@ -14,11 +14,12 @@ class PreviewViewController: UIViewController {
   let localHtml = NSBundle.mainBundle().pathForResource("md", ofType: "html")!
   
   @IBOutlet weak var webView: UIWebView!
+  @IBOutlet weak var rightBarButton: UIBarButtonItem!
   override func viewDidLoad() {
     super.viewDidLoad()
     loadApi()
+    rightBarButton.setFAIcon(.FAEdit, iconSize: 22)
     
-    // Do any additional setup after loading the view.
     let req = NSURLRequest(URL: NSURL(string: localHtml)!)
     webView.loadRequest(req)
   }
