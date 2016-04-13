@@ -19,10 +19,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   //  var searchController:UISearchController!
   let searchController = UISearchController(searchResultsController: nil)
   
+  @IBOutlet weak var rightBarButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    rightBarButton.setFAIcon(.FAPencil, iconSize: 22)
     stbNextView = UIStoryboard(name: "Login", bundle: nil)
     nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
     initTableView()
