@@ -11,6 +11,7 @@ import SVProgressHUD
 
 class PreviewViewController: UIViewController {
   var postNumber:Int!
+  let localHtml = NSBundle.mainBundle().pathForResource("md", ofType: "html")!
   
   @IBOutlet weak var webView: UIWebView!
   override func viewDidLoad() {
@@ -18,6 +19,8 @@ class PreviewViewController: UIViewController {
     loadApi()
     
     // Do any additional setup after loading the view.
+    let req = NSURLRequest(URL: NSURL(string: localHtml)!)
+    webView.loadRequest(req)
   }
   
   override func didReceiveMemoryWarning() {
@@ -33,7 +36,12 @@ class PreviewViewController: UIViewController {
         SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(post)")
         self.navigationItem.title = post.name
-        self.webView.loadHTMLString(post.bodyHtml, baseURL: nil)
+        //        self.webView.loadHTMLString(post.bodyHtml, baseURL: nil)
+        let html = post.bodyHtml.stringByReplacingOccurrencesOfString("\n", withString: "")
+        //        print(html)
+        let js = "insert('\(html)');"
+        print(js)
+        self.webView.stringByEvaluatingJavaScriptFromString(js)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")

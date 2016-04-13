@@ -12,7 +12,6 @@ PODS:
   - Himotoki (1.7.0)
   - KeychainAccess (2.3.4)
   - Kingfisher (2.2.0)
-  - PagingMenuController (0.8.0)
   - Result (2.0.0)
   - Siren (0.6.7)
   - SVProgressHUD (2.0)
@@ -33,7 +32,6 @@ DEPENDENCIES:
   - Himotoki (~> 1.7)
   - KeychainAccess
   - Kingfisher (~> 2.2)
-  - PagingMenuController
   - Siren
   - SVProgressHUD
   - SwiftMoment
@@ -53,7 +51,6 @@ SPEC CHECKSUMS:
   Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
   KeychainAccess: 3a21b6944b4f2a22653f091d770cf10374961a94
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
-  PagingMenuController: 1a9ff8ad0ab9704f215706997c1a624bc951f508
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   Siren: 6d1c751d3ae4f1abcfeff17c77ee6576da8f09e1
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479

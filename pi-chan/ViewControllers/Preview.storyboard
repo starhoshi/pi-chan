@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Preview View Controller-->
@@ -25,10 +24,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="r00-mL-oHm" firstAttribute="leading" secondItem="DdR-KV-saC" secondAttribute="leadingMargin" constant="-20" id="8t6-Zu-Ut7"/>
-                            <constraint firstItem="r00-mL-oHm" firstAttribute="top" secondItem="qoI-Yx-lM5" secondAttribute="bottom" id="Dqv-AP-VYh"/>
-                            <constraint firstItem="ZG0-js-oI5" firstAttribute="top" secondItem="r00-mL-oHm" secondAttribute="bottom" id="JeJ-ha-VM7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="r00-mL-oHm" secondAttribute="trailing" constant="-20" id="X7f-yY-Ek7"/>
+                            <constraint firstItem="ZG0-js-oI5" firstAttribute="top" secondItem="r00-mL-oHm" secondAttribute="bottom" id="PQV-hy-bSQ"/>
+                            <constraint firstAttribute="trailing" secondItem="r00-mL-oHm" secondAttribute="trailing" id="Ztn-co-CQB"/>
+                            <constraint firstItem="r00-mL-oHm" firstAttribute="leading" secondItem="DdR-KV-saC" secondAttribute="leading" id="dpy-jf-FQF"/>
+                            <constraint firstItem="r00-mL-oHm" firstAttribute="top" secondItem="qoI-Yx-lM5" secondAttribute="bottom" id="o3D-n1-b6s"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
