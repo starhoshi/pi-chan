@@ -27,18 +27,18 @@ class LoginViewController: UIViewController {
   @IBAction func login(sender: AnyObject) {
     SVProgressHUD.showWithStatus("Loading...")
     
-    //    Esa.sharedInstance.teams(){ result in
-    //      switch result {
-    //      case .Success(let teams):
-    //        SVProgressHUD.showSuccessWithStatus("Success!")
-    //        log?.info("\(teams)")
-    //        KeychainManager.setToken(self.tokenField.text!)
-    //        KeychainManager.setTeamName(self.teamField.text!)
-    //      case .Failure(let error):
-    //        SVProgressHUD.showErrorWithStatus("Error!")
-    //        log?.error("\(error)")
-    //      }
-    //    }
+    Esa(token: tokenField.text!, currentTeam: teamField.text!).teams(){ result in
+      switch result {
+      case .Success(let teams):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(teams)")
+        KeychainManager.setToken(self.tokenField.text!)
+        KeychainManager.setTeamName(self.teamField.text!)
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.error("\(error)")
+      }
+    }
   }
   
   @IBAction func close(sender: AnyObject) {

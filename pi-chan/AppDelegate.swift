@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     UpdateChecker.prompt()
+    KeychainManager.initialSettings()
     
     // navigation bar settings
     UINavigationBar.appearance().tintColor = UIColor.whiteColor()

@@ -14,6 +14,14 @@ struct KeychainManager {
   private static let TEAM_NAME = "TEAM_NAME"
   private static let keychain = Keychain(service: "pi-chan")
   
+  static func initialSettings(){
+    if getToken() == nil {
+      setToken("")
+    }
+    if getTeamName() == nil {
+      setTeamName("")
+    }
+  }
   static func getToken() -> String?{
     return keychain[TOKEN]
   }

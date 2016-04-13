@@ -113,6 +113,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")
+        self.presentViewController(self.nvcNextViewCtrl, animated:true, completion: nil)
       }
     }
   }
