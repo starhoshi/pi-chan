@@ -40,6 +40,8 @@
 		E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */; };
 		E33599821CB2D2D0001A3C8D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599811CB2D2D0001A3C8D /* Posts.swift */; };
 		E35460871CBE97EF00BE7952 /* md.html in Resources */ = {isa = PBXBuildFile; fileRef = E35460861CBE97EF00BE7952 /* md.html */; };
+		E354608B1CBEC1DD00BE7952 /* marked.js in Resources */ = {isa = PBXBuildFile; fileRef = E35460891CBEC1DD00BE7952 /* marked.js */; };
+		E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = E354608A1CBEC1DD00BE7952 /* github-markdown.css */; };
 		E37402C91CBD445D00E4659B /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37402C81CBD445D00E4659B /* PreviewViewController.swift */; };
 		E37402CB1CBD446A00E4659B /* Preview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37402CA1CBD446A00E4659B /* Preview.storyboard */; };
 		E38A0F6A1CA7D95200ED99B6 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A0F691CA7D95200ED99B6 /* Team.swift */; };
@@ -105,7 +107,9 @@
 		E335997D1CB2CC23001A3C8D /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
 		E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		E33599811CB2D2D0001A3C8D /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
-		E35460861CBE97EF00BE7952 /* md.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = md.html; path = ../Resources/md.html; sourceTree = "<group>"; };
+		E35460861CBE97EF00BE7952 /* md.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = md.html; path = html/md.html; sourceTree = "<group>"; };
+		E35460891CBEC1DD00BE7952 /* marked.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = marked.js; path = html/marked.js; sourceTree = "<group>"; };
+		E354608A1CBEC1DD00BE7952 /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "github-markdown.css"; path = "html/github-markdown.css"; sourceTree = "<group>"; };
 		E37402C81CBD445D00E4659B /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		E37402CA1CBD446A00E4659B /* Preview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preview.storyboard; sourceTree = "<group>"; };
 		E38A0F691CA7D95200ED99B6 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -265,11 +269,13 @@
 		E37402C71CBD43CA00E4659B /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				E354608A1CBEC1DD00BE7952 /* github-markdown.css */,
+				E35460891CBEC1DD00BE7952 /* marked.js */,
 				E35460861CBE97EF00BE7952 /* md.html */,
-				E37402C81CBD445D00E4659B /* PreviewViewController.swift */,
 				E37402CA1CBD446A00E4659B /* Preview.storyboard */,
+				E37402C81CBD445D00E4659B /* PreviewViewController.swift */,
 			);
-			name = Preview;
+			path = Preview;
 			sourceTree = "<group>";
 		};
 		E38A0F681CA7D74900ED99B6 /* Resources */ = {
@@ -372,12 +378,12 @@
 		E3D9A5D71CA7D6B600B43F37 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E37402C71CBD43CA00E4659B /* Preview */,
 				E335994F1CA801AD001A3C8D /* Comments */,
 				E335994C1CA8017D001A3C8D /* Home */,
 				E33599641CA8327B001A3C8D /* Login */,
 				E335995C1CA80E9B001A3C8D /* MainTabbar */,
 				E335995F1CA814C2001A3C8D /* Posts */,
+				E37402C71CBD43CA00E4659B /* Preview */,
 				E335994D1CA80189001A3C8D /* Settings */,
 				E335994E1CA801A1001A3C8D /* Teams */,
 			);
@@ -507,6 +513,8 @@
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
 				E33599511CA80223001A3C8D /* Comments.storyboard in Resources */,
+				E354608B1CBEC1DD00BE7952 /* marked.js in Resources */,
+				E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */,
 				E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */,
 				E33599571CA80331001A3C8D /* Teams.storyboard in Resources */,
 				E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */,
