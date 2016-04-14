@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="./marked.js"></script>
   <link rel="stylesheet" href="./github-markdown.css">
+  <link rel="stylesheet" href="./emojify.min.css" />
+  <script type="text/javascript" src="./emojify.min.js"></script>
   <style>
     @font-face {
       font-family: Lato;
@@ -20,6 +22,7 @@
   <script>
     function insert(html) {
       document.getElementById('content').innerHTML = marked(html);
+      emojify.run(document.getElementById('content'))
     }
   </script>
 </head>

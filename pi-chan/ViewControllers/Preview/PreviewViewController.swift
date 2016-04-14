@@ -17,11 +17,11 @@ class PreviewViewController: UIViewController {
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
   override func viewDidLoad() {
     super.viewDidLoad()
-    loadApi()
     rightBarButton.setFAIcon(.FAEdit, iconSize: 22)
     
     let req = NSURLRequest(URL: NSURL(string: localHtml)!)
     webView.loadRequest(req)
+    loadApi()
   }
   
   override func didReceiveMemoryWarning() {
