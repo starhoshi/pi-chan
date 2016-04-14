@@ -21,6 +21,7 @@ target 'pi-chan' do
   pod 'APIKit', '~> 1.3.0'
   pod "Himotoki", "~> 1.7"
   pod 'DynamicColor', '~> 2.4.0'
+  pod 'UITextView+Placeholder', '~> 1.2'
 end
 
 target 'pi-chanTests' do

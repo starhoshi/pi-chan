@@ -8,6 +8,7 @@
 
 import UIKit
 import Font_Awesome_Swift
+import UITextView_Placeholder
 
 class EditorViewController: UIViewController {
   var editor: Editor!
@@ -25,8 +26,9 @@ class EditorViewController: UIViewController {
   }
   
   func setTextViewStyle(){
+    textView.placeholder = "# Input with Markdown"
     textView.layer.borderWidth = 1
-    textView.layer.borderColor = UIColor.grayColor().CGColor
+    textView.layer.borderColor = UIColor.grayUITextFieldBorderColor().CGColor
     textView.layer.cornerRadius = 8
   }
   
