@@ -29,7 +29,7 @@ class EditorViewController: UIViewController {
     textView.placeholder = "# Input with Markdown"
     textView.layer.borderWidth = 1
     textView.layer.borderColor = UIColor.grayUITextFieldBorderColor().CGColor
-    textView.layer.cornerRadius = 8
+    textView.layer.cornerRadius = 6
   }
   
   func setStatusBarBackground(){

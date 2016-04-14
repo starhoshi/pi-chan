@@ -42,37 +42,49 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="category1/category2/title #tag" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-YW-U70">
-                                <rect key="frame" x="7" y="71" width="586" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3D-TT-khQ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QUh-eD-Ta5">
+                                        <rect key="frame" x="8" y="46" width="584" height="482"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="482" id="vf1-Xi-xqr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="category1/category2/title #tag" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ktc-YW-U70">
+                                        <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UpQ-iR-O3K"/>
+                                    <constraint firstItem="QUh-eD-Ta5" firstAttribute="trailing" secondItem="ktc-YW-U70" secondAttribute="trailing" id="4hV-il-01E"/>
+                                    <constraint firstItem="QUh-eD-Ta5" firstAttribute="centerX" secondItem="y3D-TT-khQ" secondAttribute="centerX" id="FUq-EI-uOH"/>
+                                    <constraint firstItem="QUh-eD-Ta5" firstAttribute="top" secondItem="ktc-YW-U70" secondAttribute="bottom" constant="8" id="MaE-IM-OGV"/>
+                                    <constraint firstAttribute="bottom" secondItem="QUh-eD-Ta5" secondAttribute="bottom" constant="8" id="Sxd-vw-xYn"/>
+                                    <constraint firstAttribute="trailing" secondItem="QUh-eD-Ta5" secondAttribute="trailing" constant="8" id="XYy-oe-MaU"/>
+                                    <constraint firstItem="ktc-YW-U70" firstAttribute="leading" secondItem="y3D-TT-khQ" secondAttribute="leading" constant="8" id="Yx1-aq-a0W"/>
+                                    <constraint firstItem="QUh-eD-Ta5" firstAttribute="leading" secondItem="y3D-TT-khQ" secondAttribute="leading" constant="8" id="d5G-ch-g2j"/>
+                                    <constraint firstItem="ktc-YW-U70" firstAttribute="top" secondItem="y3D-TT-khQ" secondAttribute="top" constant="8" id="jw2-ev-Vm7"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QUh-eD-Ta5">
-                                <rect key="frame" x="7" y="109" width="586" height="483"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="90l-GZ-Oek" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="7" id="0L5-D7-eAb"/>
+                            <constraint firstAttribute="trailing" secondItem="y3D-TT-khQ" secondAttribute="trailing" id="2IG-MM-TaT"/>
                             <constraint firstAttribute="trailing" secondItem="oo6-eW-oem" secondAttribute="trailing" constant="7" id="2yO-Vm-w9o"/>
-                            <constraint firstItem="QUh-eD-Ta5" firstAttribute="top" secondItem="ktc-YW-U70" secondAttribute="bottom" constant="8" id="3jn-oe-AvJ"/>
                             <constraint firstItem="90l-GZ-Oek" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" constant="7" id="76N-yK-pHQ"/>
-                            <constraint firstAttribute="trailing" secondItem="ktc-YW-U70" secondAttribute="trailing" constant="7" id="C2C-6P-0G0"/>
+                            <constraint firstItem="y3D-TT-khQ" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" id="8DL-bU-bKi"/>
                             <constraint firstItem="Q8f-JC-fVl" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" id="Fhp-y0-5PI"/>
-                            <constraint firstItem="ktc-YW-U70" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" constant="7" id="HPf-3V-ecj"/>
-                            <constraint firstItem="QUh-eD-Ta5" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" constant="7" id="R25-ao-U9P"/>
-                            <constraint firstItem="ktc-YW-U70" firstAttribute="top" secondItem="Q8f-JC-fVl" secondAttribute="bottom" constant="7" id="U7b-cS-WWw"/>
                             <constraint firstAttribute="trailing" secondItem="Q8f-JC-fVl" secondAttribute="trailing" id="YjQ-Wg-3sl"/>
-                            <constraint firstAttribute="trailing" secondItem="QUh-eD-Ta5" secondAttribute="trailing" constant="7" id="euf-qv-hfS"/>
                             <constraint firstItem="oo6-eW-oem" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="7" id="gl7-rH-lln"/>
-                            <constraint firstItem="T8g-a6-TUr" firstAttribute="top" secondItem="QUh-eD-Ta5" secondAttribute="bottom" constant="8" id="vtc-mX-reB"/>
+                            <constraint firstItem="T8g-a6-TUr" firstAttribute="top" secondItem="y3D-TT-khQ" secondAttribute="bottom" id="k2P-sJ-fFp"/>
+                            <constraint firstItem="y3D-TT-khQ" firstAttribute="top" secondItem="Q8f-JC-fVl" secondAttribute="bottom" id="s3U-Fe-wFN"/>
                             <constraint firstItem="Q8f-JC-fVl" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" id="yZC-OF-yqq"/>
                         </constraints>
                     </view>
