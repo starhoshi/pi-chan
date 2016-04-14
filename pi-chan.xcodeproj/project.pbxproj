@@ -949,8 +949,6 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>text.html</string>
-			<key>name</key>
-			<string>md.html</string>
 			<key>path</key>
 			<string>md.html</string>
 			<key>sourceTree</key>
@@ -971,8 +969,6 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.javascript</string>
-			<key>name</key>
-			<string>marked.js</string>
 			<key>path</key>
 			<string>marked.js</string>
 			<key>sourceTree</key>
@@ -986,8 +982,6 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>text.css</string>
-			<key>name</key>
-			<string>github-markdown.css</string>
 			<key>path</key>
 			<string>github-markdown.css</string>
 			<key>sourceTree</key>
@@ -1173,6 +1167,62 @@ fi
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>E3D0C1551CBFD85B006A48EA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E3D0C1581CBFD891006A48EA</string>
+				<string>E3D0C1561CBFD880006A48EA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Editor</string>
+			<key>path</key>
+			<string>Editor</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3D0C1561CBFD880006A48EA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>EditorViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3D0C1571CBFD880006A48EA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E3D0C1561CBFD880006A48EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E3D0C1581CBFD891006A48EA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Editor.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3D0C1591CBFD891006A48EA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E3D0C1581CBFD891006A48EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>E3D9A59A1CA7D29A00B43F37</key>
 		<dict>
 			<key>children</key>
@@ -1287,6 +1337,7 @@ fi
 				<string>E33599821CB2D2D0001A3C8D</string>
 				<string>E33599761CB2B706001A3C8D</string>
 				<string>E33412BA1CB4074D00F455BE</string>
+				<string>E3D0C1571CBFD880006A48EA</string>
 				<string>E335995E1CA80EDF001A3C8D</string>
 				<string>E33599531CA80250001A3C8D</string>
 				<string>E38A0F6C1CA7DDF900ED99B6</string>
@@ -1329,6 +1380,7 @@ fi
 			<key>files</key>
 			<array>
 				<string>E33599631CA814E2001A3C8D</string>
+				<string>E3D0C1591CBFD891006A48EA</string>
 				<string>E33412C11CB4288500F455BE</string>
 				<string>E3D9A5B11CA7D29B00B43F37</string>
 				<string>E33599511CA80223001A3C8D</string>
@@ -2205,6 +2257,7 @@ fi
 			<key>children</key>
 			<array>
 				<string>E335994F1CA801AD001A3C8D</string>
+				<string>E3D0C1551CBFD85B006A48EA</string>
 				<string>E335994C1CA8017D001A3C8D</string>
 				<string>E33599641CA8327B001A3C8D</string>
 				<string>E335995C1CA80E9B001A3C8D</string>
