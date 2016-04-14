@@ -15,10 +15,22 @@ class EditorViewController: UIViewController {
   @IBOutlet weak var navigationBar: UINavigationBar!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var sendButton: UIButton!
+  @IBOutlet weak var textView: UITextView!
   override func viewDidLoad() {
     super.viewDidLoad()
     sendButton.setFAIcon(.FASend, iconSize: 22, forState: .Normal)
     cancelButton.setFAIcon(.FAClose, iconSize: 22, forState: .Normal)
+    setStatusBarBackground()
+    setTextViewStyle()
+  }
+  
+  func setTextViewStyle(){
+    textView.layer.borderWidth = 1
+    textView.layer.borderColor = UIColor.grayColor().CGColor
+    textView.layer.cornerRadius = 8
+  }
+  
+  func setStatusBarBackground(){
     let statusBarBackground = UIView(frame: CGRectMake(0 , 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(UIApplication.sharedApplication().statusBarFrame)))
     statusBarBackground.backgroundColor = UIColor.esaGreen()
     self.view.addSubview(statusBarBackground)
