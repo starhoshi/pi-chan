@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class PreviewViewController: UIViewController {
+class PreviewViewController: UIViewController, UIWebViewDelegate {
   var postNumber:Int!
   let localHtml = NSBundle.mainBundle().pathForResource("md", ofType: "html")!
   
@@ -20,8 +20,8 @@ class PreviewViewController: UIViewController {
     rightBarButton.setFAIcon(.FAEdit, iconSize: 22)
     
     let req = NSURLRequest(URL: NSURL(string: localHtml)!)
+    webView.delegate = self;
     webView.loadRequest(req)
-    loadApi()
   }
   
   override func didReceiveMemoryWarning() {
@@ -47,7 +47,7 @@ class PreviewViewController: UIViewController {
     }
   }
   
-  
-  
-  
+  func webViewDidFinishLoad(webView: UIWebView) {
+    loadApi()
+  }
 }
