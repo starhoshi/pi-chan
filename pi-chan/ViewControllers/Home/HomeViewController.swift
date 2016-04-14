@@ -117,7 +117,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   @IBAction func openEditor(sender: AnyObject) {
-    Window.openEditor(self)
+    let editor = Editor()
+    Window.openEditor(self, editor: editor)
   }
   
 }
