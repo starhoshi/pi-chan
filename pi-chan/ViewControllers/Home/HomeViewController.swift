@@ -13,8 +13,6 @@ import DZNEmptyDataSet
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
   
-  var stbNextView: UIStoryboard!
-  var nvcNextViewCtrl: UINavigationController!
   var posts:[Post] = []
   //  var searchController:UISearchController!
   let searchController = UISearchController(searchResultsController: nil)
@@ -25,8 +23,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     super.viewDidLoad()
     
     rightBarButton.setFAIcon(.FAPencil, iconSize: 22)
-    stbNextView = UIStoryboard(name: "Login", bundle: nil)
-    nvcNextViewCtrl = stbNextView!.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
     initTableView()
     loadPostApi()
     setSearchBar()
@@ -115,8 +111,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.error("\(error)")
-        self.presentViewController(self.nvcNextViewCtrl, animated:true, completion: nil)
+        Window.openLogin(self)
       }
     }
   }
+  
+  @IBAction func openEditor(sender: AnyObject) {
+    Window.openEditor(self)
+  }
+  
 }

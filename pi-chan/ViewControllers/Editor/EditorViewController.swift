@@ -7,29 +7,27 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
 class EditorViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
+  @IBOutlet weak var sendButton: UIBarButtonItem!
+  @IBOutlet weak var cancelButton: UIBarButtonItem!
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    sendButton.setFAIcon(.FASend, iconSize: 22)
+    cancelButton.setFAIcon(.FAClose, iconSize: 22)
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  @IBAction func send(sender: AnyObject) {
+  }
+  
+  @IBAction func close(sender: AnyObject) {
+    self.dismissViewControllerAnimated(true, completion: nil)
+  }
 }

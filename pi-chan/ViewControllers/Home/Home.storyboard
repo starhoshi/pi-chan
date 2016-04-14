@@ -31,7 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="gSp-5m-i58">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="r36-dJ-MKC"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="r36-dJ-MKC">
+                            <connections>
+                                <action selector="openEditor:" destination="r46-aO-JOG" id="ZdA-AF-ZQa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
