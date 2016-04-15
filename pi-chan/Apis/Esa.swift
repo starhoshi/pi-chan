@@ -39,9 +39,20 @@ class Esa{
     return Session.sendRequest(request, handler:handler)
   }
   
+  func newPost(post:Post,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = PostPostsRequest(esa: self, post: post)
+    return Session.sendRequest(request, handler:handler)
+  }
+  
+  func patchPost(post:Post,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = PatchPostsRequest(esa: self, post: post)
+    return Session.sendRequest(request, handler:handler)
+  }
+  
   static func createHTTPHeaderFields(token:String) -> [String:String] {
     return ["Authorization":"Bearer " + token]
   }
+  
 }
 
 

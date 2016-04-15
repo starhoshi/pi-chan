@@ -9,6 +9,7 @@
 import UIKit
 import Font_Awesome_Swift
 import UITextView_Placeholder
+import SVProgressHUD
 
 class EditorViewController: UIViewController {
   var post: Post?
@@ -46,6 +47,17 @@ class EditorViewController: UIViewController {
   }
   
   @IBAction func post(sender: AnyObject) {
+    SVProgressHUD.showWithStatus("Loading...")
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).patchPost(post!){ result in
+      switch result {
+      case .Success(let posts):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(posts)")
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.error("\(error)")
+      }
+    }
   }
   
   @IBAction func close(sender: AnyObject) {
