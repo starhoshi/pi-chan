@@ -13,6 +13,7 @@ import SVProgressHUD
 
 class EditorViewController: UIViewController {
   var post: Post?
+  var client:Esa!
   
   @IBOutlet weak var navigationBar: UINavigationBar!
   @IBOutlet weak var cancelButton: UIButton!
@@ -27,6 +28,7 @@ class EditorViewController: UIViewController {
     setTextViewStyle()
     textView.text = post?.bodyMd
     textField.text = post?.fullName
+    client = Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!)
   }
   
   func setTextViewStyle(){
@@ -48,7 +50,28 @@ class EditorViewController: UIViewController {
   
   @IBAction func post(sender: AnyObject) {
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).patchPost(post!){ result in
+    if let _ = post{
+      patch()
+    }else{
+      newPost()
+    }
+  }
+  
+  func newPost(){
+    client.newPost(post!){ result in
+      switch result {
+      case .Success(let posts):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(posts)")
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.error("\(error)")
+      }
+    }
+  }
+  
+  func patch(){
+    client.patchPost(post!){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
