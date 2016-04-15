@@ -9,6 +9,7 @@
 import Foundation
 import APIKit
 import Result
+import Dollar
 
 class Esa{
   let token: String
@@ -53,6 +54,13 @@ class Esa{
     return ["Authorization":"Bearer " + token]
   }
   
+  static func parseCategory(fullName:String) -> (category:String, name:String){
+    var categoryArray = $.remove(fullName.componentsSeparatedByString("/"),value:"")
+    let name = categoryArray.last
+    categoryArray.removeLast()
+    let category = categoryArray.joinWithSeparator("/")
+    return (category:category, name:name!)
+  }
 }
 
 

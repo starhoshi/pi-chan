@@ -106,12 +106,13 @@ class EditorViewController: UIViewController {
   }
   
   func createPostsParameters(wip:Bool, commitMessage:String?) -> PostsParameters{
+    let category = Esa.parseCategory(textField.text!)
     return PostsParameters(
       number: post?.number,
-      name: textField.text!,
+      name: category.name,
       bodyMd: textView.text,
       tags: post?.tags,
-      category: post?.category,
+      category: category.category,
       wip: wip,
       message: commitMessage,
       originalRevision: nil
