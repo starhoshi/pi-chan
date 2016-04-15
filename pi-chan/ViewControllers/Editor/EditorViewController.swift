@@ -43,6 +43,9 @@ class EditorViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
   
+  @IBAction func post(sender: AnyObject) {
+  }
+
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }

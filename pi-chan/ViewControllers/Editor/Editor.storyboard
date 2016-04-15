@@ -41,6 +41,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="post:" destination="Ui9-Qj-cgq" eventType="touchUpInside" id="a9q-Ke-S3H"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3D-TT-khQ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
