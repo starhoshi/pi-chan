@@ -12,6 +12,7 @@ import Font_Awesome_Swift
 
 class PostTableViewCell: UITableViewCell {
   
+  @IBOutlet weak var contentsView: UIView!
   @IBOutlet weak var circleThumbnail: UIImageView!
   @IBOutlet weak var wip: UILabel!
   @IBOutlet weak var category: UILabel!
@@ -38,10 +39,10 @@ class PostTableViewCell: UITableViewCell {
     circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
     circleThumbnail.layer.cornerRadius = circleThumbnail.frame.size.width / 2;
     circleThumbnail.clipsToBounds = true;
-    wip.hidden = !post.wip
     category.text = post.category
     title.text = post.name
     createdBy.text = post.createdBy.screenName
+    wip.hidden = !post.wip
+    contentsView.alpha = post.wip ? 0.5 : 1.0
   }
-  
 }

@@ -148,6 +148,7 @@
                 <outlet property="checkIcon" destination="PZS-49-mxC" id="guD-h7-la0"/>
                 <outlet property="circleThumbnail" destination="uOr-sr-I49" id="IXz-ir-eyl"/>
                 <outlet property="commentsIcon" destination="UKw-t7-JMO" id="kId-Su-CCR"/>
+                <outlet property="contentsView" destination="H2p-sc-9uM" id="Ams-Cf-P5b"/>
                 <outlet property="createdBy" destination="s0h-hK-mqT" id="Spb-jz-Nt0"/>
                 <outlet property="eyeIcon" destination="HW4-bs-j58" id="DNw-c0-MUc"/>
                 <outlet property="starIcon" destination="rfg-Jh-PJb" id="kHg-cE-VVs"/>

@@ -105,7 +105,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
-        log?.info("\(posts)")
         self.posts = posts.posts
         self.tableView.reloadData()
       case .Failure(let error):
