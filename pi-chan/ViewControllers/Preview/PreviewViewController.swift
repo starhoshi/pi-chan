@@ -12,6 +12,7 @@ import SVProgressHUD
 class PreviewViewController: UIViewController, UIWebViewDelegate {
   var postNumber:Int!
   let localHtml = NSBundle.mainBundle().pathForResource("md", ofType: "html")!
+  var post:Post?
   
   @IBOutlet weak var webView: UIWebView!
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
@@ -35,6 +36,7 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
       switch result {
       case .Success(let post):
         SVProgressHUD.showSuccessWithStatus("Success!")
+        self.post = post
         log?.info("\(post)")
         self.navigationItem.title = post.name
         let md = post.bodyMd.stringByReplacingOccurrencesOfString("\r\n", withString: "\\n")
@@ -49,5 +51,13 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
   
   func webViewDidFinishLoad(webView: UIWebView) {
     loadApi()
+  }
+  @IBAction func openEditor(sender: AnyObject) {
+    let editor = Editor()
+    editor.newPost = false
+    editor.md = post?.bodyMd
+    editor.postNumber = post?.number
+    editor.fullName = post?.fullName
+    Window.openEditor(self, editor: editor)
   }
 }

@@ -31,7 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4p9-h6-zFV">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="dWJ-r8-3Cu"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="dWJ-r8-3Cu">
+                            <connections>
+                                <action selector="openEditor:" destination="hgs-7w-Gz9" id="R3a-S9-SgZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

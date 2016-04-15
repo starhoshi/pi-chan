@@ -23,6 +23,7 @@ class EditorViewController: UIViewController {
     cancelButton.setFAIcon(.FAClose, iconSize: 22, forState: .Normal)
     setStatusBarBackground()
     setTextViewStyle()
+    textView.text = editor.md
   }
   
   func setTextViewStyle(){
@@ -48,8 +49,8 @@ class EditorViewController: UIViewController {
 }
 
 class Editor{
-  let md:String? = nil
-  let postNumber:Int? = nil
-  let newPost:Bool! = true
-  let postTitle:String? = nil
+  var md:String? = nil
+  var postNumber:Int? = nil
+  var newPost:Bool! = true
+  var fullName:String? = nil
 }
