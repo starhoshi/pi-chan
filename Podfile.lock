@@ -14,6 +14,7 @@ PODS:
   - Kingfisher (2.2.0)
   - Result (2.0.0)
   - SCLAlertView (0.5.2)
+  - SDCAlertView (5.0)
   - Siren (0.6.7)
   - SVProgressHUD (2.0)
   - SwiftMoment (0.4)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - KeychainAccess
   - Kingfisher (~> 2.2)
   - SCLAlertView
+  - SDCAlertView (~> 5.0)
   - Siren
   - SVProgressHUD
   - SwiftMoment
@@ -57,6 +59,7 @@ SPEC CHECKSUMS:
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SCLAlertView: 66873759027a98f891b6ba9042d75db9082abca2
+  SDCAlertView: e552dd803a1ea47ffda9f718b046e307cfd6b82a
   Siren: 6d1c751d3ae4f1abcfeff17c77ee6576da8f09e1
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
   SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29

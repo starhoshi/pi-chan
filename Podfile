@@ -23,6 +23,7 @@ target 'pi-chan' do
   pod 'DynamicColor', '~> 2.4.0'
   pod 'UITextView+Placeholder', '~> 1.2'
   pod 'SCLAlertView'
+  pod 'SDCAlertView', '~> 5.0'
 end
 
 target 'pi-chanTests' do

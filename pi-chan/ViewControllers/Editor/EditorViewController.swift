@@ -11,6 +11,7 @@ import Font_Awesome_Swift
 import UITextView_Placeholder
 import SVProgressHUD
 import SCLAlertView
+import SDCAlertView
 
 class EditorViewController: UIViewController {
   var post: Post?
@@ -51,6 +52,14 @@ class EditorViewController: UIViewController {
   }
   
   @IBAction func post(sender: AnyObject) {
+    if (textField.text != nil && textField.text != "" && textField.text != "/" ){
+      showAlert()
+    } else {
+      AlertController.alertWithTitle("入力エラー", message: "タイトルは必ず入力してください。", actionTitle: "OK")
+    }
+  }
+  
+  func showAlert(){
     let alertTitle = post == nil ? "Create post.":"Update post."
     let alert = SCLAlertView()
     let commitMessage = alert.addTextField("Enter your name")
