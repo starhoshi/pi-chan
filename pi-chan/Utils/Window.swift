@@ -14,10 +14,10 @@ struct Window{
     let login = loginStoryboard.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
     controller.presentViewController(login, animated:true, completion: nil)
   }
-  static func openEditor(controller : UIViewController, editor: Editor) {
+  static func openEditor(controller : UIViewController, post: Post?) {
     let editorStoryboard = UIStoryboard(name: "Editor", bundle: nil)
     let editorController = editorStoryboard.instantiateViewControllerWithIdentifier("EditorViewController") as! EditorViewController
-    editorController.editor = editor
+    editorController.post = post
     controller.presentViewController(editorController, animated:true, completion: nil)
   }
 }

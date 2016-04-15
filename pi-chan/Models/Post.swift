@@ -33,7 +33,7 @@ struct Post {
   let watchersCount: Int
   let star: Bool
   let watch: Bool
-  let sharingUrls: NSURL?
+  let sharingUrls: SharingUrls?
 }
 
 extension Post : Decodable {

@@ -11,19 +11,21 @@ import Font_Awesome_Swift
 import UITextView_Placeholder
 
 class EditorViewController: UIViewController {
-  var editor: Editor!
+  var post: Post?
   
   @IBOutlet weak var navigationBar: UINavigationBar!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var sendButton: UIButton!
   @IBOutlet weak var textView: UITextView!
+  @IBOutlet weak var textField: UITextField!
   override func viewDidLoad() {
     super.viewDidLoad()
     sendButton.setFAIcon(.FASend, iconSize: 22, forState: .Normal)
     cancelButton.setFAIcon(.FAClose, iconSize: 22, forState: .Normal)
     setStatusBarBackground()
     setTextViewStyle()
-    textView.text = editor.md
+    textView.text = post?.bodyMd
+    textField.text = post?.fullName
   }
   
   func setTextViewStyle(){
@@ -45,15 +47,8 @@ class EditorViewController: UIViewController {
   
   @IBAction func post(sender: AnyObject) {
   }
-
+  
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }
-}
-
-class Editor{
-  var md:String? = nil
-  var postNumber:Int? = nil
-  var newPost:Bool! = true
-  var fullName:String? = nil
 }

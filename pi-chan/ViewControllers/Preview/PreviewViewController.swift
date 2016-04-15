@@ -53,11 +53,6 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     loadApi()
   }
   @IBAction func openEditor(sender: AnyObject) {
-    let editor = Editor()
-    editor.newPost = false
-    editor.md = post?.bodyMd
-    editor.postNumber = post?.number
-    editor.fullName = post?.fullName
-    Window.openEditor(self, editor: editor)
+    Window.openEditor(self, post: post)
   }
 }

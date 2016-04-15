@@ -96,6 +96,7 @@
                         <outlet property="cancelButton" destination="90l-GZ-Oek" id="lef-YY-KAL"/>
                         <outlet property="navigationBar" destination="Q8f-JC-fVl" id="SCL-L4-O9c"/>
                         <outlet property="sendButton" destination="oo6-eW-oem" id="lRr-GE-Zls"/>
+                        <outlet property="textField" destination="ktc-YW-U70" id="V5t-cJ-qeT"/>
                         <outlet property="textView" destination="QUh-eD-Ta5" id="aMl-Tq-LzD"/>
                     </connections>
                 </viewController>
