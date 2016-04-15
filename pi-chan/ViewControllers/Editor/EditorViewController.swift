@@ -10,6 +10,7 @@ import UIKit
 import Font_Awesome_Swift
 import UITextView_Placeholder
 import SVProgressHUD
+import SCLAlertView
 
 class EditorViewController: UIViewController {
   var post: Post?
@@ -49,6 +50,25 @@ class EditorViewController: UIViewController {
   }
   
   @IBAction func post(sender: AnyObject) {
+    let alertTitle = post == nil ? "Create post.":"Update post."
+    let alert = SCLAlertView()
+    let txt = alert.addTextField("Enter your name")
+    txt.text = alertTitle
+    alert.addButton("Save as WIP") {
+      print("Text value: \(txt.text)")
+    }
+    alert.addButton("Ship It!") {
+      print("Text value: \(txt.text)")
+    }
+    alert.showEdit(
+      alertTitle,
+      subTitle: "Write explaining this change.(Optional)",
+      closeButtonTitle: "Cancel",
+      colorStyle: 0x0a9b94
+    )
+  }
+  
+  func callPostApi(){
     SVProgressHUD.showWithStatus("Loading...")
     if let _ = post{
       patch()
