@@ -13,6 +13,7 @@ PODS:
   - KeychainAccess (2.3.4)
   - Kingfisher (2.2.0)
   - Result (2.0.0)
+  - SCLAlertView (0.5.2)
   - Siren (0.6.7)
   - SVProgressHUD (2.0)
   - SwiftMoment (0.4)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Himotoki (~> 1.7)
   - KeychainAccess
   - Kingfisher (~> 2.2)
+  - SCLAlertView
   - Siren
   - SVProgressHUD
   - SwiftMoment
@@ -54,6 +56,7 @@ SPEC CHECKSUMS:
   KeychainAccess: 3a21b6944b4f2a22653f091d770cf10374961a94
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
+  SCLAlertView: 66873759027a98f891b6ba9042d75db9082abca2
   Siren: 6d1c751d3ae4f1abcfeff17c77ee6576da8f09e1
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
   SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29
