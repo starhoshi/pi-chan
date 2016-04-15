@@ -39,13 +39,13 @@ class Esa{
     return Session.sendRequest(request, handler:handler)
   }
   
-  func newPost(post:Post,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = PostPostsRequest(esa: self, post: post)
+  func newPost(postsParameters:PostsParameters,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = PostPostsRequest(esa: self, postsParameters: postsParameters)
     return Session.sendRequest(request, handler:handler)
   }
   
-  func patchPost(post:Post,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = PatchPostsRequest(esa: self, post: post)
+  func patchPost(postsParameters:PostsParameters,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = PatchPostsRequest(esa: self, postsParameters: postsParameters)
     return Session.sendRequest(request, handler:handler)
   }
   

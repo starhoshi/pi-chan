@@ -6,19 +6,17 @@
 //  Copyright © 2016年 star__hoshi. All rights reserved.
 //
 
-import Foundation
-
 import APIKit
 import Himotoki
 
 struct PatchPostsRequest: EsaRequestType {
   typealias Response = Post
   let esa: Esa
-  let post: Post
+  let postsParameters: PostsParameters
   
-  init(esa: Esa, post: Post) {
+  init(esa: Esa, postsParameters: PostsParameters) {
     self.esa = esa
-    self.post = post
+    self.postsParameters = postsParameters
   }
   
   var method: HTTPMethod {
@@ -26,16 +24,7 @@ struct PatchPostsRequest: EsaRequestType {
   }
   
   var parameters: [String : AnyObject] {
-    let post = [
-      "name":self.post.name,
-      "body_md":self.post.bodyMd,
-      "tags":self.post.tags!,
-      "category":self.post.category!,
-      "wip":self.post.wip,
-      "message":"update"
-    ]
-    
-    return ["post":post]
+    return postsParameters.createParameters()
   }
   
   var HTTPHeaderFields:[String:String] {
@@ -43,7 +32,7 @@ struct PatchPostsRequest: EsaRequestType {
   }
   
   var path: String {
-    return "\(esa.currentTeam)/posts/\(post.number)"
+    return "\(esa.currentTeam)/posts/\(postsParameters.number!)"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

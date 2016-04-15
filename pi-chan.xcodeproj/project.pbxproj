@@ -56,6 +56,7 @@
 		E3D0C15F1CC1114E006A48EA /* SharingUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C15E1CC1114E006A48EA /* SharingUrls.swift */; };
 		E3D0C1611CC1186D006A48EA /* POST_Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1601CC1186D006A48EA /* POST_Posts.swift */; };
 		E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */; };
+		E3D0C1651CC14F17006A48EA /* PostsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1641CC14F17006A48EA /* PostsParameters.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -132,6 +133,7 @@
 		E3D0C15E1CC1114E006A48EA /* SharingUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingUrls.swift; sourceTree = "<group>"; };
 		E3D0C1601CC1186D006A48EA /* POST_Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST_Posts.swift; sourceTree = "<group>"; };
 		E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PATCH_Posts.swift; sourceTree = "<group>"; };
+		E3D0C1641CC14F17006A48EA /* PostsParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsParameters.swift; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				E335997B1CB2CA75001A3C8D /* Teams.swift */,
 				E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */,
 				E3D0C15E1CC1114E006A48EA /* SharingUrls.swift */,
+				E3D0C1641CC14F17006A48EA /* PostsParameters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				E33599721CB030CC001A3C8D /* GET_Team.swift in Sources */,
 				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,
 				E33599781CB2C148001A3C8D /* GET_Post.swift in Sources */,
+				E3D0C1651CC14F17006A48EA /* PostsParameters.swift in Sources */,
 				E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */,
 				E38A0F6A1CA7D95200ED99B6 /* Team.swift in Sources */,
 				E335995B1CA80392001A3C8D /* SettingsViewController.swift in Sources */,

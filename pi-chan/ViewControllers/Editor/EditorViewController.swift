@@ -15,6 +15,7 @@ import SCLAlertView
 class EditorViewController: UIViewController {
   var post: Post?
   var client:Esa!
+  var postsParameters: PostsParameters!
   
   @IBOutlet weak var navigationBar: UINavigationBar!
   @IBOutlet weak var cancelButton: UIButton!
@@ -52,13 +53,13 @@ class EditorViewController: UIViewController {
   @IBAction func post(sender: AnyObject) {
     let alertTitle = post == nil ? "Create post.":"Update post."
     let alert = SCLAlertView()
-    let txt = alert.addTextField("Enter your name")
-    txt.text = alertTitle
+    let commitMessage = alert.addTextField("Enter your name")
+    commitMessage.text = alertTitle
     alert.addButton("Save as WIP") {
-      print("Text value: \(txt.text)")
+      self.callPostApi(true, commitMessage: commitMessage.text)
     }
     alert.addButton("Ship It!") {
-      print("Text value: \(txt.text)")
+      self.callPostApi(false, commitMessage: commitMessage.text)
     }
     alert.showEdit(
       alertTitle,
@@ -68,7 +69,8 @@ class EditorViewController: UIViewController {
     )
   }
   
-  func callPostApi(){
+  func callPostApi(wip:Bool, commitMessage:String?){
+    self.postsParameters = self.createPostsParameters(wip, commitMessage: commitMessage)
     SVProgressHUD.showWithStatus("Loading...")
     if let _ = post{
       patch()
@@ -78,7 +80,7 @@ class EditorViewController: UIViewController {
   }
   
   func newPost(){
-    client.newPost(post!){ result in
+    client.newPost(postsParameters){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
@@ -91,7 +93,7 @@ class EditorViewController: UIViewController {
   }
   
   func patch(){
-    client.patchPost(post!){ result in
+    client.patchPost(postsParameters){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
@@ -102,6 +104,20 @@ class EditorViewController: UIViewController {
       }
     }
   }
+  
+  func createPostsParameters(wip:Bool, commitMessage:String?) -> PostsParameters{
+    return PostsParameters(
+      number: post?.number,
+      name: textField.text!,
+      bodyMd: textView.text,
+      tags: post?.tags,
+      category: post?.category,
+      wip: wip,
+      message: commitMessage,
+      originalRevision: nil
+    )
+  }
+  
   
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)

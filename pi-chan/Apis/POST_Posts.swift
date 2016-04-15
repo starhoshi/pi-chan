@@ -12,11 +12,11 @@ import Himotoki
 struct PostPostsRequest: EsaRequestType {
   typealias Response = Post
   let esa: Esa
-  let post: Post
+  let postsParameters: PostsParameters
   
-  init(esa: Esa, post: Post) {
+  init(esa: Esa, postsParameters: PostsParameters) {
     self.esa = esa
-    self.post = post
+    self.postsParameters = postsParameters
   }
   
   var method: HTTPMethod {
@@ -24,16 +24,7 @@ struct PostPostsRequest: EsaRequestType {
   }
   
   var parameters: [String : AnyObject] {
-    let post = [
-      "name":self.post.name,
-      "body_md":self.post.bodyMd,
-      "tags":self.post.tags!,
-      "category":self.post.category!,
-      "wip":self.post.wip,
-      "message":"message"
-    ]
-    
-    return ["post":post]
+    return postsParameters.createParameters()
   }
   
   var HTTPHeaderFields:[String:String] {
