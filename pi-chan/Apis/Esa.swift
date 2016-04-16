@@ -30,8 +30,8 @@ class Esa{
     return Session.sendRequest(request, handler:handler)
   }
   
-  func posts(handler:(Result<Posts, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetPostsRequest(esa: self)
+  func posts(page:Int? = nil, perPage:Int = 20, handler:(Result<Posts, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetPostsRequest(esa: self, page: page, perPage:perPage)
     return Session.sendRequest(request, handler:handler)
   }
   

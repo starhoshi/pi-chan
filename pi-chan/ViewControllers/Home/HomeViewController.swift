@@ -10,10 +10,12 @@ import UIKit
 import SVProgressHUD
 import DGElasticPullToRefresh
 import DZNEmptyDataSet
+import Cent
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
   
   var posts:[Post] = []
+  var nextPage:Int? = 1
   //  var searchController:UISearchController!
   let searchController = UISearchController(searchResultsController: nil)
   
@@ -24,7 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     rightBarButton.setFAIcon(.FAPencil, iconSize: 22)
     initTableView()
-    loadPostApi()
+    resetAndLoadApi()
     setSearchBar()
   }
   override func viewWillAppear(animated: Bool) {
@@ -62,7 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     self.tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self!.tableView.dg_stopLoading()
-      self!.loadPostApi()
+      self!.resetAndLoadApi()
       }, loadingView: View.refreshLoading())
     tableView.dg_setPullToRefreshFillColor(UIColor.esaGreen())
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
@@ -77,7 +79,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func emptyDataSetDidTapView(scrollView: UIScrollView!) {
-    self.loadPostApi()
+    resetAndLoadApi()
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int  {
@@ -87,6 +89,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell:PostTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell")! as! PostTableViewCell
     cell.setItems(posts[indexPath.row])
+    if (posts.count - 1) == indexPath.row {
+      loadPostApi(nextPage)
+    }
     return cell
   }
   
@@ -99,13 +104,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     previewViewController.postNumber = sender as! Int
   }
   
-  func loadPostApi(){
+  func resetAndLoadApi(){
+    posts = []
+    loadPostApi(1)
+  }
+  
+  func loadPostApi(page:Int?){
+    if page == nil && SVProgressHUD.isVisible(){
+      return
+    }
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page!, perPage: 7){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
-        self.posts = posts.posts
+        self.posts << posts.posts
+        self.nextPage = posts.nextPage
         self.tableView.reloadData()
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
