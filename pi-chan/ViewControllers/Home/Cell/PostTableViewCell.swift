@@ -19,9 +19,13 @@ class PostTableViewCell: UITableViewCell {
   @IBOutlet weak var title: UILabel!
   @IBOutlet weak var createdBy: UILabel!
   @IBOutlet weak var starIcon: UILabel!
+  @IBOutlet weak var starCount: UILabel!
   @IBOutlet weak var eyeIcon: UILabel!
+  @IBOutlet weak var eyeCount: UILabel!
   @IBOutlet weak var commentsIcon: UILabel!
+  @IBOutlet weak var commentsCount: UILabel!
   @IBOutlet weak var checkIcon: UILabel!
+  @IBOutlet weak var checkCount: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -42,6 +46,12 @@ class PostTableViewCell: UITableViewCell {
     category.text = post.category
     title.text = post.name
     createdBy.text = post.createdBy.screenName
+    starIcon.textColor = post.star ? UIColor.esaGreen() : UIColor.esaFontBlue()
+    eyeIcon.textColor = post.watch ? UIColor.esaGreen() : UIColor.esaFontBlue()
+    starCount.text = String(post.stargazersCount)
+    eyeCount.text = String(post.watchersCount)
+    commentsCount.text = String(post.commentsCount)
+    checkCount.text = "\(post.doneTasksCount)/\(post.tasksCount)"
     wip.hidden = !post.wip
     contentsView.alpha = post.wip ? 0.5 : 1.0
   }

@@ -13,6 +13,9 @@ extension UIColor {
   class func esaGreen() -> UIColor {
     return UIColor(hexString: "#0a9b94")
   }
+  class func esaFontBlue() -> UIColor {
+    return UIColor(hexString: "#3c4a60")
+  }
   
   class func grayUITextFieldBorderColor() -> UIColor {
     return UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)
