@@ -14,9 +14,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.tabBar.items?[0].setFAIcon(.FAHome)
-    self.tabBar.items?[1].setFAIcon(.FACommentO)
-    self.tabBar.items?[2].setFAIcon(.FASmileO)
-    self.tabBar.items?[3].setFAIcon(.FAGear)
+    self.tabBar.items?[1].setFAIcon(.FASmileO)
+    self.tabBar.items?[2].setFAIcon(.FAGear)
   }
   
   override func didReceiveMemoryWarning() {

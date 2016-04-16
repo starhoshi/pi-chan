@@ -21,7 +21,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="etc-RE-OQf" kind="relationship" relationship="viewControllers" id="jky-vw-HI6"/>
-                        <segue destination="B1D-X1-mdZ" kind="relationship" relationship="viewControllers" id="R6F-rI-n5S"/>
                         <segue destination="INe-VB-4xi" kind="relationship" relationship="viewControllers" id="TA7-y7-TBb"/>
                         <segue destination="mz9-JA-cqY" kind="relationship" relationship="viewControllers" id="CDm-k3-uIm"/>
                     </connections>
@@ -64,38 +63,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5D-Eq-NNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1004" y="-10"/>
-        </scene>
-        <!--Comments-->
-        <scene sceneID="Yzu-2g-2Xk">
-            <objects>
-                <navigationController id="B1D-X1-mdZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Comments" id="qMt-z6-uSD"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gFt-w2-akF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gd7-ef-JVr" kind="relationship" relationship="rootViewController" id="afT-fv-eac"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qee-6F-nSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="569" y="660"/>
-        </scene>
-        <!--Comments-->
-        <scene sceneID="BZd-wS-eBC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Comments" id="gd7-ef-JVr" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="65o-ew-rO4"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztj-sK-FvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1012" y="660"/>
         </scene>
         <!--Teams-->
         <scene sceneID="uDe-Jx-DP2">
