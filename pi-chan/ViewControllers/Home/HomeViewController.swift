@@ -114,7 +114,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       return
     }
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page!, perPage: 7){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page!){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
