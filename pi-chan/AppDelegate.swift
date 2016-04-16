@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UpdateChecker.prompt()
     KeychainManager.initialSettings()
     IQKeyboardManager.sharedManager().enable = true
+    
+    SVProgressHUD.setMinimumDismissTimeInterval(2)
     
     // navigation bar settings
     UINavigationBar.appearance().tintColor = UIColor.whiteColor()

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   var posts:[Post] = []
   var nextPage:Int? = 1
+  var loading = false
   //  var searchController:UISearchController!
   let searchController = UISearchController(searchResultsController: nil)
   
@@ -110,11 +111,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func loadPostApi(page:Int?){
-    if page == nil && SVProgressHUD.isVisible(){
+    if page == nil || loading{
       return
     }
+    loading = true
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page!){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
@@ -126,6 +128,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         log?.error("\(error)")
         Window.openLogin(self)
       }
+      self.loading = false
     }
   }
   
