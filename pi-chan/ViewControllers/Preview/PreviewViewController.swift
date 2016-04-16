@@ -37,10 +37,9 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
       case .Success(let post):
         SVProgressHUD.showSuccessWithStatus("Success!")
         self.post = post
-        log?.info("\(post)")
         self.navigationItem.title = post.name
-        let md = post.bodyMd.stringByReplacingOccurrencesOfString("\r\n", withString: "\\n")
-        let js = "insert('\(md)');"
+        let js = "insert('\(post.bodyMd.replaceNewLine())');"
+        log?.debug("\(js)")
         self.webView.stringByEvaluatingJavaScriptFromString(js)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
