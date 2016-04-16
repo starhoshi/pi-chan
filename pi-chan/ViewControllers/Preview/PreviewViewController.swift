@@ -56,8 +56,6 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     if navigationType == .Other{
       return true
     }else{
-      print(webView)
-      print(navigationType.rawValue)
       let safari = SFSafariViewController(URL: request.URL!, entersReaderIfAvailable: true)
       presentViewController(safari, animated: true, completion: nil)
       return false
