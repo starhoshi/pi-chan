@@ -10,6 +10,7 @@ import UIKit
 import APIKit
 import SVProgressHUD
 import Font_Awesome_Swift
+import SDCAlertView
 
 class LoginViewController: UIViewController {
   
@@ -17,12 +18,14 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var teamField: UITextField!
   @IBOutlet weak var keyIconLabel: UILabel!
   @IBOutlet weak var teamIconLabel: UILabel!
+  @IBOutlet weak var tokenQuestion: UIButton!
   override func viewDidLoad() {
     super.viewDidLoad()
     tokenField.text = KeychainManager.getToken()
     teamField.text = KeychainManager.getTeamName()
     keyIconLabel.FAIcon = .FAKey
     teamIconLabel.FAIcon = .FASmileO
+    tokenQuestion.setFAIcon(.FAQuestionCircle, forState: .Normal)
   }
   
   override func didReceiveMemoryWarning() {
@@ -46,6 +49,9 @@ class LoginViewController: UIViewController {
     }
   }
   
+  @IBAction func showTokenQuestion(sender: AnyObject) {
+    AlertController.alertWithTitle("Access Token", message: "ピーちゃんを利用するには、アクセストークンが必要です。\nアクセストークンは、ユーザの管理画面(https://[team].esa.io/user/tokens)から発行できます。", actionTitle: "OK")
+  }
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }
