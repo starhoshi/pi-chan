@@ -29,10 +29,10 @@ class PostTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    starIcon.setFAIcon(.FAStar, iconSize: 16)
-    eyeIcon.setFAIcon(.FAEye, iconSize: 16)
-    commentsIcon.setFAIcon(.FAComments, iconSize: 16)
-    checkIcon.setFAIcon(.FACheckSquareO, iconSize: 16)
+    starIcon.setFAIcon(.FAStar, iconSize: 14)
+    eyeIcon.setFAIcon(.FAEye, iconSize: 14)
+    commentsIcon.setFAIcon(.FAComments, iconSize: 14)
+    checkIcon.setFAIcon(.FACheckSquareO, iconSize: 14)
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
