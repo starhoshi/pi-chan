@@ -9,6 +9,8 @@
 import UIKit
 import Kingfisher
 import Font_Awesome_Swift
+import SwiftDate
+import NSDate_TimeAgo
 
 class PostTableViewCell: UITableViewCell {
   
@@ -45,7 +47,6 @@ class PostTableViewCell: UITableViewCell {
     circleThumbnail.clipsToBounds = true;
     category.text = post.category
     title.text = post.name
-    createdBy.text = post.createdBy.screenName
     starIcon.textColor = post.star ? UIColor.esaGreen() : UIColor.esaFontBlue()
     eyeIcon.textColor = post.watch ? UIColor.esaGreen() : UIColor.esaFontBlue()
     starCount.text = String(post.stargazersCount)
@@ -54,5 +55,18 @@ class PostTableViewCell: UITableViewCell {
     checkCount.text = "\(post.doneTasksCount)/\(post.tasksCount)"
     wip.hidden = !post.wip
     contentsView.alpha = post.wip ? 0.5 : 1.0
+    setCreatedBy(post)
+  }
+  
+  func setCreatedBy(post:Post){
+    var createdByText = ""
+    if post.updatedAt == post.createdAt {
+      createdByText += "Created by \(post.createdBy.screenName) | "
+      createdByText += post.createdAt.toDateFromISO8601()!.timeAgo()
+    } else {
+      createdByText += "Updated by \(post.updatedBy.screenName) | "
+      createdByText += post.updatedAt.toDateFromISO8601()!.timeAgo()
+    }
+    createdBy.text = createdByText
   }
 }

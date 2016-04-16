@@ -12,12 +12,13 @@ PODS:
   - Himotoki (1.7.0)
   - KeychainAccess (2.3.4)
   - Kingfisher (2.2.0)
+  - NSDate+TimeAgo (1.0.6)
   - Result (2.0.0)
   - SCLAlertView (0.5.2)
   - SDCAlertView (5.0)
   - Siren (0.6.7)
   - SVProgressHUD (2.0)
-  - SwiftMoment (0.4)
+  - SwiftDate (3.0.8)
   - SwiftyUserDefaults (2.1.3)
   - UITextView+Placeholder (1.2.0)
   - VTAcknowledgementsViewController (0.17)
@@ -35,11 +36,12 @@ DEPENDENCIES:
   - Himotoki (~> 1.7)
   - KeychainAccess
   - Kingfisher (~> 2.2)
+  - NSDate+TimeAgo
   - SCLAlertView
   - SDCAlertView (~> 5.0)
   - Siren
   - SVProgressHUD
-  - SwiftMoment
+  - SwiftDate
   - SwiftyUserDefaults
   - UITextView+Placeholder (~> 1.2)
   - VTAcknowledgementsViewController
@@ -57,12 +59,13 @@ SPEC CHECKSUMS:
   Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
   KeychainAccess: 3a21b6944b4f2a22653f091d770cf10374961a94
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
+  NSDate+TimeAgo: 35601c619b2d59290055e4fe76e61d97677a2360
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SCLAlertView: 66873759027a98f891b6ba9042d75db9082abca2
   SDCAlertView: e552dd803a1ea47ffda9f718b046e307cfd6b82a
   Siren: 6d1c751d3ae4f1abcfeff17c77ee6576da8f09e1
   SVProgressHUD: e9e7c893686a20da55a28015ed384d9425e15479
-  SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29
+  SwiftDate: 971f8b9394f664f2226b9c3ab64e801a7291c612
   SwiftyUserDefaults: bd394a09247e3f00e17e402aa535c047c5d12b07
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
   VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80
