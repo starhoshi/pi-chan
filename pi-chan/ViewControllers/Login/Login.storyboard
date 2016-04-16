@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="983e32c2a6b1a12f514313f53b267bcf411f9a1c..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3m-T9-7e7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="983e32c2a6b1a12f514313f53b267bcf411f9a1c..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="y3m-T9-7e7">
                                 <rect key="frame" x="8" y="113" width="584" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="f6D-5g-XcN"/>
@@ -59,7 +59,7 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Team Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUN-AO-5vG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Team Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FUN-AO-5vG">
                                 <rect key="frame" x="8" y="196" width="584" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jRh-VU-UhV"/>
