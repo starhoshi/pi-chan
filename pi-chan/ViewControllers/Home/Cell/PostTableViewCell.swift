@@ -16,6 +16,7 @@ class PostTableViewCell: UITableViewCell {
   
   @IBOutlet weak var contentsView: UIView!
   @IBOutlet weak var circleThumbnail: UIImageView!
+  @IBOutlet weak var circleUpdateThumbnail: UIImageView!
   @IBOutlet weak var wip: UILabel!
   @IBOutlet weak var category: UILabel!
   @IBOutlet weak var title: UILabel!
@@ -42,9 +43,6 @@ class PostTableViewCell: UITableViewCell {
   }
   
   func setItems(post:Post){
-    circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
-    circleThumbnail.layer.cornerRadius = circleThumbnail.frame.size.width / 2;
-    circleThumbnail.clipsToBounds = true;
     category.text = post.category
     title.text = post.name
     starIcon.textColor = post.star ? UIColor.esaGreen() : UIColor.esaFontBlue()
@@ -56,6 +54,18 @@ class PostTableViewCell: UITableViewCell {
     wip.hidden = !post.wip
     contentsView.alpha = post.wip ? 0.5 : 1.0
     setCreatedBy(post)
+    setThumbnail(post)
+  }
+  
+  func setThumbnail(post:Post){
+    circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
+    circleThumbnail.layer.cornerRadius = circleThumbnail.frame.size.width / 2;
+    circleThumbnail.clipsToBounds = true;
+    if post.createdBy.screenName != post.updatedBy.screenName{
+      circleUpdateThumbnail.kf_setImageWithURL(post.updatedBy.icon)
+      circleUpdateThumbnail.layer.cornerRadius = circleUpdateThumbnail.frame.size.width / 2;
+      circleUpdateThumbnail.clipsToBounds = true;
+    }
   }
   
   func setCreatedBy(post:Post){
