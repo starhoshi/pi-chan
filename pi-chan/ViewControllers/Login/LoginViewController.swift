@@ -9,15 +9,20 @@
 import UIKit
 import APIKit
 import SVProgressHUD
+import Font_Awesome_Swift
 
 class LoginViewController: UIViewController {
   
   @IBOutlet weak var tokenField: UITextField!
   @IBOutlet weak var teamField: UITextField!
+  @IBOutlet weak var keyIconLabel: UILabel!
+  @IBOutlet weak var teamIconLabel: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
     tokenField.text = KeychainManager.getToken()
     teamField.text = KeychainManager.getTeamName()
+    keyIconLabel.FAIcon = .FAKey
+    teamIconLabel.FAIcon = .FASmileO
   }
   
   override func didReceiveMemoryWarning() {
