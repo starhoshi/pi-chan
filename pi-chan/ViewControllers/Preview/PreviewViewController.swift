@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SafariServices
 
 class PreviewViewController: UIViewController, UIWebViewDelegate {
   var postNumber:Int!
@@ -50,6 +51,20 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
   func webViewDidFinishLoad(webView: UIWebView) {
     loadApi()
   }
+  
+  func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    if navigationType == .Other{
+      return true
+    }else{
+      print(webView)
+      print(navigationType.rawValue)
+      let safari = SFSafariViewController(URL: request.URL!, entersReaderIfAvailable: true)
+      presentViewController(safari, animated: true, completion: nil)
+      return false
+    }
+    
+  }
+  
   @IBAction func openEditor(sender: AnyObject) {
     Window.openEditor(self, post: post)
   }
