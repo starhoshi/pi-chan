@@ -15,15 +15,21 @@ struct GetPostsRequest: EsaRequestType {
   let esa: Esa
   let page: Int
   let perPage: Int
+  let q: String?
   
-  init(esa: Esa, page:Int?, perPage:Int) {
+  init(esa: Esa, page:Int?, perPage:Int, q:String?) {
     self.esa = esa
     self.page = page == nil ? 1 : page!
     self.perPage = perPage
+    self.q = q
   }
   
   var parameters: [String : AnyObject]{
-    return ["page":page, "per_page":perPage]
+    var params:[String : AnyObject] = ["page":page, "per_page":perPage]
+    if let q = q{
+      params["q"] = q
+    }
+    return params
   }
   
   var method: HTTPMethod {

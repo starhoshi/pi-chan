@@ -12,12 +12,11 @@ import DGElasticPullToRefresh
 import DZNEmptyDataSet
 import Cent
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate{
   
   var posts:[Post] = []
   var nextPage:Int? = 1
   var loading = false
-  //  var searchController:UISearchController!
   let searchController = UISearchController(searchResultsController: nil)
   
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
@@ -38,7 +37,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func setSearchBar(){
-    //    searchController.searchResultsUpdater = self
+    searchController.searchBar.delegate = self
     searchController.hidesNavigationBarDuringPresentation = false
     searchController.dimsBackgroundDuringPresentation = false
     searchController.obscuresBackgroundDuringPresentation = false
@@ -69,6 +68,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
       }, loadingView: View.refreshLoading())
     tableView.dg_setPullToRefreshFillColor(UIColor.esaGreen())
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+  }
+  
+  func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    resetAndLoadApi(searchBar.text)
   }
   
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
@@ -105,18 +108,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     previewViewController.postNumber = sender as! Int
   }
   
-  func resetAndLoadApi(){
+  func resetAndLoadApi(q:String? = nil){
     posts = []
-    loadPostApi(1)
+    loadPostApi(1,q:q)
   }
   
-  func loadPostApi(page:Int?){
+  func loadPostApi(page:Int?, q:String? = nil){
     if page == nil || loading{
       return
     }
     loading = true
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page, q:q){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")
