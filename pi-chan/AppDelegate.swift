@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     UpdateChecker.prompt()
     KeychainManager.initialSettings()
+    IQKeyboardManager.sharedManager().enable = true
     
     // navigation bar settings
     UINavigationBar.appearance().tintColor = UIColor.whiteColor()

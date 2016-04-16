@@ -10,6 +10,7 @@ PODS:
   - DZNEmptyDataSet (1.7.3)
   - Font-Awesome-Swift (1.4.6)
   - Himotoki (1.7.0)
+  - IQKeyboardManagerSwift (4.0.1)
   - KeychainAccess (2.3.4)
   - Kingfisher (2.2.0)
   - NSDate+TimeAgo (1.0.6)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - Font-Awesome-Swift
   - Himotoki (~> 1.7)
+  - IQKeyboardManagerSwift
   - KeychainAccess
   - Kingfisher (~> 2.2)
   - NSDate+TimeAgo
@@ -57,6 +59,7 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
   Font-Awesome-Swift: a965c23e619514be65de9b113f49038ca683c1bb
   Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
+  IQKeyboardManagerSwift: e92246955e21dad73ad9dc89b80adb134d8bb395
   KeychainAccess: 3a21b6944b4f2a22653f091d770cf10374961a94
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
   NSDate+TimeAgo: 35601c619b2d59290055e4fe76e61d97677a2360

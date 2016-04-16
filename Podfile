@@ -25,6 +25,7 @@ target 'pi-chan' do
   pod 'UITextView+Placeholder', '~> 1.2'
   pod 'SCLAlertView'
   pod 'SDCAlertView', '~> 5.0'
+  pod 'IQKeyboardManagerSwift'
 end
 
 target 'pi-chanTests' do
