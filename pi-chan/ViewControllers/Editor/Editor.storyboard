@@ -8,6 +8,7 @@
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -27,18 +28,13 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90l-GZ-Oek">
-                                <rect key="frame" x="7" y="27" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="close:" destination="Ui9-Qj-cgq" eventType="touchUpInside" id="oTT-xf-7Vd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo6-eW-oem">
-                                <rect key="frame" x="547" y="27" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="562" y="27" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Zk-4t-sTo"/>
+                                    <constraint firstAttribute="width" constant="30" id="Mv6-hG-Add"/>
+                                </constraints>
+                                <state key="normal" title="S">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -75,19 +71,47 @@
                                     <constraint firstItem="ktc-YW-U70" firstAttribute="top" secondItem="y3D-TT-khQ" secondAttribute="top" constant="8" id="jw2-ev-Vm7"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idl-MA-HsO">
+                                <rect key="frame" x="46" y="29" width="508" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="qrU-BE-CVO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90l-GZ-Oek">
+                                <rect key="frame" x="8" y="27" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AZJ-GA-qDN"/>
+                                    <constraint firstAttribute="width" constant="30" id="mnc-Cu-k5f"/>
+                                </constraints>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="Ui9-Qj-cgq" eventType="touchUpInside" id="oTT-xf-7Vd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="90l-GZ-Oek" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="7" id="0L5-D7-eAb"/>
                             <constraint firstAttribute="trailing" secondItem="y3D-TT-khQ" secondAttribute="trailing" id="2IG-MM-TaT"/>
-                            <constraint firstAttribute="trailing" secondItem="oo6-eW-oem" secondAttribute="trailing" constant="7" id="2yO-Vm-w9o"/>
-                            <constraint firstItem="90l-GZ-Oek" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" constant="7" id="76N-yK-pHQ"/>
+                            <constraint firstItem="y3D-TT-khQ" firstAttribute="top" secondItem="idl-MA-HsO" secondAttribute="bottom" constant="9" id="6uM-eJ-92C"/>
+                            <constraint firstItem="y3D-TT-khQ" firstAttribute="top" secondItem="oo6-eW-oem" secondAttribute="bottom" constant="7" id="89K-Bq-eIn"/>
                             <constraint firstItem="y3D-TT-khQ" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" id="8DL-bU-bKi"/>
+                            <constraint firstItem="y3D-TT-khQ" firstAttribute="top" secondItem="90l-GZ-Oek" secondAttribute="bottom" constant="7" id="Azd-eT-76S"/>
                             <constraint firstItem="Q8f-JC-fVl" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" id="Fhp-y0-5PI"/>
+                            <constraint firstItem="90l-GZ-Oek" firstAttribute="leading" secondItem="pGO-eG-oPC" secondAttribute="leading" constant="8" id="Gyd-aE-0qz"/>
+                            <constraint firstItem="idl-MA-HsO" firstAttribute="leading" secondItem="90l-GZ-Oek" secondAttribute="trailing" constant="8" id="KYa-rJ-JVl"/>
                             <constraint firstAttribute="trailing" secondItem="Q8f-JC-fVl" secondAttribute="trailing" id="YjQ-Wg-3sl"/>
-                            <constraint firstItem="oo6-eW-oem" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="7" id="gl7-rH-lln"/>
+                            <constraint firstItem="oo6-eW-oem" firstAttribute="leading" secondItem="idl-MA-HsO" secondAttribute="trailing" constant="8" id="dNX-VO-R8m"/>
+                            <constraint firstItem="90l-GZ-Oek" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="7" id="gHb-r6-aod"/>
+                            <constraint firstItem="oo6-eW-oem" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="7" id="gqY-zr-iD4"/>
                             <constraint firstItem="T8g-a6-TUr" firstAttribute="top" secondItem="y3D-TT-khQ" secondAttribute="bottom" id="k2P-sJ-fFp"/>
+                            <constraint firstAttribute="trailing" secondItem="oo6-eW-oem" secondAttribute="trailing" constant="8" id="rk6-Z2-Wco"/>
                             <constraint firstItem="y3D-TT-khQ" firstAttribute="top" secondItem="Q8f-JC-fVl" secondAttribute="bottom" id="s3U-Fe-wFN"/>
+                            <constraint firstItem="idl-MA-HsO" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" constant="9" id="uuD-3n-qbl"/>
                             <constraint firstItem="Q8f-JC-fVl" firstAttribute="top" secondItem="R3f-DY-Ch5" secondAttribute="bottom" id="yZC-OF-yqq"/>
                         </constraints>
                     </view>
@@ -95,6 +119,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="90l-GZ-Oek" id="lef-YY-KAL"/>
                         <outlet property="navigationBar" destination="Q8f-JC-fVl" id="SCL-L4-O9c"/>
+                        <outlet property="navigationTitle" destination="idl-MA-HsO" id="Fx5-fU-ZvA"/>
                         <outlet property="sendButton" destination="oo6-eW-oem" id="lRr-GE-Zls"/>
                         <outlet property="textField" destination="ktc-YW-U70" id="V5t-cJ-qeT"/>
                         <outlet property="textView" destination="QUh-eD-Ta5" id="aMl-Tq-LzD"/>

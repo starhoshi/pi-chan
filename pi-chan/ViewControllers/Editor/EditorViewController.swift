@@ -19,6 +19,7 @@ class EditorViewController: UIViewController {
   var postsParameters: PostsParameters!
   
   @IBOutlet weak var navigationBar: UINavigationBar!
+  @IBOutlet weak var navigationTitle: UILabel!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var sendButton: UIButton!
   @IBOutlet weak var textView: UITextView!
@@ -31,6 +32,7 @@ class EditorViewController: UIViewController {
     setTextViewStyle()
     textView.text = post?.bodyMd
     textField.text = post?.fullName
+    navigationTitle.text = (post == nil) ? "New Posts" : post?.name
     client = Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!)
   }
   
