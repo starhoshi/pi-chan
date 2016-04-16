@@ -18,6 +18,9 @@ class EditorViewController: UIViewController {
   var client:Esa!
   var postsParameters: PostsParameters!
   
+  @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
+  @IBOutlet weak var contentViewWidthConstraint: NSLayoutConstraint!
+  @IBOutlet weak var contentView: UIView!
   @IBOutlet weak var navigationBar: UINavigationBar!
   @IBOutlet weak var navigationTitle: UILabel!
   @IBOutlet weak var cancelButton: UIButton!
@@ -26,6 +29,10 @@ class EditorViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   override func viewDidLoad() {
     super.viewDidLoad()
+    contentViewWidthConstraint.constant = CGRectGetWidth(view.frame)
+    //    var frame = CGRect(x:contentView.frame.maxX, y:contentView.frame.maxY, width:contentView.frame.width, height:200.0)
+    //    frame.height
+    contentViewHeightConstraint.constant = CGFloat(view.frame.height - 64)
     sendButton.setFAIcon(.FASend, iconSize: 22, forState: .Normal)
     cancelButton.setFAIcon(.FAClose, iconSize: 22, forState: .Normal)
     setStatusBarBackground()
