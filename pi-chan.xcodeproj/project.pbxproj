@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C9FB46EDC0CFA89CFE4349D /* Pods_pi_chan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F735B90EC8B554F8EB36E76B /* Pods_pi_chan.framework */; };
-		9BD3BAE71CBF4BAF00503ADE /* emojify.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 9BD3BAE61CBF4BAF00503ADE /* emojify.min.js */; };
-		9BD3BAE91CBF4BEA00503ADE /* emojify.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 9BD3BAE81CBF4BEA00503ADE /* emojify.min.css */; };
 		E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */; };
 		E33412BC1CB40CF500F455BE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412BB1CB40CF500F455BE /* View.swift */; };
 		E33412C01CB4288500F455BE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412BE1CB4288500F455BE /* PostTableViewCell.swift */; };
@@ -86,8 +84,6 @@
 
 /* Begin PBXFileReference section */
 		65469B0622BBDBBE099147FC /* Pods-pi-chan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-chan.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan.release.xcconfig"; sourceTree = "<group>"; };
-		9BD3BAE61CBF4BAF00503ADE /* emojify.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = emojify.min.js; sourceTree = "<group>"; };
-		9BD3BAE81CBF4BEA00503ADE /* emojify.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = emojify.min.css; sourceTree = "<group>"; };
 		D42D9F7198932C8E74FC4FDD /* Pods-pi-chan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-chan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan.debug.xcconfig"; sourceTree = "<group>"; };
 		E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor+Extension.swift"; sourceTree = "<group>"; };
 		E33412BB1CB40CF500F455BE /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -285,8 +281,6 @@
 			children = (
 				E37402CA1CBD446A00E4659B /* Preview.storyboard */,
 				E37402C81CBD445D00E4659B /* PreviewViewController.swift */,
-				9BD3BAE81CBF4BEA00503ADE /* emojify.min.css */,
-				9BD3BAE61CBF4BAF00503ADE /* emojify.min.js */,
 				E354608A1CBEC1DD00BE7952 /* github-markdown.css */,
 				E35460891CBEC1DD00BE7952 /* marked.js */,
 				E35460861CBE97EF00BE7952 /* md.html */,
@@ -556,9 +550,7 @@
 				E33599591CA80385001A3C8D /* Settings.storyboard in Resources */,
 				E33599661CA8329F001A3C8D /* Login.storyboard in Resources */,
 				E3A9A8F81CBA222D0031FBAE /* Lato-Regular.ttf in Resources */,
-				9BD3BAE71CBF4BAF00503ADE /* emojify.min.js in Resources */,
 				E37402CB1CBD446A00E4659B /* Preview.storyboard in Resources */,
-				9BD3BAE91CBF4BEA00503ADE /* emojify.min.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
