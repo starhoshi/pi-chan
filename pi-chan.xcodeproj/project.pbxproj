@@ -18,8 +18,6 @@
 		E33599471CA7E373001A3C8D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599461CA7E373001A3C8D /* Logger.swift */; };
 		E335994A1CA7E5DA001A3C8D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599481CA7E5DA001A3C8D /* Home.storyboard */; };
 		E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599491CA7E5DA001A3C8D /* HomeViewController.swift */; };
-		E33599511CA80223001A3C8D /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599501CA80223001A3C8D /* Comments.storyboard */; };
-		E33599531CA80250001A3C8D /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599521CA80250001A3C8D /* CommentsViewController.swift */; };
 		E33599551CA80325001A3C8D /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599541CA80325001A3C8D /* TeamsViewController.swift */; };
 		E33599571CA80331001A3C8D /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599561CA80331001A3C8D /* Teams.storyboard */; };
 		E33599591CA80385001A3C8D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599581CA80385001A3C8D /* Settings.storyboard */; };
@@ -58,6 +56,9 @@
 		E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */; };
 		E3D0C1651CC14F17006A48EA /* PostsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1641CC14F17006A48EA /* PostsParameters.swift */; };
 		E3D0C1671CC236D4006A48EA /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1661CC236D4006A48EA /* String+Extension.swift */; };
+		E3D0C16B1CC35959006A48EA /* GET_Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C16A1CC35959006A48EA /* GET_Members.swift */; };
+		E3D0C16D1CC359AB006A48EA /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C16C1CC359AB006A48EA /* Members.swift */; };
+		E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C16E1CC359B1006A48EA /* Member.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -96,8 +97,6 @@
 		E33599461CA7E373001A3C8D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E33599481CA7E5DA001A3C8D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E33599491CA7E5DA001A3C8D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E33599501CA80223001A3C8D /* Comments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Comments.storyboard; sourceTree = "<group>"; };
-		E33599521CA80250001A3C8D /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		E33599541CA80325001A3C8D /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		E33599561CA80331001A3C8D /* Teams.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
 		E33599581CA80385001A3C8D /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -136,6 +135,9 @@
 		E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PATCH_Posts.swift; sourceTree = "<group>"; };
 		E3D0C1641CC14F17006A48EA /* PostsParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsParameters.swift; sourceTree = "<group>"; };
 		E3D0C1661CC236D4006A48EA /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E3D0C16A1CC35959006A48EA /* GET_Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GET_Members.swift; sourceTree = "<group>"; };
+		E3D0C16C1CC359AB006A48EA /* Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
+		E3D0C16E1CC359B1006A48EA /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -241,15 +243,6 @@
 				E33599541CA80325001A3C8D /* TeamsViewController.swift */,
 			);
 			path = Teams;
-			sourceTree = "<group>";
-		};
-		E335994F1CA801AD001A3C8D /* Comments */ = {
-			isa = PBXGroup;
-			children = (
-				E33599501CA80223001A3C8D /* Comments.storyboard */,
-				E33599521CA80250001A3C8D /* CommentsViewController.swift */,
-			);
-			path = Comments;
 			sourceTree = "<group>";
 		};
 		E335995C1CA80E9B001A3C8D /* MainTabbar */ = {
@@ -383,6 +376,8 @@
 				E33599791CB2C956001A3C8D /* Post.swift */,
 				E33599811CB2D2D0001A3C8D /* Posts.swift */,
 				E38A0F691CA7D95200ED99B6 /* Team.swift */,
+				E3D0C16C1CC359AB006A48EA /* Members.swift */,
+				E3D0C16E1CC359B1006A48EA /* Member.swift */,
 				E335997B1CB2CA75001A3C8D /* Teams.swift */,
 				E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */,
 				E3D0C15E1CC1114E006A48EA /* SharingUrls.swift */,
@@ -413,7 +408,6 @@
 		E3D9A5D71CA7D6B600B43F37 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E335994F1CA801AD001A3C8D /* Comments */,
 				E3D0C1551CBFD85B006A48EA /* Editor */,
 				E335994C1CA8017D001A3C8D /* Home */,
 				E33599641CA8327B001A3C8D /* Login */,
@@ -436,6 +430,7 @@
 				E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */,
 				E33599711CB030CC001A3C8D /* GET_Team.swift */,
 				E335996F1CAAF218001A3C8D /* GET_Teams.swift */,
+				E3D0C16A1CC35959006A48EA /* GET_Members.swift */,
 			);
 			path = Apis;
 			sourceTree = "<group>";
@@ -551,7 +546,6 @@
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
-				E33599511CA80223001A3C8D /* Comments.storyboard in Resources */,
 				E354608B1CBEC1DD00BE7952 /* marked.js in Resources */,
 				E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */,
 				E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */,
@@ -646,6 +640,7 @@
 				E37402C91CBD445D00E4659B /* PreviewViewController.swift in Sources */,
 				E3D0C15D1CBFDE98006A48EA /* Window.swift in Sources */,
 				E33599701CAAF218001A3C8D /* GET_Teams.swift in Sources */,
+				E3D0C16B1CC35959006A48EA /* GET_Members.swift in Sources */,
 				E33412C51CB8B5E000F455BE /* UIScrollView+Extension.swift in Sources */,
 				E3D0C15F1CC1114E006A48EA /* SharingUrls.swift in Sources */,
 				E3D0C1611CC1186D006A48EA /* POST_Posts.swift in Sources */,
@@ -656,8 +651,8 @@
 				E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */,
 				E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */,
 				E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */,
-				E33599531CA80250001A3C8D /* CommentsViewController.swift in Sources */,
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
+				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
 				E33599611CA814DA001A3C8D /* PostsViewController.swift in Sources */,
 				E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */,
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
@@ -665,6 +660,7 @@
 				E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */,
 				E33599721CB030CC001A3C8D /* GET_Team.swift in Sources */,
 				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,
+				E3D0C16D1CC359AB006A48EA /* Members.swift in Sources */,
 				E3D0C1671CC236D4006A48EA /* String+Extension.swift in Sources */,
 				E33599781CB2C148001A3C8D /* GET_Post.swift in Sources */,
 				E3D0C1651CC14F17006A48EA /* PostsParameters.swift in Sources */,

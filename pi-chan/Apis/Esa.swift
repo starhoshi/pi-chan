@@ -50,6 +50,11 @@ class Esa{
     return Session.sendRequest(request, handler:handler)
   }
   
+  func members(handler:(Result<Members, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetMembersRequest(esa: self)
+    return Session.sendRequest(request, handler:handler)
+  }
+  
   static func createHTTPHeaderFields(token:String) -> [String:String] {
     return ["Authorization":"Bearer " + token]
   }
