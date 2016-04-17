@@ -22,6 +22,11 @@ struct KeychainManager {
       setTeamName("")
     }
   }
+  static func clear() {
+    setToken("")
+    setTeamName("")
+  }
+  
   static func getToken() -> String?{
     return keychain[TOKEN]
   }

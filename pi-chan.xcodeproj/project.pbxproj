@@ -37,6 +37,9 @@
 		E335997E1CB2CC23001A3C8D /* CreatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335997D1CB2CC23001A3C8D /* CreatedBy.swift */; };
 		E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */; };
 		E33599821CB2D2D0001A3C8D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599811CB2D2D0001A3C8D /* Posts.swift */; };
+		E35181171CC39FB2008B141D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35181151CC39FB2008B141D /* SettingTableViewCell.swift */; };
+		E35181181CC39FB2008B141D /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E35181161CC39FB2008B141D /* SettingTableViewCell.xib */; };
+		E351811A1CC3A8DD008B141D /* CellConfigrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35181191CC3A8DD008B141D /* CellConfigrations.swift */; };
 		E35460871CBE97EF00BE7952 /* md.html in Resources */ = {isa = PBXBuildFile; fileRef = E35460861CBE97EF00BE7952 /* md.html */; };
 		E354608B1CBEC1DD00BE7952 /* marked.js in Resources */ = {isa = PBXBuildFile; fileRef = E35460891CBEC1DD00BE7952 /* marked.js */; };
 		E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = E354608A1CBEC1DD00BE7952 /* github-markdown.css */; };
@@ -117,6 +120,9 @@
 		E335997D1CB2CC23001A3C8D /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
 		E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedBy.swift; sourceTree = "<group>"; };
 		E33599811CB2D2D0001A3C8D /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		E35181151CC39FB2008B141D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		E35181161CC39FB2008B141D /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		E35181191CC3A8DD008B141D /* CellConfigrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigrations.swift; sourceTree = "<group>"; };
 		E35460861CBE97EF00BE7952 /* md.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = md.html; sourceTree = "<group>"; };
 		E35460891CBEC1DD00BE7952 /* marked.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = marked.js; sourceTree = "<group>"; };
 		E354608A1CBEC1DD00BE7952 /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-markdown.css"; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				E35181141CC38C54008B141D /* Cell */,
 				E33599581CA80385001A3C8D /* Settings.storyboard */,
 				E335995A1CA80392001A3C8D /* SettingsViewController.swift */,
+				E35181191CC3A8DD008B141D /* CellConfigrations.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -279,6 +286,8 @@
 		E35181141CC38C54008B141D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E35181151CC39FB2008B141D /* SettingTableViewCell.swift */,
+				E35181161CC39FB2008B141D /* SettingTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -566,6 +575,7 @@
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
+				E35181181CC39FB2008B141D /* SettingTableViewCell.xib in Resources */,
 				E354608B1CBEC1DD00BE7952 /* marked.js in Resources */,
 				E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */,
 				E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */,
@@ -665,6 +675,7 @@
 				E38A0F6E1CA7DE6700ED99B6 /* Storyboard+Extension.swift in Sources */,
 				E33599821CB2D2D0001A3C8D /* Posts.swift in Sources */,
 				E33599761CB2B706001A3C8D /* GET_Posts.swift in Sources */,
+				E351811A1CC3A8DD008B141D /* CellConfigrations.swift in Sources */,
 				E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */,
 				E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */,
 				E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */,
@@ -673,6 +684,7 @@
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
 				E33599611CA814DA001A3C8D /* PostsViewController.swift in Sources */,
+				E35181171CC39FB2008B141D /* SettingTableViewCell.swift in Sources */,
 				E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */,
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
 				E33599551CA80325001A3C8D /* TeamsViewController.swift in Sources */,
