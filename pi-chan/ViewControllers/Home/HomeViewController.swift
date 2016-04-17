@@ -15,9 +15,11 @@ import Cent
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate{
   
   var posts:[Post] = []
+  var searchText:String? = nil
   var nextPage:Int? = 1
   var loading = false
-  let searchController = UISearchController(searchResultsController: nil)
+  //  let searchController = UISearchController(searchResultsController: nil)
+  var searchController: UISearchController!
   
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
@@ -36,11 +38,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
   }
   
+  
   func setSearchBar(){
+    searchController = UISearchController(searchResultsController: nil)
     searchController.searchBar.delegate = self
-    searchController.hidesNavigationBarDuringPresentation = false
     searchController.dimsBackgroundDuringPresentation = false
     searchController.obscuresBackgroundDuringPresentation = false
+    searchController.searchBar.text = searchText
     searchController.searchBar.searchBarStyle = UISearchBarStyle.Default
     searchController.searchBar.sizeToFit()
     searchController.searchBar.barTintColor = UIColor.esaGreen()
@@ -48,8 +52,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     searchController.searchBar.layer.borderColor = UIColor.esaGreen().CGColor
     searchController.searchBar.layer.borderWidth = 1
     searchController.searchBar.layer.opacity = 1
+    searchController.loadViewIfNeeded()    // iOS 9
     //    tableView.extendedLayoutIncludesOpaqueBars = true
     tableView.tableHeaderView = searchController.searchBar
+  }
+  
+  deinit {
+    self.tableView.dg_removePullToRefresh()
   }
   
   func initTableView(){
@@ -71,7 +80,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-    resetAndLoadApi(searchBar.text)
+    searchText = searchController.searchBar.text
+    resetAndLoadApi()
   }
   
   func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
@@ -108,18 +118,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     previewViewController.postNumber = sender as! Int
   }
   
-  func resetAndLoadApi(q:String? = nil){
+  func resetAndLoadApi(){
     posts = []
-    loadPostApi(1,q:q)
+    loadPostApi(1)
   }
   
-  func loadPostApi(page:Int?, q:String? = nil){
+  func loadPostApi(page:Int?){
     if page == nil || loading{
       return
     }
     loading = true
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page, q:q){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page, q:searchText){ result in
       switch result {
       case .Success(let posts):
         SVProgressHUD.showSuccessWithStatus("Success!")

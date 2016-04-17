@@ -35,11 +35,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="4ig-n5-1Md" id="6ij-LV-sEp"/>
+                        <segue destination="CDT-UD-sjR" kind="show" identifier="TeamsToHome" id="3NH-wf-zw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJA-Xe-vWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291" y="426"/>
+            <point key="canvasLocation" x="354" y="435"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Ebt-nk-AaU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="CDT-UD-sjR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldl-QU-qD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.5" y="448"/>
         </scene>
     </scenes>
 </document>

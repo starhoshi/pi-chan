@@ -58,13 +58,9 @@ class PostTableViewCell: UITableViewCell {
   }
   
   func setThumbnail(post:Post){
-    circleThumbnail.kf_setImageWithURL(post.createdBy.icon)
-    circleThumbnail.layer.cornerRadius = circleThumbnail.frame.size.width / 2;
-    circleThumbnail.clipsToBounds = true;
+    circleThumbnail.toCircle().kf_setImageWithURL(post.createdBy.icon)
     circleUpdateThumbnail.hidden = post.createdBy.screenName == post.updatedBy.screenName ? true:false
-    circleUpdateThumbnail.kf_setImageWithURL(post.updatedBy.icon)
-    circleUpdateThumbnail.layer.cornerRadius = circleUpdateThumbnail.frame.size.width / 2;
-    circleUpdateThumbnail.clipsToBounds = true;
+    circleUpdateThumbnail.toCircle().kf_setImageWithURL(post.updatedBy.icon)
   }
   
   func setCreatedBy(post:Post){

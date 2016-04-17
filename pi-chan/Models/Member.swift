@@ -11,7 +11,7 @@ import Himotoki
 
 struct Member {
   let name: String
-  let screenName: NSURL
+  let screenName: String
   let icon: NSURL
   let email: String?
 }

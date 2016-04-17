@@ -57,6 +57,9 @@
 		E3D0C16B1CC35959006A48EA /* GET_Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C16A1CC35959006A48EA /* GET_Members.swift */; };
 		E3D0C16D1CC359AB006A48EA /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C16C1CC359AB006A48EA /* Members.swift */; };
 		E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C16E1CC359B1006A48EA /* Member.swift */; };
+		E3D0C1731CC362B5006A48EA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1711CC362B5006A48EA /* MemberTableViewCell.swift */; };
+		E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D0C1721CC362B5006A48EA /* MemberTableViewCell.xib */; };
+		E3D0C1761CC3657B006A48EA /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1751CC3657B006A48EA /* UIImage+Extension.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -134,6 +137,9 @@
 		E3D0C16A1CC35959006A48EA /* GET_Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GET_Members.swift; sourceTree = "<group>"; };
 		E3D0C16C1CC359AB006A48EA /* Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
 		E3D0C16E1CC359B1006A48EA /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		E3D0C1711CC362B5006A48EA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		E3D0C1721CC362B5006A48EA /* MemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
+		E3D0C1751CC3657B006A48EA /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 		E335994E1CA801A1001A3C8D /* Teams */ = {
 			isa = PBXGroup;
 			children = (
+				E3D0C1701CC36259006A48EA /* Cell */,
 				E33599561CA80331001A3C8D /* Teams.storyboard */,
 				E33599541CA80325001A3C8D /* TeamsViewController.swift */,
 			);
@@ -306,6 +313,15 @@
 				E3D0C1561CBFD880006A48EA /* EditorViewController.swift */,
 			);
 			path = Editor;
+			sourceTree = "<group>";
+		};
+		E3D0C1701CC36259006A48EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E3D0C1711CC362B5006A48EA /* MemberTableViewCell.swift */,
+				E3D0C1721CC362B5006A48EA /* MemberTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		E3D9A59A1CA7D29A00B43F37 = {
@@ -388,6 +404,7 @@
 				E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */,
 				E33412C41CB8B5E000F455BE /* UIScrollView+Extension.swift */,
 				E3D0C1661CC236D4006A48EA /* String+Extension.swift */,
+				E3D0C1751CC3657B006A48EA /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -539,6 +556,7 @@
 				E33599631CA814E2001A3C8D /* Posts.storyboard in Resources */,
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
+				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
 				E354608B1CBEC1DD00BE7952 /* marked.js in Resources */,
 				E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */,
@@ -642,6 +660,7 @@
 				E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */,
 				E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */,
 				E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */,
+				E3D0C1731CC362B5006A48EA /* MemberTableViewCell.swift in Sources */,
 				E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */,
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
@@ -649,6 +668,7 @@
 				E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */,
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
 				E33599551CA80325001A3C8D /* TeamsViewController.swift in Sources */,
+				E3D0C1761CC3657B006A48EA /* UIImage+Extension.swift in Sources */,
 				E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */,
 				E33599721CB030CC001A3C8D /* GET_Team.swift in Sources */,
 				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,

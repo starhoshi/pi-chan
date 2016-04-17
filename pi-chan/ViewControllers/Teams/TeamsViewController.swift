@@ -34,10 +34,9 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     self.tableView.dataSource = self
     self.tableView.emptyDataSetSource = self
     self.tableView.emptyDataSetDelegate = self
-    let postCellNib:UINib = UINib(nibName: "PostTableViewCell", bundle: nil)
-    tableView.registerNib(postCellNib, forCellReuseIdentifier: "PostCell")
-    tableView.estimatedRowHeight = 123
-    tableView.rowHeight = UITableViewAutomaticDimension
+    let memberCellNib:UINib = UINib(nibName: "MemberTableViewCell", bundle: nil)
+    tableView.registerNib(memberCellNib, forCellReuseIdentifier: "MemberCell")
+    tableView.estimatedRowHeight = 80
     self.tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self!.tableView.dg_stopLoading()
@@ -64,18 +63,18 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell:PostTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell")! as! PostTableViewCell
-    //    cell.setItems(members[indexPath.row])
+    let cell:MemberTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("MemberCell")! as! MemberTableViewCell
+    cell.setItems(members[indexPath.row])
     return cell
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("HomeToPreview", sender: members[indexPath.row].screenName)
+    performSegueWithIdentifier("TeamsToHome", sender: "@" + members[indexPath.row].screenName)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let previewViewController:PreviewViewController = segue.destinationViewController as! PreviewViewController
-    previewViewController.postNumber = sender as! Int
+    let homeViewController:HomeViewController = segue.destinationViewController as! HomeViewController
+    homeViewController.searchText = sender as? String
   }
   
   func loadMembersApi(){
