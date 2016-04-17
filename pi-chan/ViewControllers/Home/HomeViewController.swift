@@ -18,7 +18,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   var searchText:String? = nil
   var nextPage:Int? = 1
   var loading = false
-  //  let searchController = UISearchController(searchResultsController: nil)
   var searchController: UISearchController!
   
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
@@ -27,6 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     super.viewDidLoad()
     
     rightBarButton.setFAIcon(.FAPencil, iconSize: 22)
+    self.navigationItem.title = searchText != nil ? searchText : "Home"
     initTableView()
     resetAndLoadApi()
     setSearchBar()

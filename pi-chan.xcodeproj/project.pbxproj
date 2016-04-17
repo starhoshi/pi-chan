@@ -232,6 +232,7 @@
 		E335994D1CA80189001A3C8D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E35181141CC38C54008B141D /* Cell */,
 				E33599581CA80385001A3C8D /* Settings.storyboard */,
 				E335995A1CA80392001A3C8D /* SettingsViewController.swift */,
 			);
@@ -273,6 +274,13 @@
 				E33599671CA832D4001A3C8D /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E35181141CC38C54008B141D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		E35ECB051CBA18BB009EC020 /* fonts */ = {

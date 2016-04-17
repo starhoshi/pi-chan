@@ -8,7 +8,7 @@
         <!--Teams-->
         <scene sceneID="QQa-y3-fYA">
             <objects>
-                <viewController id="RUr-de-D2g" customClass="TeamsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RUr-de-D2g" customClass="TeamsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ct-DA-t8r"/>
                         <viewControllerLayoutGuide type="bottom" id="Zad-18-B6h"/>

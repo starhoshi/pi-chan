@@ -8,7 +8,7 @@
         <!--Settings-->
         <scene sceneID="UOd-GK-pRB">
             <objects>
-                <viewController id="UEw-7J-skc" customClass="SettingsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UEw-7J-skc" customClass="SettingsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mkI-py-CZc"/>
                         <viewControllerLayoutGuide type="bottom" id="x6e-Xy-o62"/>
@@ -16,11 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="dVD-yo-Hgn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2n4-Qo-xbv">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2n4-Qo-xbv" firstAttribute="top" secondItem="mkI-py-CZc" secondAttribute="bottom" id="6JR-tL-8ME"/>
+                            <constraint firstItem="x6e-Xy-o62" firstAttribute="top" secondItem="2n4-Qo-xbv" secondAttribute="bottom" id="jG6-kB-arF"/>
+                            <constraint firstItem="2n4-Qo-xbv" firstAttribute="leading" secondItem="dVD-yo-Hgn" secondAttribute="leading" id="naf-ce-ACb"/>
+                            <constraint firstAttribute="trailing" secondItem="2n4-Qo-xbv" secondAttribute="trailing" id="wKh-rm-Gbz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="YC4-DF-Fk8"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="2n4-Qo-xbv" id="0a0-TD-DWG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHX-F9-ia0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
