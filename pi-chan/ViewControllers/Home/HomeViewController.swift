@@ -52,7 +52,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     searchController.searchBar.layer.borderColor = UIColor.esaGreen().CGColor
     searchController.searchBar.layer.borderWidth = 1
     searchController.searchBar.layer.opacity = 1
-    searchController.loadViewIfNeeded()    // iOS 9
+    //    searchController.loadViewIfNeeded()    // iOS 9
     //    tableView.extendedLayoutIncludesOpaqueBars = true
     tableView.tableHeaderView = searchController.searchBar
   }
