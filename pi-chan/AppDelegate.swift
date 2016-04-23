@@ -9,6 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import SVProgressHUD
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITabBarItem.appearance().setTitleTextAttributes(attributesNormal, forState: .Normal)
     UITabBarItem.appearance().setTitleTextAttributes(attributesSelected, forState: .Selected)
     
+    return true
+  }
+  
+  func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+    if (url.host == "oauth-callback") {
+      OAuthSwift.handleOpenURL(url)
+    }
     return true
   }
   

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C9FB46EDC0CFA89CFE4349D /* Pods_pi_chan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F735B90EC8B554F8EB36E76B /* Pods_pi_chan.framework */; };
+		E30B0E631CCBBE490088D43A /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0E621CCBBE490088D43A /* Authorization.swift */; };
+		E30B0E651CCBBF2F0088D43A /* Authorization.sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0E641CCBBF2F0088D43A /* Authorization.sample.swift */; };
 		E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */; };
 		E33412BC1CB40CF500F455BE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412BB1CB40CF500F455BE /* View.swift */; };
 		E33412C01CB4288500F455BE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412BE1CB4288500F455BE /* PostTableViewCell.swift */; };
@@ -91,6 +93,8 @@
 /* Begin PBXFileReference section */
 		65469B0622BBDBBE099147FC /* Pods-pi-chan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-chan.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan.release.xcconfig"; sourceTree = "<group>"; };
 		D42D9F7198932C8E74FC4FDD /* Pods-pi-chan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-chan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan.debug.xcconfig"; sourceTree = "<group>"; };
+		E30B0E621CCBBE490088D43A /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		E30B0E641CCBBF2F0088D43A /* Authorization.sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.sample.swift; sourceTree = "<group>"; };
 		E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor+Extension.swift"; sourceTree = "<group>"; };
 		E33412BB1CB40CF500F455BE /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E33412BE1CB4288500F455BE /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -452,6 +456,8 @@
 			isa = PBXGroup;
 			children = (
 				E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */,
+				E30B0E621CCBBE490088D43A /* Authorization.swift */,
+				E30B0E641CCBBF2F0088D43A /* Authorization.sample.swift */,
 				E33599771CB2C148001A3C8D /* GET_Post.swift */,
 				E3D0C1601CC1186D006A48EA /* POST_Posts.swift */,
 				E33599751CB2B706001A3C8D /* GET_Posts.swift */,
@@ -677,9 +683,11 @@
 				E33599761CB2B706001A3C8D /* GET_Posts.swift in Sources */,
 				E351811A1CC3A8DD008B141D /* CellConfigrations.swift in Sources */,
 				E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */,
+				E30B0E651CCBBF2F0088D43A /* Authorization.sample.swift in Sources */,
 				E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */,
 				E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */,
 				E3D0C1731CC362B5006A48EA /* MemberTableViewCell.swift in Sources */,
+				E30B0E631CCBBE490088D43A /* Authorization.swift in Sources */,
 				E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */,
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,

@@ -14,6 +14,7 @@ PODS:
   - KeychainAccess (2.3.4)
   - Kingfisher (2.2.0)
   - NSDate+TimeAgo (1.0.6)
+  - OAuthSwift (0.5.2)
   - Result (2.0.0)
   - SCLAlertView (0.5.2)
   - SDCAlertView (5.0)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - KeychainAccess
   - Kingfisher (~> 2.2)
   - NSDate+TimeAgo
+  - OAuthSwift (~> 0.5.0)
   - SCLAlertView
   - SDCAlertView (~> 5.0)
   - Siren
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   KeychainAccess: 3a21b6944b4f2a22653f091d770cf10374961a94
   Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
   NSDate+TimeAgo: 35601c619b2d59290055e4fe76e61d97677a2360
+  OAuthSwift: 1ef042d4362e755e24a78f158d817245641a5d24
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SCLAlertView: 66873759027a98f891b6ba9042d75db9082abca2
   SDCAlertView: e552dd803a1ea47ffda9f718b046e307cfd6b82a
