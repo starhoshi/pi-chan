@@ -70,14 +70,7 @@
                             <constraint firstItem="ONS-zm-kZe" firstAttribute="top" secondItem="DVf-7R-kIC" secondAttribute="bottom" constant="142" id="apq-Sc-P6X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Authorization" id="7c3-ec-IiM">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="0Wk-BV-wjU">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="close:" destination="0uY-OQ-eWE" id="r24-SZ-Clz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Authorization" id="7c3-ec-IiM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhd-TJ-dmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

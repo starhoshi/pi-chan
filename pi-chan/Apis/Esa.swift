@@ -21,12 +21,13 @@ class Esa{
     self.currentTeam = currentTeam
   }
   
+  // FIXME: change success, failure to handler
   static func authorization(controller:UIViewController, success:(credential:OAuthSwiftCredential) -> Void, failure:(error:NSError) -> Void){
     Authorization.oauth2(controller, success:success, failure: failure)
   }
   
-  func teams(handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetTeamsRequest(esa: self)
+  static func teams(token:String,handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetTeamsRequest(token: token)
     return Session.sendRequest(request, handler:handler)
   }
   

@@ -12,10 +12,10 @@ import Himotoki
 
 struct GetTeamsRequest: EsaRequestType {
   typealias Response = Teams
-  let esa: Esa
+  let token: String
   
-  init(esa: Esa) {
-    self.esa = esa
+  init(token: String) {
+    self.token = token
   }
   
   var method: HTTPMethod {
@@ -23,7 +23,7 @@ struct GetTeamsRequest: EsaRequestType {
   }
   
   var HTTPHeaderFields:[String:String] {
-    return Esa.createHTTPHeaderFields(esa.token)
+    return Esa.createHTTPHeaderFields(token)
   }
   
   var path: String {

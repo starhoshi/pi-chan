@@ -11,6 +11,7 @@ import APIKit
 import SVProgressHUD
 import Font_Awesome_Swift
 import SDCAlertView
+import Cent
 
 class AuthorizationViewController: UIViewController {
   
@@ -26,15 +27,56 @@ class AuthorizationViewController: UIViewController {
     Esa.authorization(
       self,
       success: {credential in
-        print(credential.oauth_token)
+        log?.info(credential.oauth_token)
+        self.callTeamsApi(credential.oauth_token)
       },
       failure:{ error in
-        print(error)
+        log?.info(error.localizedDescription)
       }
     )
   }
   
-  @IBAction func close(sender: AnyObject) {
-    self.dismissViewControllerAnimated(true, completion: nil)
+  func callTeamsApi(token:String){
+    SVProgressHUD.showWithStatus("Loading...")
+    Esa.teams(token){
+      result in
+      switch result {
+      case .Success(let teams):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(teams)")
+        self.selectTeamWhenJoinedMultiTeams(teams)
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.info("\(error)")
+      }
+    }
+  }
+  
+  func selectTeamWhenJoinedMultiTeams(teams:Teams){
+    let teamNames = getTeamNames(teams)
+    switch teamNames.count {
+    case 0:
+      // throw
+      break
+    case 1:
+      // fin
+      break
+    default:
+      // multi team
+      break
+    }
+    
+    if teamNames.count == 1 {
+      
+    }
+  }
+  
+  func getTeamNames(teams:Teams) -> [String]{
+    var teamNames:[String] = []
+    teams.teams.each { team in
+      teamNames << team.name
+    }
+    log?.info("\(teamNames)")
+    return teamNames
   }
 }
