@@ -56,8 +56,7 @@ class AuthorizationViewController: UIViewController {
   func selectTeamWhenJoinedMultiTeams(teams:Teams, token:String){
     switch teams.teams.count {
     case 1:
-      KeychainManager.setTeamName(teams.teams.first()!.name)
-      KeychainManager.setToken(token)
+      successAuthorization(teams.teams.first()!.name, token:token)
       break
     default:
       showTeamSelectActionSheet(teams, token: token)
@@ -71,11 +70,16 @@ class AuthorizationViewController: UIViewController {
     teams.teams.each { team in
       let image = UIImage(data: NSData(contentsOfURL: team.icon)!)
       actionSheet.addAction(Action(ActionData(title: team.name, subtitle: team.url.absoluteString, image: image!), style: .Default, handler: { action in
-        KeychainManager.setTeamName(team.name)
-        KeychainManager.setToken(token)
+        self.successAuthorization(team.name, token:token)
         log?.debug(team.name)
       }))
     }
     presentViewController(actionSheet, animated: true, completion: nil)
+  }
+  
+  func successAuthorization(teamName:String,token:String){
+    KeychainManager.setTeamName(teamName)
+    KeychainManager.setToken(token)
+    self.dismissViewControllerAnimated(true, completion: nil)
   }
 }

@@ -120,6 +120,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   func resetAndLoadApi(){
     posts = []
+    tableView.reloadData()
     loadPostApi(1)
   }
   
