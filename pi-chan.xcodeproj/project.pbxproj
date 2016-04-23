@@ -25,8 +25,8 @@
 		E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335995D1CA80EDF001A3C8D /* MainTabBarController.swift */; };
 		E33599611CA814DA001A3C8D /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599601CA814DA001A3C8D /* PostsViewController.swift */; };
 		E33599631CA814E2001A3C8D /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599621CA814E2001A3C8D /* Posts.storyboard */; };
-		E33599661CA8329F001A3C8D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599651CA8329F001A3C8D /* Login.storyboard */; };
-		E33599681CA832D4001A3C8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599671CA832D4001A3C8D /* LoginViewController.swift */; };
+		E33599661CA8329F001A3C8D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599651CA8329F001A3C8D /* Authorization.storyboard */; };
+		E33599681CA832D4001A3C8D /* AuthorazationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599671CA832D4001A3C8D /* AuthorazationViewController.swift */; };
 		E335996A1CA83680001A3C8D /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599691CA83680001A3C8D /* UpdateChecker.swift */; };
 		E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335996B1CA9A681001A3C8D /* KeychainManager.swift */; };
 		E33599701CAAF218001A3C8D /* GET_Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335996F1CAAF218001A3C8D /* GET_Teams.swift */; };
@@ -110,8 +110,8 @@
 		E335995D1CA80EDF001A3C8D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E33599601CA814DA001A3C8D /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		E33599621CA814E2001A3C8D /* Posts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
-		E33599651CA8329F001A3C8D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		E33599671CA832D4001A3C8D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E33599651CA8329F001A3C8D /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		E33599671CA832D4001A3C8D /* AuthorazationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorazationViewController.swift; sourceTree = "<group>"; };
 		E33599691CA83680001A3C8D /* UpdateChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
 		E335996B1CA9A681001A3C8D /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		E335996F1CAAF218001A3C8D /* GET_Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GET_Teams.swift; sourceTree = "<group>"; };
@@ -278,12 +278,13 @@
 			path = Posts;
 			sourceTree = "<group>";
 		};
-		E33599641CA8327B001A3C8D /* Login */ = {
+		E33599641CA8327B001A3C8D /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				E33599651CA8329F001A3C8D /* Login.storyboard */,
-				E33599671CA832D4001A3C8D /* LoginViewController.swift */,
+				E33599651CA8329F001A3C8D /* Authorization.storyboard */,
+				E33599671CA832D4001A3C8D /* AuthorazationViewController.swift */,
 			);
+			name = Authorization;
 			path = Login;
 			sourceTree = "<group>";
 		};
@@ -442,7 +443,7 @@
 			children = (
 				E3D0C1551CBFD85B006A48EA /* Editor */,
 				E335994C1CA8017D001A3C8D /* Home */,
-				E33599641CA8327B001A3C8D /* Login */,
+				E33599641CA8327B001A3C8D /* Authorization */,
 				E335995C1CA80E9B001A3C8D /* MainTabbar */,
 				E335995F1CA814C2001A3C8D /* Posts */,
 				E37402C71CBD43CA00E4659B /* Preview */,
@@ -590,7 +591,7 @@
 				E35460871CBE97EF00BE7952 /* md.html in Resources */,
 				E335994A1CA7E5DA001A3C8D /* Home.storyboard in Resources */,
 				E33599591CA80385001A3C8D /* Settings.storyboard in Resources */,
-				E33599661CA8329F001A3C8D /* Login.storyboard in Resources */,
+				E33599661CA8329F001A3C8D /* Authorization.storyboard in Resources */,
 				E3A9A8F81CBA222D0031FBAE /* Lato-Regular.ttf in Resources */,
 				E37402CB1CBD446A00E4659B /* Preview.storyboard in Resources */,
 			);
@@ -668,7 +669,7 @@
 				E33412BC1CB40CF500F455BE /* View.swift in Sources */,
 				E335997C1CB2CA75001A3C8D /* Teams.swift in Sources */,
 				E335997E1CB2CC23001A3C8D /* CreatedBy.swift in Sources */,
-				E33599681CA832D4001A3C8D /* LoginViewController.swift in Sources */,
+				E33599681CA832D4001A3C8D /* AuthorazationViewController.swift in Sources */,
 				E33599471CA7E373001A3C8D /* Logger.swift in Sources */,
 				E335996A1CA83680001A3C8D /* UpdateChecker.swift in Sources */,
 				E37402C91CBD445D00E4659B /* PreviewViewController.swift in Sources */,

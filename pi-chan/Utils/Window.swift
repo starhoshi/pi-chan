@@ -11,8 +11,8 @@ import OAuthSwift
 
 struct Window{
   static func openLogin(controller : UIViewController) {
-    let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-    let login = loginStoryboard.instantiateViewControllerWithIdentifier("LoginNavigation") as! UINavigationController
+    let loginStoryboard = UIStoryboard(name: "Authorization", bundle: nil)
+    let login = loginStoryboard.instantiateViewControllerWithIdentifier("AuthorizationNavigation") as! UINavigationController
     controller.presentViewController(login, animated:true, completion: nil)
   }
   static func openEditor(controller : UIViewController, post: Post?) {
