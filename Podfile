@@ -27,6 +27,7 @@ target 'pi-chan' do
   pod 'SDCAlertView', '~> 5.0'
   pod 'IQKeyboardManagerSwift'
   pod "OAuthSwift", "~> 0.5.0"
+  pod 'XLActionController/Twitter'
 end
 
 target 'pi-chanTests' do

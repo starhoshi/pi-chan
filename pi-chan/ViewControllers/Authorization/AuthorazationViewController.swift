@@ -12,6 +12,7 @@ import SVProgressHUD
 import Font_Awesome_Swift
 import SDCAlertView
 import Cent
+import XLActionController
 
 class AuthorizationViewController: UIViewController {
   
@@ -44,7 +45,7 @@ class AuthorizationViewController: UIViewController {
       case .Success(let teams):
         SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(teams)")
-        self.selectTeamWhenJoinedMultiTeams(teams)
+        self.selectTeamWhenJoinedMultiTeams(teams,token: token)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
         log?.info("\(error)")
@@ -52,31 +53,29 @@ class AuthorizationViewController: UIViewController {
     }
   }
   
-  func selectTeamWhenJoinedMultiTeams(teams:Teams){
-    let teamNames = getTeamNames(teams)
-    switch teamNames.count {
-    case 0:
-      // throw
-      break
+  func selectTeamWhenJoinedMultiTeams(teams:Teams, token:String){
+    switch teams.teams.count {
     case 1:
-      // fin
+      KeychainManager.setTeamName(teams.teams.first()!.name)
+      KeychainManager.setToken(token)
       break
     default:
-      // multi team
+      showTeamSelectActionSheet(teams, token: token)
       break
-    }
-    
-    if teamNames.count == 1 {
-      
     }
   }
   
-  func getTeamNames(teams:Teams) -> [String]{
-    var teamNames:[String] = []
+  func showTeamSelectActionSheet(teams:Teams, token:String) {
+    let actionSheet = TwitterActionController()
+    actionSheet.headerData = "Select Your Team (\\( ⁰⊖⁰)/)"
     teams.teams.each { team in
-      teamNames << team.name
+      let image = UIImage(data: NSData(contentsOfURL: team.icon)!)
+      actionSheet.addAction(Action(ActionData(title: team.name, subtitle: team.url.absoluteString, image: image!), style: .Default, handler: { action in
+        KeychainManager.setTeamName(team.name)
+        KeychainManager.setToken(token)
+        log?.debug(team.name)
+      }))
     }
-    log?.info("\(teamNames)")
-    return teamNames
+    presentViewController(actionSheet, animated: true, completion: nil)
   }
 }

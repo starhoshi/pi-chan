@@ -25,6 +25,9 @@ PODS:
   - UITextView+Placeholder (1.2.0)
   - VTAcknowledgementsViewController (0.17)
   - XCGLogger (3.2)
+  - XLActionController/Core (2.0.0)
+  - XLActionController/Twitter (2.0.0):
+    - XLActionController/Core
 
 DEPENDENCIES:
   - Alamofire
@@ -50,6 +53,7 @@ DEPENDENCIES:
   - UITextView+Placeholder (~> 1.2)
   - VTAcknowledgementsViewController
   - XCGLogger (~> 3.2)
+  - XLActionController/Twitter
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
@@ -76,5 +80,6 @@ SPEC CHECKSUMS:
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
   VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80
   XCGLogger: da1f341f4bb8979db6e1df64232f04d9698402d4
+  XLActionController: 97ed31237413db4d9401c6a559270f4d2b4de136
 
 COCOAPODS: 0.39.0
