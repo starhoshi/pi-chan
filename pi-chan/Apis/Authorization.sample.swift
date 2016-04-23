@@ -24,6 +24,7 @@ struct AuthorizationSample{
       NSURL(string: "your-scheme://oauth-callback")!,
       scope: "read+write", state:"a7e567e2fb858f0e12838798016ee9cf8ccc778",
       success: { credential, response, parameters in
+        print("response",response)
         print(credential.oauth_token)
       },
       failure: { error in

@@ -20,6 +20,10 @@ class Esa{
     self.currentTeam = currentTeam
   }
   
+  static func authorization(controller:UIViewController){
+    Authorization.oauth2(controller)
+  }
+  
   func teams(handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = GetTeamsRequest(esa: self)
     return Session.sendRequest(request, handler:handler)
