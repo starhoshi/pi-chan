@@ -23,8 +23,15 @@ class AuthorizationViewController: UIViewController {
   }
   
   @IBAction func login(sender: AnyObject) {
-    SVProgressHUD.showWithStatus("Loading...")
-    Esa.authorization(self)
+    Esa.authorization(
+      self,
+      success: {credential in
+        print(credential.oauth_token)
+      },
+      failure:{ error in
+        print(error)
+      }
+    )
   }
   
   @IBAction func close(sender: AnyObject) {

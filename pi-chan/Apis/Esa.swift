@@ -10,6 +10,7 @@ import Foundation
 import APIKit
 import Result
 import Dollar
+import OAuthSwift
 
 class Esa{
   let token: String
@@ -20,8 +21,8 @@ class Esa{
     self.currentTeam = currentTeam
   }
   
-  static func authorization(controller:UIViewController){
-    Authorization.oauth2(controller)
+  static func authorization(controller:UIViewController, success:(credential:OAuthSwiftCredential) -> Void, failure:(error:NSError) -> Void){
+    Authorization.oauth2(controller, success:success, failure: failure)
   }
   
   func teams(handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
