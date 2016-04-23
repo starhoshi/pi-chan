@@ -32,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Lato-Regular", size: 19)!, NSForegroundColorAttributeName: UIColor.whiteColor()]
     
-    
     // tabbar settings
     let titleFontAll : UIFont = UIFont(name: "Lato-Regular", size: 11.0)!
     let attributesNormal = [ NSForegroundColorAttributeName : UIColor.grayColor(), NSFontAttributeName : titleFontAll ]

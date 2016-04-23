@@ -18,7 +18,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   var searchText:String? = nil
   var nextPage:Int? = 1
   var loading = false
-  var searchController: UISearchController!
+  //  var searchController: UISearchController!
+  var     searchController = UISearchController(searchResultsController: nil)
   
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
@@ -38,9 +39,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
   }
   
-  
   func setSearchBar(){
-    searchController = UISearchController(searchResultsController: nil)
+    self.definesPresentationContext = true
+    self.extendedLayoutIncludesOpaqueBars = true
+    searchController.hidesNavigationBarDuringPresentation = false
     searchController.searchBar.delegate = self
     searchController.dimsBackgroundDuringPresentation = false
     searchController.obscuresBackgroundDuringPresentation = false
@@ -52,6 +54,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     searchController.searchBar.layer.borderColor = UIColor.esaGreen().CGColor
     searchController.searchBar.layer.borderWidth = 1
     searchController.searchBar.layer.opacity = 1
+    searchController.searchBar.subviews[0].subviews.flatMap(){ $0 as? UITextField }.first?.tintColor = UIColor.esaGreen()
     //    searchController.loadViewIfNeeded()    // iOS 9
     //    tableView.extendedLayoutIncludesOpaqueBars = true
     tableView.tableHeaderView = searchController.searchBar
