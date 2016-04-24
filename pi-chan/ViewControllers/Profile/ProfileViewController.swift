@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var settingButton: UIBarButtonItem!
   override func viewDidLoad() {
     super.viewDidLoad()
-    settingButton.setFAIcon(.FAInfoCircle, iconSize: 22)
+    settingButton.setFAIcon(.FAGear, iconSize: 22)
   }
   
   override func didReceiveMemoryWarning() {
