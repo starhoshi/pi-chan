@@ -10,7 +10,7 @@ import Foundation
 import Himotoki
 
 struct Team {
-  let description: String
+  let description: String?
   let icon: NSURL
   let name: String
   let privacy: Privacy
@@ -23,7 +23,7 @@ extension Team : Decodable {
     let privacy: Privacy = Privacy.init(rawValue: privacyString)!
     
     return try Team(
-      description: e <| "description",
+      description: e <|? "description",
       icon: e <| "icon",
       name: e <| "name",
       privacy: privacy,
