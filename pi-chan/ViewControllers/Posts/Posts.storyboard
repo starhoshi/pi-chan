@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Posts-->
         <scene sceneID="bE8-dh-erF">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="r46-aO-JOG" customClass="PostsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Posts" automaticallyAdjustsScrollViewInsets="NO" id="r46-aO-JOG" customClass="PostsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UsE-QW-c6y"/>
                         <viewControllerLayoutGuide type="bottom" id="a3A-y2-rLN"/>
@@ -30,7 +30,7 @@
                             <constraint firstItem="ucX-SB-QA3" firstAttribute="top" secondItem="UsE-QW-c6y" secondAttribute="bottom" id="hJE-HT-SlN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="gSp-5m-i58">
+                    <navigationItem key="navigationItem" title="Posts" id="gSp-5m-i58">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="r36-dJ-MKC">
                             <connections>
                                 <action selector="openEditor:" destination="r46-aO-JOG" id="ZdA-AF-ZQa"/>

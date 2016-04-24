@@ -27,7 +27,7 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     super.viewDidLoad()
     
     rightBarButton.setFAIcon(.FAPencil, iconSize: 22)
-    self.navigationItem.title = searchText != nil ? searchText : "Home"
+    self.navigationItem.title = searchText != nil ? searchText : "Posts"
     initTableView()
     resetAndLoadApi()
     setSearchBar()
