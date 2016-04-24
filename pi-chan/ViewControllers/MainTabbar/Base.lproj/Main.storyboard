@@ -96,11 +96,11 @@
             </objects>
             <point key="canvasLocation" x="1012" y="1328"/>
         </scene>
-        <!--Settings-->
+        <!--Profile-->
         <scene sceneID="Bde-kA-wy5">
             <objects>
                 <navigationController id="mz9-JA-cqY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="gWe-od-nbn"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="gWe-od-nbn"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uVS-d9-UTq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -116,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hy8-7J-Wjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="1928"/>
+            <point key="canvasLocation" x="569" y="2000"/>
         </scene>
         <!--Settings-->
         <scene sceneID="20H-wd-EBE">
