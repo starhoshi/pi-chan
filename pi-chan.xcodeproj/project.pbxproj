@@ -23,8 +23,6 @@
 		E33599591CA80385001A3C8D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599581CA80385001A3C8D /* Settings.storyboard */; };
 		E335995B1CA80392001A3C8D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335995A1CA80392001A3C8D /* SettingsViewController.swift */; };
 		E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E335995D1CA80EDF001A3C8D /* MainTabBarController.swift */; };
-		E33599611CA814DA001A3C8D /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599601CA814DA001A3C8D /* PostsViewController.swift */; };
-		E33599631CA814E2001A3C8D /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599621CA814E2001A3C8D /* Posts.storyboard */; };
 		E33599661CA8329F001A3C8D /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599651CA8329F001A3C8D /* Authorization.storyboard */; };
 		E33599681CA832D4001A3C8D /* AuthorazationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599671CA832D4001A3C8D /* AuthorazationViewController.swift */; };
 		E335996A1CA83680001A3C8D /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599691CA83680001A3C8D /* UpdateChecker.swift */; };
@@ -108,8 +106,6 @@
 		E33599581CA80385001A3C8D /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		E335995A1CA80392001A3C8D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E335995D1CA80EDF001A3C8D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		E33599601CA814DA001A3C8D /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
-		E33599621CA814E2001A3C8D /* Posts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 		E33599651CA8329F001A3C8D /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		E33599671CA832D4001A3C8D /* AuthorazationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorazationViewController.swift; sourceTree = "<group>"; };
 		E33599691CA83680001A3C8D /* UpdateChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
@@ -267,15 +263,6 @@
 				E335995D1CA80EDF001A3C8D /* MainTabBarController.swift */,
 			);
 			path = MainTabbar;
-			sourceTree = "<group>";
-		};
-		E335995F1CA814C2001A3C8D /* Posts */ = {
-			isa = PBXGroup;
-			children = (
-				E33599621CA814E2001A3C8D /* Posts.storyboard */,
-				E33599601CA814DA001A3C8D /* PostsViewController.swift */,
-			);
-			path = Posts;
 			sourceTree = "<group>";
 		};
 		E33599641CA8327B001A3C8D /* Authorization */ = {
@@ -444,7 +431,6 @@
 				E3D0C1551CBFD85B006A48EA /* Editor */,
 				E335994C1CA8017D001A3C8D /* Home */,
 				E335995C1CA80E9B001A3C8D /* MainTabbar */,
-				E335995F1CA814C2001A3C8D /* Posts */,
 				E37402C71CBD43CA00E4659B /* Preview */,
 				E335994D1CA80189001A3C8D /* Settings */,
 				E335994E1CA801A1001A3C8D /* Teams */,
@@ -577,7 +563,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E33599631CA814E2001A3C8D /* Posts.storyboard in Resources */,
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
@@ -692,7 +677,6 @@
 				E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */,
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
-				E33599611CA814DA001A3C8D /* PostsViewController.swift in Sources */,
 				E35181171CC39FB2008B141D /* SettingTableViewCell.swift in Sources */,
 				E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */,
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
