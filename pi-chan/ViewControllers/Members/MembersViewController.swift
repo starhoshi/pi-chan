@@ -12,10 +12,10 @@ import DGElasticPullToRefresh
 import DZNEmptyDataSet
 import Cent
 
-class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+class MembersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
   
-  var members:[Member] = []
   @IBOutlet weak var tableView: UITableView!
+  var members:[Member] = []
   override func viewDidLoad() {
     super.viewDidLoad()
     initTableView()
@@ -37,7 +37,7 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let memberCellNib:UINib = UINib(nibName: "MemberTableViewCell", bundle: nil)
     tableView.registerNib(memberCellNib, forCellReuseIdentifier: "MemberCell")
     tableView.estimatedRowHeight = 80
-    self.tableView.tableFooterView = UIView()
+    tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self!.tableView.dg_stopLoading()
       self!.loadMembersApi()
@@ -63,13 +63,13 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell:MemberTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("MemberCell")! as! MemberTableViewCell
+    let cell:MemberTableViewCell = tableView.dequeueReusableCellWithIdentifier("MemberCell")! as! MemberTableViewCell
     cell.setItems(members[indexPath.row])
     return cell
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("TeamsToPosts", sender: "@" + members[indexPath.row].screenName)
+    performSegueWithIdentifier("MembersToPosts", sender: "@" + members[indexPath.row].screenName)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

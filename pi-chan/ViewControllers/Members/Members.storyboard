@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Teams-->
+        <!--Members-->
         <scene sceneID="QQa-y3-fYA">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RUr-de-D2g" customClass="TeamsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RUr-de-D2g" customClass="MembersViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ct-DA-t8r"/>
                         <viewControllerLayoutGuide type="bottom" id="Zad-18-B6h"/>
@@ -30,12 +30,12 @@
                             <constraint firstItem="Zad-18-B6h" firstAttribute="top" secondItem="4ig-n5-1Md" secondAttribute="bottom" id="rXY-qH-4tp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Teams" id="AlR-rk-HMk"/>
+                    <navigationItem key="navigationItem" title="Members" id="AlR-rk-HMk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="4ig-n5-1Md" id="6ij-LV-sEp"/>
-                        <segue destination="CDT-UD-sjR" kind="show" identifier="TeamsToPosts" id="3NH-wf-zw2"/>
+                        <outlet property="tableView" destination="4ig-n5-1Md" id="PfT-Ds-UA7"/>
+                        <segue destination="CDT-UD-sjR" kind="show" identifier="MembersToPosts" id="3NH-wf-zw2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJA-Xe-vWb" userLabel="First Responder" sceneMemberID="firstResponder"/>

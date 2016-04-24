@@ -64,11 +64,11 @@
             </objects>
             <point key="canvasLocation" x="1004" y="-10"/>
         </scene>
-        <!--Teams-->
+        <!--Members-->
         <scene sceneID="uDe-Jx-DP2">
             <objects>
                 <navigationController id="INe-VB-4xi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Teams" id="5Nb-qw-G0b"/>
+                    <tabBarItem key="tabBarItem" title="Members" id="5Nb-qw-G0b"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="L2H-nZ-DHx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="569" y="1229"/>
         </scene>
-        <!--Teams-->
+        <!--Members-->
         <scene sceneID="Htp-3j-MB5">
             <objects>
-                <viewControllerPlaceholder storyboardName="Teams" id="40Y-PP-5VB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Members" id="40Y-PP-5VB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BFA-y7-Lal"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqS-NS-gJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>

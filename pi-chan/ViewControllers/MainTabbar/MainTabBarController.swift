@@ -14,7 +14,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.tabBar.items?[0].setFAIcon(.FAFileTextO)
-    self.tabBar.items?[1].setFAIcon(.FASmileO)
+    self.tabBar.items?[1].setFAIcon(.FAUsers)
     self.tabBar.items?[2].setFAIcon(.FAGear)
   }
   
