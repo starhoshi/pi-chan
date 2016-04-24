@@ -29,11 +29,11 @@
             </objects>
             <point key="canvasLocation" x="-148" y="975"/>
         </scene>
-        <!--Home-->
+        <!--Posts-->
         <scene sceneID="sFx-v6-AD0">
             <objects>
                 <navigationController id="etc-RE-OQf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="gtt-WR-aqk"/>
+                    <tabBarItem key="tabBarItem" title="Posts" id="gtt-WR-aqk"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cjY-CG-874">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="569" y="568"/>
         </scene>
-        <!--Home-->
+        <!--Posts-->
         <scene sceneID="7Xp-2H-Owa">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Zht-Qo-Fpu" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Posts" id="Zht-Qo-Fpu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QRu-bm-G8u"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5D-Eq-NNL" userLabel="First Responder" sceneMemberID="firstResponder"/>

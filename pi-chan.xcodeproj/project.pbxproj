@@ -16,8 +16,8 @@
 		E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E33412BF1CB4288500F455BE /* PostTableViewCell.xib */; };
 		E33412C51CB8B5E000F455BE /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412C41CB8B5E000F455BE /* UIScrollView+Extension.swift */; };
 		E33599471CA7E373001A3C8D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599461CA7E373001A3C8D /* Logger.swift */; };
-		E335994A1CA7E5DA001A3C8D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599481CA7E5DA001A3C8D /* Home.storyboard */; };
-		E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599491CA7E5DA001A3C8D /* HomeViewController.swift */; };
+		E335994A1CA7E5DA001A3C8D /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599481CA7E5DA001A3C8D /* Posts.storyboard */; };
+		E335994B1CA7E5DA001A3C8D /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599491CA7E5DA001A3C8D /* PostsViewController.swift */; };
 		E33599551CA80325001A3C8D /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33599541CA80325001A3C8D /* TeamsViewController.swift */; };
 		E33599571CA80331001A3C8D /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599561CA80331001A3C8D /* Teams.storyboard */; };
 		E33599591CA80385001A3C8D /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E33599581CA80385001A3C8D /* Settings.storyboard */; };
@@ -99,8 +99,8 @@
 		E33412BF1CB4288500F455BE /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		E33412C41CB8B5E000F455BE /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		E33599461CA7E373001A3C8D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		E33599481CA7E5DA001A3C8D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		E33599491CA7E5DA001A3C8D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E33599481CA7E5DA001A3C8D /* Posts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
+		E33599491CA7E5DA001A3C8D /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		E33599541CA80325001A3C8D /* TeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		E33599561CA80331001A3C8D /* Teams.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
 		E33599581CA80385001A3C8D /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				E33412BD1CB4283800F455BE /* Cell */,
-				E33599481CA7E5DA001A3C8D /* Home.storyboard */,
-				E33599491CA7E5DA001A3C8D /* HomeViewController.swift */,
+				E33599481CA7E5DA001A3C8D /* Posts.storyboard */,
+				E33599491CA7E5DA001A3C8D /* PostsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -574,7 +574,7 @@
 				E33599571CA80331001A3C8D /* Teams.storyboard in Resources */,
 				E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */,
 				E35460871CBE97EF00BE7952 /* md.html in Resources */,
-				E335994A1CA7E5DA001A3C8D /* Home.storyboard in Resources */,
+				E335994A1CA7E5DA001A3C8D /* Posts.storyboard in Resources */,
 				E33599591CA80385001A3C8D /* Settings.storyboard in Resources */,
 				E33599661CA8329F001A3C8D /* Authorization.storyboard in Resources */,
 				E3A9A8F81CBA222D0031FBAE /* Lato-Regular.ttf in Resources */,
@@ -678,7 +678,7 @@
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
 				E35181171CC39FB2008B141D /* SettingTableViewCell.swift in Sources */,
-				E335994B1CA7E5DA001A3C8D /* HomeViewController.swift in Sources */,
+				E335994B1CA7E5DA001A3C8D /* PostsViewController.swift in Sources */,
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
 				E33599551CA80325001A3C8D /* TeamsViewController.swift in Sources */,
 				E3D0C1761CC3657B006A48EA /* UIImageView+Extension.swift in Sources */,

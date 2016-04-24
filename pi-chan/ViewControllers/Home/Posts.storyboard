@@ -8,7 +8,7 @@
         <!--Home-->
         <scene sceneID="bE8-dh-erF">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="r46-aO-JOG" customClass="HomeViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="r46-aO-JOG" customClass="PostsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UsE-QW-c6y"/>
                         <viewControllerLayoutGuide type="bottom" id="a3A-y2-rLN"/>
@@ -43,7 +43,7 @@
                     <connections>
                         <outlet property="rightBarButton" destination="r36-dJ-MKC" id="F5e-N8-xS6"/>
                         <outlet property="tableView" destination="ucX-SB-QA3" id="fnc-cB-bB3"/>
-                        <segue destination="XPB-ak-8gH" kind="show" identifier="HomeToPreview" id="Hy8-cm-Axk"/>
+                        <segue destination="XPB-ak-8gH" kind="show" identifier="PostsToPreview" id="Hy8-cm-Axk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zE-qo-RBf" userLabel="First Responder" sceneMemberID="firstResponder"/>

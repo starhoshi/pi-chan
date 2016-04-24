@@ -12,7 +12,7 @@ import DGElasticPullToRefresh
 import DZNEmptyDataSet
 import Cent
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate{
+class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate{
   
   var posts:[Post] = []
   var searchText:String? = nil
@@ -113,7 +113,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("HomeToPreview", sender: posts[indexPath.row].number)
+    performSegueWithIdentifier("PostsToPreview", sender: posts[indexPath.row].number)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

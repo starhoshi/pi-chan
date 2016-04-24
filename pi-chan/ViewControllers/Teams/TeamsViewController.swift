@@ -69,12 +69,12 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
   }
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("TeamsToHome", sender: "@" + members[indexPath.row].screenName)
+    performSegueWithIdentifier("TeamsToPosts", sender: "@" + members[indexPath.row].screenName)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let homeViewController:HomeViewController = segue.destinationViewController as! HomeViewController
-    homeViewController.searchText = sender as? String
+    let postsViewController:PostsViewController = segue.destinationViewController as! PostsViewController
+    postsViewController.searchText = sender as? String
   }
   
   func loadMembersApi(){
