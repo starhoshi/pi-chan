@@ -540,6 +540,7 @@
 				TargetAttributes = {
 					E3D9A5A21CA7D29A00B43F37 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5J5Q4ZGXZR;
 					};
 					E3D9A5B61CA7D29B00B43F37 = {
 						CreatedOnToolsVersion = 7.3;
@@ -829,7 +830,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -854,10 +855,13 @@
 			baseConfigurationReference = D42D9F7198932C8E74FC4FDD /* Pods-pi-chan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "pi-chan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.starhoshi.pi-chan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.pichan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -866,10 +870,13 @@
 			baseConfigurationReference = 65469B0622BBDBBE099147FC /* Pods-pi-chan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = "pi-chan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.starhoshi.pi-chan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.pichan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
