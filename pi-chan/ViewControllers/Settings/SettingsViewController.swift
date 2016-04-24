@@ -12,9 +12,11 @@ import Font_Awesome_Swift
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var closeButton: UIBarButtonItem!
   override func viewDidLoad() {
     super.viewDidLoad()
     initTableView()
+    closeButton.setFAIcon(.FAClose, iconSize: 22)
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -49,7 +51,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     return cell
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+  @IBAction func close(sender: AnyObject) {
+    self.dismissViewControllerAnimated(true, completion: nil)
   }
 }

@@ -393,8 +393,6 @@ fi
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Posts</string>
 			<key>path</key>
 			<string>Posts</string>
 			<key>sourceTree</key>
@@ -901,6 +899,8 @@ fi
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>CellConfigrations.swift</string>
 			<key>path</key>
 			<string>CellConfigrations.swift</string>
 			<key>sourceTree</key>
@@ -1134,6 +1134,60 @@ fi
 		<dict>
 			<key>fileRef</key>
 			<string>E3A9A8F71CBA222D0031FBAE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E3AA87BD1CCCD45800195E69</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E3AA87BE1CCCD46700195E69</string>
+				<string>E3AA87C01CCCD4A700195E69</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Profile</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3AA87BE1CCCD46700195E69</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Profile.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3AA87BF1CCCD46700195E69</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E3AA87BE1CCCD46700195E69</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E3AA87C01CCCD4A700195E69</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ProfileViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E3AA87C11CCCD4A700195E69</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E3AA87C01CCCD4A700195E69</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1554,6 +1608,7 @@ fi
 				<string>E33599681CA832D4001A3C8D</string>
 				<string>E33599471CA7E373001A3C8D</string>
 				<string>E335996A1CA83680001A3C8D</string>
+				<string>E3AA87C11CCCD4A700195E69</string>
 				<string>E37402C91CBD445D00E4659B</string>
 				<string>E3D0C15D1CBFDE98006A48EA</string>
 				<string>E33599701CAAF218001A3C8D</string>
@@ -1629,6 +1684,7 @@ fi
 				<string>E35460871CBE97EF00BE7952</string>
 				<string>E335994A1CA7E5DA001A3C8D</string>
 				<string>E33599591CA80385001A3C8D</string>
+				<string>E3AA87BF1CCCD46700195E69</string>
 				<string>E33599661CA8329F001A3C8D</string>
 				<string>E3A9A8F81CBA222D0031FBAE</string>
 				<string>E37402CB1CBD446A00E4659B</string>
@@ -2515,6 +2571,7 @@ fi
 				<string>E335994E1CA801A1001A3C8D</string>
 				<string>E335994C1CA8017D001A3C8D</string>
 				<string>E37402C71CBD43CA00E4659B</string>
+				<string>E3AA87BD1CCCD45800195E69</string>
 				<string>E335994D1CA80189001A3C8D</string>
 			</array>
 			<key>isa</key>
