@@ -38,7 +38,6 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
       tableView.deselectRowAtIndexPath(indexPathForSelectedRow, animated: true)
     }
   }
-  
   func setSearchBar(){
     self.definesPresentationContext = true
     self.extendedLayoutIncludesOpaqueBars = true
