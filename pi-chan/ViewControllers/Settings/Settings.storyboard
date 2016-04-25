@@ -47,7 +47,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="YC4-DF-Fk8">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="mrm-Y9-9lV">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="mrm-Y9-9lV">
                             <connections>
                                 <action selector="close:" destination="UEw-7J-skc" id="evN-fG-PU5"/>
                             </connections>
