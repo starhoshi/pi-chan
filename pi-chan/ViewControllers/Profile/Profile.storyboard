@@ -75,6 +75,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="settingButton" destination="GuP-FO-gVw" id="RLy-if-Z6j"/>
+                        <outlet property="userIcon" destination="hM7-CT-4cf" id="8Gw-VO-HEG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtA-no-ZxR" userLabel="First Responder" sceneMemberID="firstResponder"/>

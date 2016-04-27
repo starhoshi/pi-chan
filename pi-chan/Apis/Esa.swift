@@ -85,6 +85,6 @@ protocol EsaRequestType: RequestType {
 
 extension EsaRequestType {
   var baseURL: NSURL {
-    return NSURL(string: "https://api.esa.io/v1/teams")!
+    return NSURL(string: "https://api.esa.io/v1")!
   }
 }

@@ -29,7 +29,7 @@ struct GetPostRequest: EsaRequestType {
   }
   
   var path: String {
-    return "\(esa.currentTeam)/posts/\(number)"
+    return "teams/\(esa.currentTeam)/posts/\(number)"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

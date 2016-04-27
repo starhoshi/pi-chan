@@ -24,8 +24,8 @@ extension User : Decodable {
       id: e <| "id",
       name: e <| "name",
       screenName: e <| "screen_name",
-      createdAt: e <| "createdAt",
-      updatedAt: e <| "updatedAt",
+      createdAt: e <| "created_at",
+      updatedAt: e <| "updated_at",
       icon: e <| "icon",
       email: e <| "email"
     )

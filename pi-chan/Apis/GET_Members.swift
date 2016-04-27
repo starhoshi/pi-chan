@@ -26,7 +26,7 @@ struct GetMembersRequest: EsaRequestType {
   }
   
   var path: String {
-    return "\(esa.currentTeam)/members"
+    return "teams/\(esa.currentTeam)/members"
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {
