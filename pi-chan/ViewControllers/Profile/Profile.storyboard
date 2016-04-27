@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="313"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-CT-4cf">
-                                        <rect key="frame" x="8" y="8" width="128" height="128"/>
+                                        <rect key="frame" x="8" y="8" width="64" height="64"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBD-4o-hi6">
                                         <rect key="frame" x="144" y="8" width="52" height="21"/>
@@ -93,6 +93,10 @@
         <scene sceneID="8Jw-eP-DUv">
             <objects>
                 <viewController id="ZRr-78-N7o" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a4H-j8-7w2"/>
+                        <viewControllerLayoutGuide type="bottom" id="UIE-fu-Mvp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="s1h-Ja-TtC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

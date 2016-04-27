@@ -35,6 +35,11 @@ class Esa{
     let request = GetTeamRequest(esa: self, name: name)
     return Session.sendRequest(request, handler:handler)
   }
+
+  func user(handler:(Result<User, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetUserRequest(esa: self)
+    return Session.sendRequest(request, handler:handler)
+  }
   
   func posts(page:Int? = nil, perPage:Int = 20, q:String? = nil, handler:(Result<Posts, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = GetPostsRequest(esa: self, page: page, perPage:perPage, q:q)
