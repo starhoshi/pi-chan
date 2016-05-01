@@ -29,7 +29,7 @@ struct GetTeamRequest: EsaRequestType {
   }
   
   var path: String {
-    return "/teams/" + self.name
+    return "\(Esa.version)//teams/" + self.name
   }
   
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

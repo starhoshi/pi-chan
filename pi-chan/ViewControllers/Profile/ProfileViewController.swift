@@ -50,4 +50,17 @@ class ProfileViewController: UIViewController {
     mail.text = user.email
   }
 
+  @IBAction func clickRevoke(sender: AnyObject) {
+    SVProgressHUD.showWithStatus("Loading...")
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).revoke(){ result in
+      switch result {
+      case .Success(_):
+        SVProgressHUD.showSuccessWithStatus("Success!")
+        Window.openLogin(self)
+      case .Failure(let error):
+        SVProgressHUD.showErrorWithStatus("Error!")
+        log?.error("\(error)")
+      }
+    }
+  }
 }

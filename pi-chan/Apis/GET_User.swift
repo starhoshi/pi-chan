@@ -26,7 +26,7 @@ struct GetUserRequest: EsaRequestType {
   }
 
   var path: String {
-    return "user"
+    return "\(Esa.version)/user"
   }
 
   func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

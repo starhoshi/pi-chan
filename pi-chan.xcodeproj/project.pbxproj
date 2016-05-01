@@ -67,6 +67,8 @@
 		E3D0C1731CC362B5006A48EA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1711CC362B5006A48EA /* MemberTableViewCell.swift */; };
 		E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D0C1721CC362B5006A48EA /* MemberTableViewCell.xib */; };
 		E3D0C1761CC3657B006A48EA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */; };
+		E3D166811CD6166F0062480C /* POST_Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166801CD6166F0062480C /* POST_Revoke.swift */; };
+		E3D166831CD616BC0062480C /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166821CD616BC0062480C /* Revoke.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -154,6 +156,8 @@
 		E3D0C1711CC362B5006A48EA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		E3D0C1721CC362B5006A48EA /* MemberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
 		E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		E3D166801CD6166F0062480C /* POST_Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST_Revoke.swift; sourceTree = "<group>"; };
+		E3D166821CD616BC0062480C /* Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revoke.swift; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 				E335997B1CB2CA75001A3C8D /* Teams.swift */,
 				E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */,
 				E3C638E11CD129F2000C5CC9 /* User.swift */,
+				E3D166821CD616BC0062480C /* Revoke.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				E3C638DF1CD129CB000C5CC9 /* GET_User.swift */,
 				E33599751CB2B706001A3C8D /* GET_Posts.swift */,
 				E33599711CB030CC001A3C8D /* GET_Team.swift */,
+				E3D166801CD6166F0062480C /* POST_Revoke.swift */,
 				E335996F1CAAF218001A3C8D /* GET_Teams.swift */,
 				E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */,
 				E3D0C1601CC1186D006A48EA /* POST_Posts.swift */,
@@ -675,6 +681,7 @@
 				E33412BC1CB40CF500F455BE /* View.swift in Sources */,
 				E335997C1CB2CA75001A3C8D /* Teams.swift in Sources */,
 				E335997E1CB2CC23001A3C8D /* CreatedBy.swift in Sources */,
+				E3D166831CD616BC0062480C /* Revoke.swift in Sources */,
 				E33599681CA832D4001A3C8D /* AuthorazationViewController.swift in Sources */,
 				E33599471CA7E373001A3C8D /* Logger.swift in Sources */,
 				E335996A1CA83680001A3C8D /* UpdateChecker.swift in Sources */,
@@ -684,6 +691,7 @@
 				E33599701CAAF218001A3C8D /* GET_Teams.swift in Sources */,
 				E3D0C16B1CC35959006A48EA /* GET_Members.swift in Sources */,
 				E33412C51CB8B5E000F455BE /* UIScrollView+Extension.swift in Sources */,
+				E3D166811CD6166F0062480C /* POST_Revoke.swift in Sources */,
 				E3D0C15F1CC1114E006A48EA /* SharingUrls.swift in Sources */,
 				E3C638E01CD129CB000C5CC9 /* GET_User.swift in Sources */,
 				E3D0C1611CC1186D006A48EA /* POST_Posts.swift in Sources */,

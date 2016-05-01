@@ -77,9 +77,12 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickRevoke:" destination="Z5g-bQ-Ufw" eventType="touchUpInside" id="pm5-3T-UpF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.77765213815789469" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="7Zh-fc-B0l" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="80" id="4Qq-Wx-zcm"/>
                                     <constraint firstItem="Hz4-6P-aL6" firstAttribute="top" secondItem="7Zh-fc-B0l" secondAttribute="bottom" constant="50" id="6kd-Fd-Cy4"/>
@@ -135,23 +138,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPa-HH-77k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="611.5" y="109"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="8Jw-eP-DUv">
-            <objects>
-                <viewController id="ZRr-78-N7o" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="a4H-j8-7w2"/>
-                        <viewControllerLayoutGuide type="bottom" id="UIE-fu-Mvp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s1h-Ja-TtC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNi-oP-xix" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>

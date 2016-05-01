@@ -13,6 +13,7 @@ import Dollar
 import OAuthSwift
 
 class Esa{
+  static let version = "v1"
   let token: String
   var currentTeam: String
   
@@ -24,6 +25,11 @@ class Esa{
   // FIXME: change success, failure to handler
   static func authorization(controller:UIViewController, success:(credential:OAuthSwiftCredential) -> Void, failure:(error:NSError) -> Void){
     Authorization.oauth2(controller, success:success, failure: failure)
+  }
+
+  func revoke(handler:(Result<Revoke, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = PostRevokeRequest(esa: self)
+    return Session.sendRequest(request, handler:handler)
   }
   
   static func teams(token:String,handler:(Result<Teams, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
@@ -85,6 +91,6 @@ protocol EsaRequestType: RequestType {
 
 extension EsaRequestType {
   var baseURL: NSURL {
-    return NSURL(string: "https://api.esa.io/v1")!
+    return NSURL(string: "https://api.esa.io")!
   }
 }
