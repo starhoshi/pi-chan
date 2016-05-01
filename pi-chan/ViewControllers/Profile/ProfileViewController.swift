@@ -14,6 +14,9 @@ class ProfileViewController: UIViewController {
   
   @IBOutlet weak var settingButton: UIBarButtonItem!
   @IBOutlet weak var userIcon: UIImageView!
+  @IBOutlet weak var screenName: UILabel!
+  @IBOutlet weak var mail: UILabel!
+  @IBOutlet weak var name: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
     settingButton.setFAIcon(.FAGear, iconSize: 22)
@@ -42,6 +45,9 @@ class ProfileViewController: UIViewController {
   func setUserData(user:User){
     userIcon.kf_setImageWithURL(user.icon)
     userIcon.toCircle()
+    screenName.text = user.screenName
+    name.text = user.name
+    mail.text = user.email
   }
 
 }

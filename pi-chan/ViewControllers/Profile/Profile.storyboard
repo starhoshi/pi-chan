@@ -10,8 +10,6 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -27,45 +25,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNO-qo-WWC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNO-qo-WWC">
                                 <rect key="frame" x="0.0" y="64" width="600" height="313"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-CT-4cf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hM7-CT-4cf">
                                         <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="U4u-z3-Wve"/>
+                                            <constraint firstAttribute="width" constant="64" id="jkl-wu-w3U"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="screen" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBD-4o-hi6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="screen_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBD-4o-hi6">
                                         <rect key="frame" x="80" y="8" width="512" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Cl8-nt-JR7"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="27"/>
                                         <color key="textColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdt-xX-pv2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdt-xX-pv2">
                                         <rect key="frame" x="80" y="51" width="512" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="gSR-9v-Or3"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                         <color key="textColor" red="0.23529411764705882" green="0.29019607843137257" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zh-fc-B0l">
-                                        <rect key="frame" x="80" y="80" width="32" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zh-fc-B0l">
+                                        <rect key="frame" x="80" y="80" width="512" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="NrZ-zg-7LT"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                         <color key="textColor" red="0.23529411764705882" green="0.29019607843137257" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71f-rG-9Mb">
-                                        <rect key="frame" x="80" y="109" width="59" height="21"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                        <color key="textColor" red="0.23529411764705882" green="0.29019607843137257" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="updated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-2x-NCr">
-                                        <rect key="frame" x="80" y="138" width="64" height="21"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                        <color key="textColor" red="0.23529411764705882" green="0.29019607843137257" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz4-6P-aL6">
-                                        <rect key="frame" x="42" y="209" width="517" height="43"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz4-6P-aL6">
+                                        <rect key="frame" x="16" y="151" width="568" height="40"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.33333333333333331" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Oca-bQ-SxF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                         <state key="normal" title="ピーちゃん との連携を解除">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,9 +80,31 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77765213815789469" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7Zh-fc-B0l" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="80" id="4Qq-Wx-zcm"/>
+                                    <constraint firstItem="Hz4-6P-aL6" firstAttribute="top" secondItem="7Zh-fc-B0l" secondAttribute="bottom" constant="50" id="6kd-Fd-Cy4"/>
+                                    <constraint firstItem="hM7-CT-4cf" firstAttribute="top" secondItem="zNO-qo-WWC" secondAttribute="top" constant="8" id="7pk-Ya-W4D"/>
+                                    <constraint firstAttribute="height" constant="313" id="9pE-WV-WGy"/>
+                                    <constraint firstItem="mdt-xX-pv2" firstAttribute="top" secondItem="vBD-4o-hi6" secondAttribute="bottom" constant="8" id="LBg-6C-8Ep"/>
+                                    <constraint firstAttribute="trailing" secondItem="vBD-4o-hi6" secondAttribute="trailing" constant="8" id="Mqc-US-gA2"/>
+                                    <constraint firstItem="mdt-xX-pv2" firstAttribute="leading" secondItem="hM7-CT-4cf" secondAttribute="trailing" constant="8" id="Qct-Dh-5Ux"/>
+                                    <constraint firstItem="vBD-4o-hi6" firstAttribute="leading" secondItem="hM7-CT-4cf" secondAttribute="trailing" constant="8" id="gJA-fQ-Ehj"/>
+                                    <constraint firstAttribute="trailing" secondItem="mdt-xX-pv2" secondAttribute="trailing" constant="8" id="gKy-6M-Z2o"/>
+                                    <constraint firstItem="7Zh-fc-B0l" firstAttribute="top" secondItem="mdt-xX-pv2" secondAttribute="bottom" constant="8" id="h1u-oW-pHF"/>
+                                    <constraint firstItem="Hz4-6P-aL6" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="16" id="iPt-xM-A6F"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hz4-6P-aL6" secondAttribute="trailing" constant="16" id="iaA-BV-uWg"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Zh-fc-B0l" secondAttribute="trailing" constant="8" id="jdE-zA-6g9"/>
+                                    <constraint firstItem="vBD-4o-hi6" firstAttribute="top" secondItem="zNO-qo-WWC" secondAttribute="top" constant="8" id="oh2-hg-CEp"/>
+                                    <constraint firstItem="hM7-CT-4cf" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="8" id="pjb-oB-VNh"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zNO-qo-WWC" firstAttribute="top" secondItem="vIn-qB-oVc" secondAttribute="bottom" id="aN3-Nq-CLv"/>
+                            <constraint firstAttribute="trailing" secondItem="zNO-qo-WWC" secondAttribute="trailing" id="aVE-mr-mNK"/>
+                            <constraint firstItem="zNO-qo-WWC" firstAttribute="leading" secondItem="wcl-Xz-hky" secondAttribute="leading" id="kfx-7f-4uH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="jmi-eP-xfz">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="GuP-FO-gVw">
@@ -93,6 +117,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="mail" destination="7Zh-fc-B0l" id="RIh-XN-qpI"/>
+                        <outlet property="name" destination="mdt-xX-pv2" id="LaG-d3-oxY"/>
+                        <outlet property="screenName" destination="vBD-4o-hi6" id="U0K-iA-i2a"/>
                         <outlet property="settingButton" destination="GuP-FO-gVw" id="RLy-if-Z6j"/>
                         <outlet property="userIcon" destination="hM7-CT-4cf" id="8Gw-VO-HEG"/>
                     </connections>
