@@ -56,11 +56,40 @@
                     <connections>
                         <outlet property="closeButton" destination="mrm-Y9-9lV" id="VhG-rm-qIc"/>
                         <outlet property="tableView" destination="2n4-Qo-xbv" id="0a0-TD-DWG"/>
+                        <segue destination="eTE-0g-fFi" kind="show" identifier="SettingsToAcknowledgements" id="v8q-ea-6US"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHX-F9-ia0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="290" y="435"/>
+        </scene>
+        <!--Acknowledgements View Controller-->
+        <scene sceneID="8sJ-qb-Mkj">
+            <objects>
+                <tableViewController id="eTE-0g-fFi" customClass="VTAcknowledgementsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="A9h-hM-9Wa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tdB-gC-Oqv">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdB-gC-Oqv" id="TrF-IG-8Ay">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eTE-0g-fFi" id="vo1-Tk-eda"/>
+                            <outlet property="delegate" destination="eTE-0g-fFi" id="LIE-rc-KWa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyh-tn-GVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="435"/>
         </scene>
     </scenes>
 </document>

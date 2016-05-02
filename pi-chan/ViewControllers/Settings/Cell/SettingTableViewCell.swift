@@ -13,7 +13,9 @@ class SettingTableViewCell: UITableViewCell {
   
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var icon: UIImageView!
+  var settingViewController: SettingsViewController?
   var cellContent:CellContent!
+
   override func awakeFromNib() {
     super.awakeFromNib()
   }
@@ -21,7 +23,11 @@ class SettingTableViewCell: UITableViewCell {
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     if selected {
-      cellContent.tapped()
+      if cellContent.title == "License" {
+        settingViewController?.goSettingsToAcknowledgements()
+      }else{
+        cellContent.tapped()
+      }
     }
   }
   

@@ -47,10 +47,18 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("SettingCell", forIndexPath: indexPath) as! SettingTableViewCell
+    cell.settingViewController = self
     cell.setItems(sectionList[indexPath.section].cellContents[indexPath.row])
     return cell
   }
-  
+
+  func goSettingsToAcknowledgements() {
+    performSegueWithIdentifier("SettingsToAcknowledgements", sender: nil)
+  }
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    print(segue)
+  }
+
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }

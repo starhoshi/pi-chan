@@ -69,6 +69,9 @@
 		E3D0C1761CC3657B006A48EA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */; };
 		E3D166811CD6166F0062480C /* POST_Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166801CD6166F0062480C /* POST_Revoke.swift */; };
 		E3D166831CD616BC0062480C /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166821CD616BC0062480C /* Revoke.swift */; };
+		E3D166851CD7CB1E0062480C /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166841CD7CB1E0062480C /* Share.swift */; };
+		E3D166871CD7CBCF0062480C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166861CD7CBCF0062480C /* Constants.swift */; };
+		E3D166891CD7EDEB0062480C /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D166881CD7EDEB0062480C /* Pods-acknowledgements.plist */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -158,6 +161,9 @@
 		E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		E3D166801CD6166F0062480C /* POST_Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST_Revoke.swift; sourceTree = "<group>"; };
 		E3D166821CD616BC0062480C /* Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revoke.swift; sourceTree = "<group>"; };
+		E3D166841CD7CB1E0062480C /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		E3D166861CD7CBCF0062480C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E3D166881CD7EDEB0062480C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-pi-chan/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 				E33599691CA83680001A3C8D /* UpdateChecker.swift */,
 				E33412BB1CB40CF500F455BE /* View.swift */,
 				E3D0C15C1CBFDE98006A48EA /* Window.swift */,
+				E3D166841CD7CB1E0062480C /* Share.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,10 +325,12 @@
 		E38A0F681CA7D74900ED99B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E3D166881CD7EDEB0062480C /* Pods-acknowledgements.plist */,
 				E35ECB051CBA18BB009EC020 /* fonts */,
 				E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */,
 				E3D9A5B21CA7D29B00B43F37 /* Info.plist */,
 				E3D9A5AF1CA7D29B00B43F37 /* LaunchScreen.storyboard */,
+				E3D166861CD7CBCF0062480C /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -589,6 +598,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D166891CD7EDEB0062480C /* Pods-acknowledgements.plist in Resources */,
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
@@ -680,6 +690,7 @@
 			files = (
 				E33412BC1CB40CF500F455BE /* View.swift in Sources */,
 				E335997C1CB2CA75001A3C8D /* Teams.swift in Sources */,
+				E3D166851CD7CB1E0062480C /* Share.swift in Sources */,
 				E335997E1CB2CC23001A3C8D /* CreatedBy.swift in Sources */,
 				E3D166831CD616BC0062480C /* Revoke.swift in Sources */,
 				E33599681CA832D4001A3C8D /* AuthorazationViewController.swift in Sources */,
@@ -702,6 +713,7 @@
 				E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */,
 				E30B0E651CCBBF2F0088D43A /* Authorization.sample.swift in Sources */,
 				E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */,
+				E3D166871CD7CBCF0062480C /* Constants.swift in Sources */,
 				E3C638E21CD129F2000C5CC9 /* User.swift in Sources */,
 				E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */,
 				E3D0C1731CC362B5006A48EA /* MemberTableViewCell.swift in Sources */,
