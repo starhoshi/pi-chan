@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-441" y="435"/>
         </scene>
-        <!--Settings-->
+        <!--App Infomations-->
         <scene sceneID="UOd-GK-pRB">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="UEw-7J-skc" customClass="SettingsViewController" customModule="pi_chan" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="trailing" secondItem="2n4-Qo-xbv" secondAttribute="trailing" id="wKh-rm-Gbz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="YC4-DF-Fk8">
+                    <navigationItem key="navigationItem" title="App Infomations" id="YC4-DF-Fk8">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="mrm-Y9-9lV">
                             <connections>
                                 <action selector="close:" destination="UEw-7J-skc" id="evN-fG-PU5"/>

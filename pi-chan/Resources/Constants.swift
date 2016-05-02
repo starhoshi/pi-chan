@@ -11,7 +11,10 @@ import Foundation
 
 struct Constants {
   struct ESA {
-    static let URL = NSURL(string:"https://esa.io/")!
+    struct URL {
+      static let INDEX = NSURL(string:"https://esa.io")!
+      static let TERMS = NSURL(string: "https://docs.esa.io/posts/5")!
+    }
   }
 
   struct PICHAN {

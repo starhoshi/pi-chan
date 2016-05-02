@@ -19,7 +19,8 @@ class SettingTableViewCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
   }
-  
+
+  // FIXME: if else の書き方修正
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     if selected {

@@ -34,7 +34,8 @@ let sectionList = [
 let esaInfoSection = Section(
   title: "esa.io",
   cellContents: [
-    esaHomePageContent
+    esaHomePageContent,
+    esaTermsContent
   ]
 )
 
@@ -43,7 +44,16 @@ let esaHomePageContent = CellContent(
   icon:.FASafari,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
-    Share.openBrowser(Constants.ESA.URL)
+    Share.openBrowser(Constants.ESA.URL.INDEX)
+  }
+)
+
+let esaTermsContent = CellContent(
+  title:"Terms",
+  icon:.FAExclamation,
+  cellType: .DisclosureIndicator,
+  tapped:{ _ in
+    Share.openBrowser(Constants.ESA.URL.TERMS)
   }
 )
 
@@ -88,7 +98,7 @@ let shareContent = CellContent(
 )
 
 let licenseContent = CellContent(
-  title:"License",
+  title:"Libraries",
   icon:.FACreativeCommons,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
@@ -98,7 +108,7 @@ let licenseContent = CellContent(
 
 let versionContent = CellContent(
   title:"ver \(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String)",
-  icon:.FAServer,
+  icon:.FATag,
   cellType: .None,
   tapped:{ _ in }
 )
