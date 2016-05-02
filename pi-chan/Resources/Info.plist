@@ -31,6 +31,20 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0.0.1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>b2c884fd1c5331b63cbc72ec3177379023c8fca4</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>
