@@ -8,11 +8,9 @@ target 'pi-chan' do
   pod 'DGElasticPullToRefresh'
   pod 'SVProgressHUD'
   pod 'VTAcknowledgementsViewController'
-  pod 'Alamofire'
   pod 'Dollar'
   pod 'Cent'
   pod 'KeychainAccess'
-  pod 'SwiftyUserDefaults'
   pod 'Siren'
   pod 'SwiftDate'
   pod 'NSDate+TimeAgo'
@@ -28,6 +26,8 @@ target 'pi-chan' do
   pod 'IQKeyboardManagerSwift'
   pod "OAuthSwift", "~> 0.5.0"
   pod 'XLActionController/Twitter'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 target 'pi-chanTests' do
