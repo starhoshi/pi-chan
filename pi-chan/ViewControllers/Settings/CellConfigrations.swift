@@ -24,29 +24,10 @@ struct CellContent{
 // sectionList
 
 let sectionList = [
-  tokenClearSection,
   esaInfoSection,
   applicationSection,
   developerSection
 ]
-
-// settings
-
-let tokenClearSection = Section(
-  title: "Access Token 削除",
-  cellContents: [
-    tokenClearContent
-  ]
-)
-
-let tokenClearContent = CellContent(
-  title:"AccessToken を削除",
-  icon:.FAUnlockAlt,
-  cellType: .DisclosureIndicator,
-  tapped:{ _ in
-    KeychainManager.clear()
-  }
-)
 
 // esa.io
 
@@ -62,7 +43,7 @@ let esaHomePageContent = CellContent(
   icon:.FASafari,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
-    
+    Share.openBrowser(Constants.ESA.URL)
   }
 )
 
@@ -71,9 +52,10 @@ let esaHomePageContent = CellContent(
 let applicationSection = Section(
   title: "ピーちゃん",
   cellContents: [
-    versionContent,
+    reviewContent,
     shareContent,
-    licenseContent
+    licenseContent,
+    versionContent
   ]
 )
 
@@ -82,6 +64,24 @@ let versionContent = CellContent(
   icon:.FAServer,
   cellType: .None,
   tapped:{ _ in print("a")}
+)
+
+let repositoryContent = CellContent(
+  title:"アプリのソースコード",
+  icon:.FAGithub,
+  cellType: .DisclosureIndicator,
+  tapped:{ _ in
+    Share.openAppStore(Constants.PICHAN.URL.GITHUB)
+  }
+)
+
+let reviewContent = CellContent(
+  title:"アプリをレビュー",
+  icon:.FAStar,
+  cellType: .DisclosureIndicator,
+  tapped:{ _ in
+    Share.openAppStore(Constants.PICHAN.URL.ITMS_REVIEW)
+  }
 )
 
 let shareContent = CellContent(
@@ -97,7 +97,8 @@ let licenseContent = CellContent(
   title:"License",
   icon:.FACreativeCommons,
   cellType: .DisclosureIndicator,
-  tapped:{ _ in print("a")}
+  tapped:{ _ in
+  }
 )
 
 // developer
@@ -114,12 +115,16 @@ let twitterContent = CellContent(
   title:"Twitter: @star__hoshi",
   icon:.FATwitter,
   cellType: .DisclosureIndicator,
-  tapped:{ _ in print("a")}
+  tapped:{ _ in
+    Share.openBrowser(Constants.STARHOSHI.URL.TWITTER)
+  }
 )
 
 let githubContent = CellContent(
-  title:"Github Reopsitory",
-  icon:.FAGithub,
+  title:"Github: starhoshi",
+  icon:.FAGithubAlt,
   cellType: .DisclosureIndicator,
-  tapped:{ _ in print("a")}
+  tapped:{ _ in
+    Share.openBrowser(Constants.STARHOSHI.URL.GITHUB)
+  }
 )

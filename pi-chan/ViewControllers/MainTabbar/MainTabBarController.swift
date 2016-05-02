@@ -15,7 +15,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     super.viewDidLoad()
     self.tabBar.items?[0].setFAIcon(.FAFileTextO)
     self.tabBar.items?[1].setFAIcon(.FAUsers)
-    self.tabBar.items?[2].setFAIcon(.FAUserMd)
+    self.tabBar.items?[2].setFAIcon(.FACubes)
   }
   
   override func didReceiveMemoryWarning() {

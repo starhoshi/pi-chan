@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var name: UILabel!
   override func viewDidLoad() {
     super.viewDidLoad()
-    settingButton.setFAIcon(.FAGear, iconSize: 22)
+    settingButton.setFAIcon(.FAInfoCircle, iconSize: 22)
     loadUserApi()
   }
   
