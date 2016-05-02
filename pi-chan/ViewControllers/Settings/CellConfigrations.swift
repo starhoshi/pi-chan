@@ -39,7 +39,7 @@ let esaInfoSection = Section(
 )
 
 let esaHomePageContent = CellContent(
-  title:"esa.io を開く",
+  title:"Open esa.io",
   icon:.FASafari,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
@@ -52,6 +52,7 @@ let esaHomePageContent = CellContent(
 let applicationSection = Section(
   title: "ピーちゃん",
   cellContents: [
+    repositoryContent,
     reviewContent,
     shareContent,
     licenseContent,
@@ -59,15 +60,8 @@ let applicationSection = Section(
   ]
 )
 
-let versionContent = CellContent(
-  title:"ver \(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String)",
-  icon:.FAServer,
-  cellType: .None,
-  tapped:{ _ in print("a")}
-)
-
 let repositoryContent = CellContent(
-  title:"アプリのソースコード",
+  title:"Github Repository",
   icon:.FAGithub,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
@@ -76,7 +70,7 @@ let repositoryContent = CellContent(
 )
 
 let reviewContent = CellContent(
-  title:"アプリをレビュー",
+  title:"Review",
   icon:.FAStar,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
@@ -85,7 +79,7 @@ let reviewContent = CellContent(
 )
 
 let shareContent = CellContent(
-  title:"アプリをシェア",
+  title:"Share",
   icon:.FAShareAlt,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
@@ -101,10 +95,17 @@ let licenseContent = CellContent(
   }
 )
 
+let versionContent = CellContent(
+  title:"ver \(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String)",
+  icon:.FAServer,
+  cellType: .None,
+  tapped:{ _ in }
+)
+
 // developer
 
 let developerSection = Section(
-  title: "開発者情報",
+  title: "Developer",
   cellContents: [
     twitterContent,
     githubContent
