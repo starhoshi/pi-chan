@@ -19,4 +19,5 @@ class Share {
   static func openAppStore(url:NSURL){
     UIApplication.sharedApplication().openURL(url)
   }
+
 }

@@ -23,7 +23,9 @@ class SettingTableViewCell: UITableViewCell {
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     if selected {
-      if cellContent.title == "License" {
+      if cellContent.title == "Share" {
+        settingViewController?.showShareActivityView()
+      } else if cellContent.title == "License" {
         settingViewController?.goSettingsToAcknowledgements()
       }else{
         cellContent.tapped()

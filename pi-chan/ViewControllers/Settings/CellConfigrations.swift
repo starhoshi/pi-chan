@@ -83,7 +83,7 @@ let shareContent = CellContent(
   icon:.FAShareAlt,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
-    
+    // look SettingTableViewCell
   }
 )
 
@@ -92,6 +92,7 @@ let licenseContent = CellContent(
   icon:.FACreativeCommons,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
+    // look SettingTableViewCell
   }
 )
 

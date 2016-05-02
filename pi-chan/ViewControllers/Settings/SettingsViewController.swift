@@ -52,11 +52,28 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     return cell
   }
 
+  func showShareActivityView(){
+    let shareText = "ピーちゃん - esa.io の非公式 iOS Client"
+    let activityItems = [shareText, Constants.PICHAN.URL.ITUNES]
+
+    let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+    let excludedActivityTypes = [
+      UIActivityTypePostToWeibo,
+      UIActivityTypeSaveToCameraRoll,
+      UIActivityTypePrint,
+      UIActivityTypeAddToReadingList,
+      UIActivityTypePostToFlickr,
+      UIActivityTypePostToVimeo,
+      UIActivityTypePostToTencentWeibo
+    ]
+    activityVC.excludedActivityTypes = excludedActivityTypes
+    presentViewController(activityVC, animated: true, completion: nil)
+  }
+
   func goSettingsToAcknowledgements() {
     performSegueWithIdentifier("SettingsToAcknowledgements", sender: nil)
   }
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    print(segue)
   }
 
   @IBAction func close(sender: AnyObject) {
