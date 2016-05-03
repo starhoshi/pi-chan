@@ -26,9 +26,7 @@ struct PostRevokeRequest: EsaRequestType {
   }
 
   var HTTPHeaderFields:[String:String] {
-    var fields = Esa.createHTTPHeaderFields(esa.token)
-    fields["Content-Type"] = "x-www-form-urlencoded"
-    return fields
+    return Esa.createHTTPHeaderFields(esa.token)
   }
 
   var path: String {

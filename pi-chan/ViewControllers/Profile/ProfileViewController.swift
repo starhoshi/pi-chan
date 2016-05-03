@@ -52,10 +52,12 @@ class ProfileViewController: UIViewController {
 
   @IBAction func clickRevoke(sender: AnyObject) {
     SVProgressHUD.showWithStatus("Loading...")
+    log?.debug("\(KeychainManager.getToken())")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).revoke(){ result in
       switch result {
-      case .Success(_):
+      case .Success(let success):
         SVProgressHUD.showSuccessWithStatus("Success!")
+        log?.info("\(success)")
         Window.openLogin(self)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")

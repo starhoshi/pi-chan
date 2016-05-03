@@ -73,7 +73,6 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     performSegueWithIdentifier("PreviewToPreview", sender: nextPostNumber)
   }
   
-  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     let previewViewController:PreviewViewController = segue.destinationViewController as! PreviewViewController
     previewViewController.postNumber = sender as! Int
