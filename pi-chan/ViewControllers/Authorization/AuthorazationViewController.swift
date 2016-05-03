@@ -10,7 +10,6 @@ import UIKit
 import APIKit
 import SVProgressHUD
 import Font_Awesome_Swift
-import SDCAlertView
 import Cent
 import XLActionController
 

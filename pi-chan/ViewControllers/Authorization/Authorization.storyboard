@@ -43,11 +43,11 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONS-zm-kZe">
-                                <rect key="frame" x="87" y="206" width="426" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONS-zm-kZe">
+                                <rect key="frame" x="62" y="146" width="476" height="40"/>
                                 <color key="backgroundColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sK6-90-26g"/>
+                                    <constraint firstAttribute="height" constant="40" id="Tfj-ix-JHJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
                                 <state key="normal" title="Login in esa.io">
@@ -65,9 +65,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ONS-zm-kZe" secondAttribute="trailing" constant="67" id="GmF-MA-n6r"/>
-                            <constraint firstItem="ONS-zm-kZe" firstAttribute="leading" secondItem="3FL-UB-9wh" secondAttribute="leadingMargin" constant="67" id="OcL-jb-1Tn"/>
-                            <constraint firstItem="ONS-zm-kZe" firstAttribute="top" secondItem="DVf-7R-kIC" secondAttribute="bottom" constant="142" id="apq-Sc-P6X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ONS-zm-kZe" secondAttribute="trailing" constant="42" id="RqC-rn-dwI"/>
+                            <constraint firstItem="ONS-zm-kZe" firstAttribute="leading" secondItem="3FL-UB-9wh" secondAttribute="leadingMargin" constant="42" id="c67-jh-Mxs"/>
+                            <constraint firstItem="ONS-zm-kZe" firstAttribute="top" secondItem="DVf-7R-kIC" secondAttribute="bottom" constant="146" id="dhv-pA-FHI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Authorization" id="7c3-ec-IiM"/>

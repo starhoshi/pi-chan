@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UpdateChecker.prompt()
     KeychainManager.initialSettings()
     IQKeyboardManager.sharedManager().enable = true
-    SVProgressHUD.setMinimumDismissTimeInterval(2)
+    SVProgressHUD.setMinimumDismissTimeInterval(0.5)
     Fabric.with([Crashlytics.self])
 
     // navigation bar settings

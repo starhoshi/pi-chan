@@ -9,6 +9,7 @@
 import UIKit
 import Font_Awesome_Swift
 import SVProgressHUD
+import SDCAlertView
 
 class ProfileViewController: UIViewController {
   
@@ -51,6 +52,15 @@ class ProfileViewController: UIViewController {
   }
 
   @IBAction func clickRevoke(sender: AnyObject) {
+    let alert = AlertController(title: "ログアウト", message: "ログアウトしますか？", preferredStyle: .Alert)
+    alert.addAction(AlertAction(title: "ログアウト", style: .Preferred){
+      _ in self.loadRevokeApi()
+      })
+    alert.addAction(AlertAction(title: "キャンセル", style: .Default))
+    alert.present()
+  }
+
+  func loadRevokeApi(){
     SVProgressHUD.showWithStatus("Loading...")
     log?.debug("\(KeychainManager.getToken())")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).revoke(){ result in
@@ -65,4 +75,5 @@ class ProfileViewController: UIViewController {
       }
     }
   }
+
 }
