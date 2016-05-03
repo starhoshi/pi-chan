@@ -4,11 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,21 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ピーちゃん" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTf-aO-zsO">
-                                <rect key="frame" x="155" y="221.5" width="291" height="157"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pi-chan" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-1s-q0K">
+                                <rect key="frame" x="244" y="227" width="112" height="145"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="xA5-sn-mJR"/>
-                                    <constraint firstAttribute="width" constant="291" id="xHL-h1-25n"/>
+                                    <constraint firstAttribute="height" constant="145" id="12G-Ng-a5d"/>
+                                    <constraint firstAttribute="width" constant="112" id="CP4-n3-3dN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="55"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.039215686274509803" green="0.60784313725490191" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.082352941176470587" green="0.58039215686274515" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="RTf-aO-zsO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="OKe-PA-HP2"/>
-                            <constraint firstItem="RTf-aO-zsO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Swh-gF-TmS"/>
+                            <constraint firstItem="Wfh-1s-q0K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="s7y-Tl-75K"/>
+                            <constraint firstItem="Wfh-1s-q0K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wKQ-ba-Kzw"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,4 +37,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pi-chan" width="201" height="259"/>
+    </resources>
 </document>

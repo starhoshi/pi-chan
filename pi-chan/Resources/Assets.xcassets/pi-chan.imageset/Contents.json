@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "pi-chan copy 2-2.png",
+      "filename" : "pi-chan.logo-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pi-chan copy 2-1.png",
+      "filename" : "pi-chan.logo copy.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "pi-chan copy 2.png",
+      "filename" : "pi-chan.logo.png",
       "scale" : "3x"
     }
   ],
