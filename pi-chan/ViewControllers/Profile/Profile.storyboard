@@ -69,7 +69,7 @@
                                             <constraint firstAttribute="height" constant="28" id="fdI-KW-S5s"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                        <state key="normal" title="ピーちゃん との連携を解除">
+                                        <state key="normal" title="ログアウト">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
