@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 import SafariServices
+import Cent
 
 class PreviewViewController: UIViewController, UIWebViewDelegate {
   var postNumber:Int!
@@ -54,6 +55,10 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
   }
   
   func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    if request.URL!.absoluteString =~ "file:///posts" {
+      goPreviewToPreview(request.URL!)
+      return false
+    }
     if navigationType == .Other{
       return true
     }else{
@@ -61,9 +66,19 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
       presentViewController(safari, animated: true, completion: nil)
       return false
     }
-    
+  }
+
+  func goPreviewToPreview(url:NSURL){
+      let nextPostNumber = Int(url.absoluteString.stringByReplacingOccurrencesOfString("file:///posts/",withString: ""))!
+    performSegueWithIdentifier("PreviewToPreview", sender: nextPostNumber)
   }
   
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let previewViewController:PreviewViewController = segue.destinationViewController as! PreviewViewController
+    previewViewController.postNumber = sender as! Int
+  }
+
   @IBAction func openEditor(sender: AnyObject) {
     Window.openEditor(self, post: post)
   }
