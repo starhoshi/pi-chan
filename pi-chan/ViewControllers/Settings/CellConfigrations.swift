@@ -40,7 +40,7 @@ let esaInfoSection = Section(
 )
 
 let esaHomePageContent = CellContent(
-  title:"Open esa.io",
+  title:"esa.io",
   icon:.FASafari,
   cellType: .DisclosureIndicator,
   tapped:{ _ in
