@@ -10,6 +10,7 @@ import UIKit
 import Font_Awesome_Swift
 import SVProgressHUD
 import SDCAlertView
+import CRToast
 
 class ProfileViewController: UIViewController {
   
@@ -68,6 +69,7 @@ class ProfileViewController: UIViewController {
       case .Success(let success):
         SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(success)")
+        CRToast.showSuccessNotificationFromBottom()
         Window.openLogin(self)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")

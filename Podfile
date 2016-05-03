@@ -28,6 +28,7 @@ target 'pi-chan' do
   pod 'XLActionController/Twitter'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'CRToast'
 end
 
 target 'pi-chanTests' do
