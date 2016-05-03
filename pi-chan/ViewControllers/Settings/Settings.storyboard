@@ -12,6 +12,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UF5-lN-0Je">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="flat" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="UEw-7J-skc" kind="relationship" relationship="rootViewController" id="0PO-gX-P0r"/>

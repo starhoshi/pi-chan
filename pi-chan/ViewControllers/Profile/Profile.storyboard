@@ -63,12 +63,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz4-6P-aL6">
-                                        <rect key="frame" x="16" y="151" width="568" height="40"/>
+                                        <rect key="frame" x="42" y="117" width="516" height="28"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.33333333333333331" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Oca-bQ-SxF"/>
+                                            <constraint firstAttribute="height" constant="28" id="fdI-KW-S5s"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                         <state key="normal" title="ピーちゃん との連携を解除">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -85,20 +85,20 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="7Zh-fc-B0l" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="80" id="4Qq-Wx-zcm"/>
-                                    <constraint firstItem="Hz4-6P-aL6" firstAttribute="top" secondItem="7Zh-fc-B0l" secondAttribute="bottom" constant="50" id="6kd-Fd-Cy4"/>
                                     <constraint firstItem="hM7-CT-4cf" firstAttribute="top" secondItem="zNO-qo-WWC" secondAttribute="top" constant="8" id="7pk-Ya-W4D"/>
                                     <constraint firstAttribute="height" constant="313" id="9pE-WV-WGy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hz4-6P-aL6" secondAttribute="trailing" constant="42" id="B12-ik-mG8"/>
                                     <constraint firstItem="mdt-xX-pv2" firstAttribute="top" secondItem="vBD-4o-hi6" secondAttribute="bottom" constant="8" id="LBg-6C-8Ep"/>
                                     <constraint firstAttribute="trailing" secondItem="vBD-4o-hi6" secondAttribute="trailing" constant="8" id="Mqc-US-gA2"/>
                                     <constraint firstItem="mdt-xX-pv2" firstAttribute="leading" secondItem="hM7-CT-4cf" secondAttribute="trailing" constant="8" id="Qct-Dh-5Ux"/>
                                     <constraint firstItem="vBD-4o-hi6" firstAttribute="leading" secondItem="hM7-CT-4cf" secondAttribute="trailing" constant="8" id="gJA-fQ-Ehj"/>
                                     <constraint firstAttribute="trailing" secondItem="mdt-xX-pv2" secondAttribute="trailing" constant="8" id="gKy-6M-Z2o"/>
                                     <constraint firstItem="7Zh-fc-B0l" firstAttribute="top" secondItem="mdt-xX-pv2" secondAttribute="bottom" constant="8" id="h1u-oW-pHF"/>
-                                    <constraint firstItem="Hz4-6P-aL6" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="16" id="iPt-xM-A6F"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hz4-6P-aL6" secondAttribute="trailing" constant="16" id="iaA-BV-uWg"/>
+                                    <constraint firstItem="Hz4-6P-aL6" firstAttribute="top" secondItem="7Zh-fc-B0l" secondAttribute="bottom" constant="16" id="hc1-x8-QEb"/>
                                     <constraint firstAttribute="trailing" secondItem="7Zh-fc-B0l" secondAttribute="trailing" constant="8" id="jdE-zA-6g9"/>
                                     <constraint firstItem="vBD-4o-hi6" firstAttribute="top" secondItem="zNO-qo-WWC" secondAttribute="top" constant="8" id="oh2-hg-CEp"/>
                                     <constraint firstItem="hM7-CT-4cf" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="8" id="pjb-oB-VNh"/>
+                                    <constraint firstItem="Hz4-6P-aL6" firstAttribute="leading" secondItem="zNO-qo-WWC" secondAttribute="leading" constant="42" id="xpu-Y0-jgk"/>
                                 </constraints>
                             </view>
                         </subviews>
