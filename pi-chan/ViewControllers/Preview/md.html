@@ -24,6 +24,11 @@
   </style>
   <script>
     function insert(html) {
+      marked.setOptions({
+                        gfm: true,
+                        tables: true,
+                        breaks: true
+                       });
       document.getElementById('content').innerHTML = marked(html);
     }
   </script>

@@ -26,7 +26,7 @@ class SettingTableViewCell: UITableViewCell {
     if selected {
       if cellContent.title == "Share" {
         settingViewController?.showShareActivityView()
-      } else if cellContent.title == "License" {
+      } else if cellContent.title == "Libraries" {
         settingViewController?.goSettingsToAcknowledgements()
       }else{
         cellContent.tapped()
