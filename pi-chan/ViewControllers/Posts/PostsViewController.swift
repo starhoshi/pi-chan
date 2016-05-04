@@ -31,9 +31,10 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     setSearchBar()
   }
   override func viewDidAppear(animated: Bool) {
-    if Global.fromLogin {
+    if Global.fromLogin || Global.posted{
       resetAndLoadApi()
       Global.fromLogin = false
+      Global.posted = false
     }
   }
   override func viewWillAppear(animated: Bool) {

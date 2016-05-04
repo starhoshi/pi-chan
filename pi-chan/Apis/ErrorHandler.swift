@@ -14,6 +14,7 @@ import JLToast
 class ErrorHandler {
   struct STATUS {
     static let UNAUTHORIAZED = 401
+    static let NOT_FOUND = 404
   }
   
   static func errorAlert(error: APIError, controller: UIViewController) {
@@ -50,6 +51,8 @@ class ErrorHandler {
       if statusCode == STATUS.UNAUTHORIAZED {
         Window.openLogin(controller)
         showNeedLoginToast()
+      } else if statusCode == STATUS.NOT_FOUND{
+        showNotFoundToast()
       } else {
         showErrorToast()
       }
@@ -58,6 +61,9 @@ class ErrorHandler {
   
   private static func showErrorToast(){
     JLToast.showPichanToast("エラーが発生しました。(\\( ⁰⊖⁰)/)\n\nしばらく経ってから再度お試しください。")
+  }
+  private static func showNotFoundToast(){
+    JLToast.showPichanToast("該当の URL が見つかりませんでした。(\\( ⁰⊖⁰)/)")
   }
   private static func showNeedLoginToast(){
     JLToast.showPichanToast("esa.io での認証が必要です (\\( ⁰⊖⁰)/)\nログインをお願いします。")

@@ -28,9 +28,10 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
   }
 
   override func viewDidAppear(animated: Bool) {
-    if Global.fromLogin {
+    if Global.fromLogin || Global.posted {
       loadApi()
       Global.fromLogin = false
+      Global.posted = false
     }
   }
 

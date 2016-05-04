@@ -102,6 +102,8 @@ class EditorViewController: UIViewController {
       case .Success(let posts):
         log?.info("\(posts)")
         JLToast.showPichanToast("投稿が完了しました! (\\( ⁰⊖⁰)/)")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        Global.posted = true
       case .Failure(let error):
         ErrorHandler.errorAlert(error, controller: self)
       }
@@ -115,6 +117,8 @@ class EditorViewController: UIViewController {
       case .Success(let posts):
         log?.info("\(posts)")
         JLToast.showPichanToast("編集が投稿されました! (\\( ⁰⊖⁰)/)")
+        self.dismissViewControllerAnimated(true, completion: nil)
+        Global.posted = true
       case .Failure(let error):
         ErrorHandler.errorAlert(error, controller: self)
       }
