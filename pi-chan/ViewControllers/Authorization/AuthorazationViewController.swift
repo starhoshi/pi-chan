@@ -81,6 +81,6 @@ class AuthorizationViewController: UIViewController {
     KeychainManager.setTeamName(teamName)
     KeychainManager.setToken(token)
     self.dismissViewControllerAnimated(true, completion: nil)
-    JLToast.showPichanToast("\(teamName) へログインが成功しました!")
+    JLToast.showPichanToast("\(teamName) へのログインが成功しました!")
   }
 }

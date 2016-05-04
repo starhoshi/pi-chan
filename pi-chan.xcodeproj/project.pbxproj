@@ -71,8 +71,7 @@
 		E3D166831CD616BC0062480C /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166821CD616BC0062480C /* Revoke.swift */; };
 		E3D166851CD7CB1E0062480C /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166841CD7CB1E0062480C /* Share.swift */; };
 		E3D166871CD7CBCF0062480C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166861CD7CBCF0062480C /* Constants.swift */; };
-		E3D166901CD91ACB0062480C /* CRToast+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1668F1CD91ACB0062480C /* CRToast+Extension.swift */; };
-		E3D166941CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D166931CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist */; };
+		E3D166941CD9C8500062480C /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D166931CD9C8500062480C /* Pods-acknowledgements.plist */; };
 		E3D166961CD9DA320062480C /* JLToast+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166951CD9DA320062480C /* JLToast+Extension.swift */; };
 		E3D166981CD9E0B20062480C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166971CD9E0B20062480C /* ErrorHandler.swift */; };
 		E3D1669A1CD9FE1A0062480C /* Crashlytics+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166991CD9FE1A0062480C /* Crashlytics+Extension.swift */; };
@@ -167,8 +166,7 @@
 		E3D166821CD616BC0062480C /* Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revoke.swift; sourceTree = "<group>"; };
 		E3D166841CD7CB1E0062480C /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		E3D166861CD7CBCF0062480C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E3D1668F1CD91ACB0062480C /* CRToast+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CRToast+Extension.swift"; sourceTree = "<group>"; };
-		E3D166931CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-pi-chan-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan-acknowledgements.plist"; sourceTree = "<group>"; };
+		E3D166931CD9C8500062480C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-pi-chan/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		E3D166951CD9DA320062480C /* JLToast+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JLToast+Extension.swift"; sourceTree = "<group>"; };
 		E3D166971CD9E0B20062480C /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorHandler.swift; path = ../Apis/ErrorHandler.swift; sourceTree = "<group>"; };
 		E3D166991CD9FE1A0062480C /* Crashlytics+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Crashlytics+Extension.swift"; sourceTree = "<group>"; };
@@ -338,7 +336,7 @@
 				E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */,
 				E3D166861CD7CBCF0062480C /* Constants.swift */,
 				E3D9A5B21CA7D29B00B43F37 /* Info.plist */,
-				E3D166931CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist */,
+				E3D166931CD9C8500062480C /* Pods-acknowledgements.plist */,
 				E3D9A5AF1CA7D29B00B43F37 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -454,7 +452,6 @@
 				E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */,
 				E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */,
 				E33412C41CB8B5E000F455BE /* UIScrollView+Extension.swift */,
-				E3D1668F1CD91ACB0062480C /* CRToast+Extension.swift */,
 				E3D166951CD9DA320062480C /* JLToast+Extension.swift */,
 				E3D166991CD9FE1A0062480C /* Crashlytics+Extension.swift */,
 			);
@@ -611,7 +608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3D166941CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist in Resources */,
+				E3D166941CD9C8500062480C /* Pods-acknowledgements.plist in Resources */,
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
@@ -761,7 +758,6 @@
 				E33599781CB2C148001A3C8D /* GET_Post.swift in Sources */,
 				E3D0C1651CC14F17006A48EA /* PostsParameters.swift in Sources */,
 				E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */,
-				E3D166901CD91ACB0062480C /* CRToast+Extension.swift in Sources */,
 				E3D166961CD9DA320062480C /* JLToast+Extension.swift in Sources */,
 				E38A0F6A1CA7D95200ED99B6 /* Team.swift in Sources */,
 				E335995B1CA80392001A3C8D /* SettingsViewController.swift in Sources */,
