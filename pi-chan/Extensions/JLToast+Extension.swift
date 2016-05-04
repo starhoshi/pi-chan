@@ -16,6 +16,7 @@ extension JLToastDelay {
 extension JLToast {
 
   static func showPichanToast(text:String){
+    JLToastCenter.defaultCenter().cancelAllToasts()
     JLToastConfigrations.initSettings()
     JLToast.makeText(text, duration: JLToastDelay.SuperLongDelay).show()
   }
@@ -38,6 +39,18 @@ class JLToastConfigrations{
     JLToastView.setDefaultValue(
       UIFont(name: "Lato-Regular", size: 14)!,
       forAttributeName: JLToastViewFontAttributeName,
+      userInterfaceIdiom: .Phone
+    )
+
+    JLToastView.setDefaultValue(
+      60.0,
+      forAttributeName: JLToastViewPortraitOffsetYAttributeName,
+      userInterfaceIdiom: .Phone
+    )
+
+    JLToastView.setDefaultValue(
+      60.0,
+      forAttributeName: JLToastViewLandscapeOffsetYAttributeName,
       userInterfaceIdiom: .Phone
     )
   }
