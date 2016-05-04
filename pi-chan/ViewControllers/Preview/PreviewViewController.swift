@@ -26,11 +26,14 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     webView.delegate = self;
     webView.loadRequest(req)
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+
+  override func viewDidAppear(animated: Bool) {
+    if Global.fromLogin {
+      loadApi()
+      Global.fromLogin = false
+    }
   }
-  
+
   func loadApi(){
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).post(postNumber){ result in

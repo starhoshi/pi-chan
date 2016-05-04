@@ -28,7 +28,14 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
       tableView.deselectRowAtIndexPath(indexPathForSelectedRow, animated: true)
     }
   }
-  
+
+  override func viewDidAppear(animated: Bool) {
+    if Global.fromLogin {
+      loadMembersApi()
+      Global.fromLogin = false
+    }
+  }
+
   func initTableView(){
     self.tableView.delegate = self
     self.tableView.dataSource = self

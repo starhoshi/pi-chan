@@ -18,19 +18,23 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
   var searchText:String? = nil
   var nextPage:Int? = 1
   var loading = false
-  //  var searchController: UISearchController!
-  var     searchController = UISearchController(searchResultsController: nil)
+  var searchController = UISearchController(searchResultsController: nil)
   
   @IBOutlet weak var rightBarButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     rightBarButton.setFAIcon(.FAPencil, iconSize: 22)
     self.navigationItem.title = searchText != nil ? searchText : "Posts"
     initTableView()
     resetAndLoadApi()
     setSearchBar()
+  }
+  override func viewDidAppear(animated: Bool) {
+    if Global.fromLogin {
+      resetAndLoadApi()
+      Global.fromLogin = false
+    }
   }
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(true)

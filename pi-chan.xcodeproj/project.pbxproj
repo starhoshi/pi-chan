@@ -75,6 +75,7 @@
 		E3D166961CD9DA320062480C /* JLToast+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166951CD9DA320062480C /* JLToast+Extension.swift */; };
 		E3D166981CD9E0B20062480C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166971CD9E0B20062480C /* ErrorHandler.swift */; };
 		E3D1669A1CD9FE1A0062480C /* Crashlytics+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166991CD9FE1A0062480C /* Crashlytics+Extension.swift */; };
+		E3D1669C1CDA20370062480C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1669B1CDA20370062480C /* Global.swift */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -170,6 +171,7 @@
 		E3D166951CD9DA320062480C /* JLToast+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JLToast+Extension.swift"; sourceTree = "<group>"; };
 		E3D166971CD9E0B20062480C /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorHandler.swift; path = ../Apis/ErrorHandler.swift; sourceTree = "<group>"; };
 		E3D166991CD9FE1A0062480C /* Crashlytics+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Crashlytics+Extension.swift"; sourceTree = "<group>"; };
+		E3D1669B1CDA20370062480C /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				E33599691CA83680001A3C8D /* UpdateChecker.swift */,
 				E33412BB1CB40CF500F455BE /* View.swift */,
 				E3D0C15C1CBFDE98006A48EA /* Window.swift */,
+				E3D1669B1CDA20370062480C /* Global.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */,
 				E30B0E651CCBBF2F0088D43A /* Authorization.sample.swift in Sources */,
 				E3D0C1631CC12900006A48EA /* PATCH_Posts.swift in Sources */,
+				E3D1669C1CDA20370062480C /* Global.swift in Sources */,
 				E3D166871CD7CBCF0062480C /* Constants.swift in Sources */,
 				E3C638E21CD129F2000C5CC9 /* User.swift in Sources */,
 				E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */,

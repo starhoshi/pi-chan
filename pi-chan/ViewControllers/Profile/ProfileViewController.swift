@@ -26,8 +26,11 @@ class ProfileViewController: UIViewController {
     loadUserApi()
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+  override func viewDidAppear(animated: Bool) {
+    if Global.fromLogin {
+      loadUserApi()
+      Global.fromLogin = false
+    }
   }
 
   func loadUserApi(){
@@ -54,8 +57,8 @@ class ProfileViewController: UIViewController {
   }
 
   @IBAction func clickRevoke(sender: AnyObject) {
-    let alert = AlertController(title: "ログアウト", message: "ログアウトしますか？", preferredStyle: .Alert)
-    alert.addAction(AlertAction(title: "ログアウト", style: .Preferred){
+    let alert = AlertController(title: "認証解除", message: "ピーちゃんと esa.io の認証を解除しますか？\n\n解除した後も再度認証いただければ、またピーちゃんをご利用いただけます。", preferredStyle: .Alert)
+    alert.addAction(AlertAction(title: "認証解除", style: .Preferred){
       _ in self.loadRevokeApi()
       })
     alert.addAction(AlertAction(title: "キャンセル", style: .Default))
@@ -69,7 +72,7 @@ class ProfileViewController: UIViewController {
       SVProgressHUD.dismiss()
       switch result {
       case .Success(_):
-        JLToast.showPichanToast("ログアウトに成功しました (\\( ⁰⊖⁰)/)\n\nアプリ連携を取り消したい場合は、 esa.io の Applications から Revoke してください。")
+        JLToast.showPichanToast("アプリ連携を解除しました (\\( ⁰⊖⁰)/)\n\n再度ご利用の場合は、もう一度認証をお願いします。")
         Window.openLogin(self)
       case .Failure(let error):
         ErrorHandler.errorAlert(error, controller: self)

@@ -81,5 +81,6 @@ class AuthorizationViewController: UIViewController {
     KeychainManager.setToken(token)
     self.dismissViewControllerAnimated(true, completion: nil)
     JLToast.showPichanToast("\(teamName) へのログインが成功しました!")
+    Global.fromLogin = true
   }
 }

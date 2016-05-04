@@ -41,7 +41,10 @@ class EditorViewController: UIViewController {
     navigationTitle.text = (post == nil) ? "New Posts" : post?.name
     client = Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!)
   }
-  
+  override func viewDidAppear(animated: Bool) {
+    Global.fromLogin = false
+  }
+
   func setTextViewStyle(){
     textView.placeholder = "# Input with Markdown"
     textView.layer.borderWidth = 1
@@ -54,11 +57,7 @@ class EditorViewController: UIViewController {
     statusBarBackground.backgroundColor = UIColor.esaGreen()
     self.view.addSubview(statusBarBackground)
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
-  
+
   @IBAction func post(sender: AnyObject) {
     if (textField.text != nil && textField.text != "" && textField.text != "/" ){
       showAlert()
