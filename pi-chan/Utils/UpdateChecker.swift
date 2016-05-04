@@ -12,9 +12,9 @@ import Siren
 class UpdateChecker {
   static func prompt(){
     let siren = Siren.sharedInstance
-    //    siren.appID = Constants.SEKITORI.ID.rawValue
+    siren.debugEnabled = true
     siren.alertType = .Skip
+    siren.forceLanguageLocalization = .Japanese
     siren.checkVersion(.Immediately)
   }
 }
-
