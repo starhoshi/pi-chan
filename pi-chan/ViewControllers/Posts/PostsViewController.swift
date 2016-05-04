@@ -59,8 +59,6 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     searchController.searchBar.layer.borderWidth = 1
     searchController.searchBar.layer.opacity = 1
     searchController.searchBar.subviews[0].subviews.flatMap(){ $0 as? UITextField }.first?.tintColor = UIColor.esaGreen()
-    //    searchController.loadViewIfNeeded()    // iOS 9
-    //    tableView.extendedLayoutIncludesOpaqueBars = true
     tableView.tableHeaderView = searchController.searchBar
   }
   

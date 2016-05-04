@@ -12,9 +12,17 @@ import Himotoki
 struct GetMembersRequest: EsaRequestType {
   typealias Response = Members
   let esa: Esa
+  let page: Int
+  let perPage: Int
   
-  init(esa: Esa) {
+  init(esa: Esa, page:Int?, perPage:Int) {
     self.esa = esa
+    self.page = page == nil ? 1 : page!
+    self.perPage = perPage
+  }
+
+  var parameters: [String : AnyObject]{
+    return ["page":page, "per_page":perPage]
   }
   
   var method: HTTPMethod {

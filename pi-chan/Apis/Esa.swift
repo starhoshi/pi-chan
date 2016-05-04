@@ -67,8 +67,8 @@ class Esa{
     return Session.sendRequest(request, handler:handler)
   }
   
-  func members(handler:(Result<Members, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
-    let request = GetMembersRequest(esa: self)
+  func members(page:Int? = nil,perPage:Int = 20,handler:(Result<Members, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = GetMembersRequest(esa: self, page: page, perPage:perPage)
     return Session.sendRequest(request, handler:handler)
   }
   

@@ -16,10 +16,12 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   @IBOutlet weak var tableView: UITableView!
   var members:[Member] = []
+  var nextPage:Int? = 1
+  var loading = false
   override func viewDidLoad() {
     super.viewDidLoad()
     initTableView()
-    loadMembersApi()
+    resetAndLoadApi()
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -28,14 +30,14 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
       tableView.deselectRowAtIndexPath(indexPathForSelectedRow, animated: true)
     }
   }
-
+  
   override func viewDidAppear(animated: Bool) {
     if Global.fromLogin {
-      loadMembersApi()
+      resetAndLoadApi()
       Global.fromLogin = false
     }
   }
-
+  
   func initTableView(){
     self.tableView.delegate = self
     self.tableView.dataSource = self
@@ -47,7 +49,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     tableView.tableFooterView = UIView()
     tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self!.tableView.dg_stopLoading()
-      self!.loadMembersApi()
+      self!.resetAndLoadApi()
       }, loadingView: View.refreshLoading())
     tableView.dg_setPullToRefreshFillColor(UIColor.esaGreen())
     tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
@@ -62,7 +64,7 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
   }
   
   func emptyDataSetDidTapView(scrollView: UIScrollView!) {
-    loadMembersApi()
+    resetAndLoadApi()
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int  {
@@ -72,6 +74,9 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell:MemberTableViewCell = tableView.dequeueReusableCellWithIdentifier("MemberCell")! as! MemberTableViewCell
     cell.setItems(members[indexPath.row])
+    if (members.count - 1) == indexPath.row {
+      loadMembersApi(nextPage)
+    }
     return cell
   }
   
@@ -84,13 +89,23 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
     postsViewController.searchText = sender as? String
   }
   
-  func loadMembersApi(){
+  func resetAndLoadApi(){
+    members = []
+    tableView.reloadData()
+    loadMembersApi(1)
+  }
+  
+  func loadMembersApi(page:Int?){
+    if page == nil || loading{
+      return
+    }
     SVProgressHUD.showWithStatus("Loading...")
-    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).members(){ result in
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).members(page){ result in
       SVProgressHUD.dismiss()
       switch result {
       case .Success(let members):
-        self.members = members.members
+        self.members << members.members
+        self.nextPage = members.nextPage
         self.tableView.reloadData()
       case .Failure(let error):
         ErrorHandler.errorAlert(error, controller: self)
