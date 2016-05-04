@@ -1,5 +1,5 @@
 //
-//  JLToastConfigrations.swift
+//  JLToast+Extension.swift
 //  pi-chan
 //
 //  Created by Kensuke Hoshikawa on 2016/05/04.
@@ -9,8 +9,20 @@
 import Foundation
 import JLToast
 
+extension JLToastDelay {
+  public static let SuperLongDelay: NSTimeInterval = 5.0
+}
+
+extension JLToast {
+
+  static func showPichanToast(text:String){
+    JLToastConfigrations.initSettings()
+    JLToast.makeText(text, duration: JLToastDelay.SuperLongDelay).show()
+  }
+}
+
 class JLToastConfigrations{
-  static func setDefault(){
+  static func initSettings(){
     JLToastView.setDefaultValue(
       UIColor.esaBrown(),
       forAttributeName: JLToastViewBackgroundColorAttributeName,

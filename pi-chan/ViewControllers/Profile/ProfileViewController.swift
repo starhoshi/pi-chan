@@ -70,10 +70,10 @@ class ProfileViewController: UIViewController {
       switch result {
       case .Success(let success):
         log?.info("\(success)")
-        JLToast.makeText("ログアウトに成功しました (\\( ⁰⊖⁰)/)\n\nアプリ連携を取り消したい場合は、 esa.io の Applications から Revoke してください。", duration: 5.0).show()
+        JLToast.showPichanToast("ログアウトに成功しました (\\( ⁰⊖⁰)/)\n\nアプリ連携を取り消したい場合は、 esa.io の Applications から Revoke してください。")
         Window.openLogin(self)
       case .Failure(let error):
-        JLToast.makeText("ログアウトに失敗しました。\nお時間を置き、再度お試しください。", duration: JLToastDelay.LongDelay).show()
+        JLToast.showPichanToast("ログアウトに失敗しました。\nお時間を置き、再度お試しください。")
         log?.error("\(error)")
       }
     }
