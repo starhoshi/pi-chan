@@ -28,7 +28,6 @@ class Window:UIViewController{
   }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    print(segue)
   }
 
 }

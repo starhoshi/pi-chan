@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController {
         Window.openLogin(self)
       case .Failure(let error):
         JLToast.showPichanToast("ログアウトに失敗しました。\nお時間を置き、再度お試しください。")
-        log?.error("\(error)")
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }

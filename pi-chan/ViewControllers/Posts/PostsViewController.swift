@@ -141,8 +141,7 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.reloadData()
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
-        log?.error("\(error)")
-        Window.openLogin(self)
+        ErrorHandler.errorAlert(error, controller: self)
       }
       self.loading = false
     }

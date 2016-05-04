@@ -12,6 +12,7 @@ import SVProgressHUD
 import Font_Awesome_Swift
 import Cent
 import XLActionController
+import JLToast
 
 class AuthorizationViewController: UIViewController {
   
@@ -47,7 +48,7 @@ class AuthorizationViewController: UIViewController {
         self.selectTeamWhenJoinedMultiTeams(teams,token: token)
       case .Failure(let error):
         SVProgressHUD.showErrorWithStatus("Error!")
-        log?.info("\(error)")
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }
@@ -80,5 +81,6 @@ class AuthorizationViewController: UIViewController {
     KeychainManager.setTeamName(teamName)
     KeychainManager.setToken(token)
     self.dismissViewControllerAnimated(true, completion: nil)
+    JLToast.showPichanToast("\(teamName) へログインが成功しました!")
   }
 }
