@@ -10,7 +10,6 @@ import UIKit
 import Font_Awesome_Swift
 import SVProgressHUD
 import SDCAlertView
-import CRToast
 import JLToast
 
 class ProfileViewController: UIViewController {
