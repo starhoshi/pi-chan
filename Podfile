@@ -29,6 +29,7 @@ target 'pi-chan' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'CRToast'
+  pod 'JLToast'
 end
 
 target 'pi-chanTests' do

@@ -14,6 +14,7 @@ PODS:
   - Font-Awesome-Swift (1.4.7)
   - Himotoki (1.7.0)
   - IQKeyboardManagerSwift (4.0.2)
+  - JLToast (1.4.0)
   - KeychainAccess (2.3.5)
   - Kingfisher (2.3.1)
   - NSDate+TimeAgo (1.0.6)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - Font-Awesome-Swift
   - Himotoki (~> 1.7)
   - IQKeyboardManagerSwift
+  - JLToast
   - KeychainAccess
   - Kingfisher (~> 2.2)
   - NSDate+TimeAgo
@@ -71,6 +73,7 @@ SPEC CHECKSUMS:
   Font-Awesome-Swift: 0131fd0f683ac024ce9abf1fdbc9fb482150ce49
   Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
   IQKeyboardManagerSwift: 2f2c19c509f67c4c0df2826db54033d3e090ce65
+  JLToast: 1599854ade65dddce01dca5bbe61d6119479ff7e
   KeychainAccess: e283c1981a6c5655e1984cd411c6faf16fa165ae
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   NSDate+TimeAgo: 35601c619b2d59290055e4fe76e61d97677a2360

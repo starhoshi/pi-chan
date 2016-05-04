@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     UpdateChecker.prompt()
     KeychainManager.initialSettings()
+    JLToastConfigrations.setDefault()
     IQKeyboardManager.sharedManager().enable = true
     SVProgressHUD.setMinimumDismissTimeInterval(0.5)
     Fabric.with([Crashlytics.self])

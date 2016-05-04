@@ -11,6 +11,7 @@ import Font_Awesome_Swift
 import SVProgressHUD
 import SDCAlertView
 import CRToast
+import JLToast
 
 class ProfileViewController: UIViewController {
   
@@ -65,14 +66,14 @@ class ProfileViewController: UIViewController {
     SVProgressHUD.showWithStatus("Loading...")
     log?.debug("\(KeychainManager.getToken())")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).revoke(){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let success):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(success)")
-        CRToast.showSuccessNotificationFromBottom()
+        JLToast.makeText("ログアウトに成功しました (\\( ⁰⊖⁰)/)\n\nアプリ連携を取り消したい場合は、 esa.io の Applications から Revoke してください。", duration: 5.0).show()
         Window.openLogin(self)
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
+        JLToast.makeText("ログアウトに失敗しました。\nお時間を置き、再度お試しください。", duration: JLToastDelay.LongDelay).show()
         log?.error("\(error)")
       }
     }

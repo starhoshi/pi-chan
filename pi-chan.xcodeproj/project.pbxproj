@@ -71,8 +71,9 @@
 		E3D166831CD616BC0062480C /* Revoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166821CD616BC0062480C /* Revoke.swift */; };
 		E3D166851CD7CB1E0062480C /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166841CD7CB1E0062480C /* Share.swift */; };
 		E3D166871CD7CBCF0062480C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166861CD7CBCF0062480C /* Constants.swift */; };
-		E3D1668E1CD91A6B0062480C /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D1668D1CD91A6B0062480C /* Pods-acknowledgements.plist */; };
 		E3D166901CD91ACB0062480C /* CRToast+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D1668F1CD91ACB0062480C /* CRToast+Extension.swift */; };
+		E3D166921CD9C29A0062480C /* JLToastConfigrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D166911CD9C29A0062480C /* JLToastConfigrations.swift */; };
+		E3D166941CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D166931CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist */; };
 		E3D9A5A71CA7D29B00B43F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */; };
 		E3D9A5AC1CA7D29B00B43F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AA1CA7D29B00B43F37 /* Main.storyboard */; };
 		E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */; };
@@ -164,8 +165,9 @@
 		E3D166821CD616BC0062480C /* Revoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revoke.swift; sourceTree = "<group>"; };
 		E3D166841CD7CB1E0062480C /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		E3D166861CD7CBCF0062480C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E3D1668D1CD91A6B0062480C /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-pi-chan/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		E3D1668F1CD91ACB0062480C /* CRToast+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CRToast+Extension.swift"; sourceTree = "<group>"; };
+		E3D166911CD9C29A0062480C /* JLToastConfigrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLToastConfigrations.swift; sourceTree = "<group>"; };
+		E3D166931CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-pi-chan-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan-acknowledgements.plist"; sourceTree = "<group>"; };
 		E3D9A5A31CA7D29A00B43F37 /* pi-chan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-chan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D9A5A61CA7D29B00B43F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D9A5AB1CA7D29B00B43F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				E33599691CA83680001A3C8D /* UpdateChecker.swift */,
 				E33412BB1CB40CF500F455BE /* View.swift */,
 				E3D0C15C1CBFDE98006A48EA /* Window.swift */,
+				E3D166911CD9C29A0062480C /* JLToastConfigrations.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -330,8 +333,8 @@
 				E35ECB051CBA18BB009EC020 /* fonts */,
 				E3D9A5AD1CA7D29B00B43F37 /* Assets.xcassets */,
 				E3D166861CD7CBCF0062480C /* Constants.swift */,
-				E3D1668D1CD91A6B0062480C /* Pods-acknowledgements.plist */,
 				E3D9A5B21CA7D29B00B43F37 /* Info.plist */,
+				E3D166931CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist */,
 				E3D9A5AF1CA7D29B00B43F37 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -602,7 +605,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3D1668E1CD91A6B0062480C /* Pods-acknowledgements.plist in Resources */,
+				E3D166941CD9C8500062480C /* Pods-pi-chan-acknowledgements.plist in Resources */,
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
@@ -737,6 +740,7 @@
 				E30B0E631CCBBE490088D43A /* Authorization.swift in Sources */,
 				E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */,
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
+				E3D166921CD9C29A0062480C /* JLToastConfigrations.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
 				E35181171CC39FB2008B141D /* SettingTableViewCell.swift in Sources */,
 				E335994B1CA7E5DA001A3C8D /* PostsViewController.swift in Sources */,
