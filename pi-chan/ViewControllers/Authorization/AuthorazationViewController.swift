@@ -41,13 +41,12 @@ class AuthorizationViewController: UIViewController {
     SVProgressHUD.showWithStatus("Loading...")
     Esa.teams(token){
       result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let teams):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(teams)")
         self.selectTeamWhenJoinedMultiTeams(teams,token: token)
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
         ErrorHandler.errorAlert(error, controller: self)
       }
     }

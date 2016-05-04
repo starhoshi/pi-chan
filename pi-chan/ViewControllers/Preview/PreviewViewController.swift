@@ -34,9 +34,9 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
   func loadApi(){
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).post(postNumber){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let post):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         self.post = post
         self.navigationItem.title = post.name
         let md = post.bodyMd.replaceNewLine()
@@ -44,8 +44,7 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
         log?.debug("\(js)")
         self.webView.stringByEvaluatingJavaScriptFromString(js)
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
-        log?.error("\(error)")
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }
@@ -67,9 +66,9 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
       return false
     }
   }
-
+  
   func goPreviewToPreview(url:NSURL){
-      let nextPostNumber = Int(url.absoluteString.stringByReplacingOccurrencesOfString("file:///posts/",withString: ""))!
+    let nextPostNumber = Int(url.absoluteString.stringByReplacingOccurrencesOfString("file:///posts/",withString: ""))!
     performSegueWithIdentifier("PreviewToPreview", sender: nextPostNumber)
   }
   
@@ -77,7 +76,7 @@ class PreviewViewController: UIViewController, UIWebViewDelegate {
     let previewViewController:PreviewViewController = segue.destinationViewController as! PreviewViewController
     previewViewController.postNumber = sender as! Int
   }
-
+  
   @IBAction func openEditor(sender: AnyObject) {
     Window.openEditor(self, post: post)
   }

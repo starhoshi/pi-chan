@@ -133,14 +133,13 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     loading = true
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).posts(page, q:searchText){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let posts):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         self.posts << posts.posts
         self.nextPage = posts.nextPage
         self.tableView.reloadData()
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
         ErrorHandler.errorAlert(error, controller: self)
       }
       self.loading = false

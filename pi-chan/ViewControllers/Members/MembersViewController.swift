@@ -80,15 +80,13 @@ class MembersViewController: UIViewController, UITableViewDelegate, UITableViewD
   func loadMembersApi(){
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).members(){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let members):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         self.members = members.members
         self.tableView.reloadData()
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
-        log?.error("\(error)")
-        Window.openLogin(self)
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }

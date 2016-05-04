@@ -12,6 +12,7 @@ import UITextView_Placeholder
 import SVProgressHUD
 import SCLAlertView
 import SDCAlertView
+import JLToast
 
 class EditorViewController: UIViewController {
   var post: Post?
@@ -30,8 +31,6 @@ class EditorViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     contentViewWidthConstraint.constant = CGRectGetWidth(view.frame)
-    //    var frame = CGRect(x:contentView.frame.maxX, y:contentView.frame.maxY, width:contentView.frame.width, height:200.0)
-    //    frame.height
     contentViewHeightConstraint.constant = CGFloat(view.frame.height - 64)
     sendButton.setFAIcon(.FASend, iconSize: 22, forState: .Normal)
     cancelButton.setFAIcon(.FAClose, iconSize: 22, forState: .Normal)
@@ -64,7 +63,7 @@ class EditorViewController: UIViewController {
     if (textField.text != nil && textField.text != "" && textField.text != "/" ){
       showAlert()
     } else {
-      AlertController.alertWithTitle("入力エラー", message: "タイトルは必ず入力してください。", actionTitle: "OK")
+      JLToast.showPichanToast("タイトルは必ず入力してください (\\( ⁰⊖⁰)/)")
     }
   }
   
@@ -99,26 +98,26 @@ class EditorViewController: UIViewController {
   
   func newPost(){
     client.newPost(postsParameters){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let posts):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(posts)")
+        JLToast.showPichanToast("投稿が完了しました! (\\( ⁰⊖⁰)/)")
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
-        log?.error("\(error)")
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }
   
   func patch(){
     client.patchPost(postsParameters){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let posts):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         log?.info("\(posts)")
+        JLToast.showPichanToast("編集が投稿されました! (\\( ⁰⊖⁰)/)")
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
-        log?.error("\(error)")
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }
@@ -136,8 +135,7 @@ class EditorViewController: UIViewController {
       originalRevision: nil
     )
   }
-  
-  
+
   @IBAction func close(sender: AnyObject) {
     self.dismissViewControllerAnimated(true, completion: nil)
   }
