@@ -23,9 +23,9 @@ struct Constants {
 
     struct URL {
       static let GITHUB = NSURL(string:"https://github.com/starhoshi/pi-chan")!
-      static let ITUNES = NSURL(string: "https://itunes.apple.com/us/app/pichan-unofficial-esa.io-client/id1107328970?l=ja&ls=1&mt=8")!
+      static let ITUNES = NSURL(string:"https://itunes.apple.com/jp/app/pichan-unofficial-esa.io-client./id1107328970")!
       static let ITMS = NSURL(string:"itms-apps://itunes.apple.com/app/id1107328970")!
-      static let ITMS_REVIEW = NSURL(string:"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=id1107328970")!
+      static let ITMS_REVIEW = NSURL(string:"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1107328970")!
     }
   }
 

@@ -12,7 +12,7 @@ import Siren
 class UpdateChecker {
   static func prompt(){
     let siren = Siren.sharedInstance
-    siren.debugEnabled = true
+//    siren.debugEnabled = true
     siren.alertType = .Skip
     siren.forceLanguageLocalization = .Japanese
     siren.checkVersion(.Immediately)

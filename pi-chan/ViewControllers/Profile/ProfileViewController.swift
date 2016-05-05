@@ -31,22 +31,20 @@ class ProfileViewController: UIViewController {
       Global.fromLogin = false
     }
   }
-
+  
   func loadUserApi(){
     SVProgressHUD.showWithStatus("Loading...")
     Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).user(){ result in
+      SVProgressHUD.dismiss()
       switch result {
       case .Success(let user):
-        SVProgressHUD.showSuccessWithStatus("Success!")
         self.setUserData(user)
       case .Failure(let error):
-        SVProgressHUD.showErrorWithStatus("Error!")
-        log?.error("\(error)")
-        Window.openLogin(self)
+        ErrorHandler.errorAlert(error, controller: self)
       }
     }
   }
-
+  
   func setUserData(user:User){
     userIcon.kf_setImageWithURL(user.icon)
     userIcon.toCircle()
@@ -54,7 +52,7 @@ class ProfileViewController: UIViewController {
     name.text = user.name
     mail.text = user.email
   }
-
+  
   @IBAction func clickRevoke(sender: AnyObject) {
     let alert = AlertController(title: "認証解除", message: "ピーちゃんと esa.io の認証を解除しますか？\n\n解除した後も再度認証いただければ、またピーちゃんをご利用いただけます。", preferredStyle: .Alert)
     alert.addAction(AlertAction(title: "認証解除", style: .Preferred){
@@ -63,7 +61,7 @@ class ProfileViewController: UIViewController {
     alert.addAction(AlertAction(title: "キャンセル", style: .Default))
     alert.present()
   }
-
+  
   func loadRevokeApi(){
     SVProgressHUD.showWithStatus("Loading...")
     log?.debug("\(KeychainManager.getToken())")
@@ -78,5 +76,5 @@ class ProfileViewController: UIViewController {
       }
     }
   }
-
+  
 }
