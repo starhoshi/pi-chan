@@ -53,6 +53,8 @@
 		E3AA87C11CCCD4A700195E69 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AA87C01CCCD4A700195E69 /* ProfileViewController.swift */; };
 		E3C638E01CD129CB000C5CC9 /* GET_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C638DF1CD129CB000C5CC9 /* GET_User.swift */; };
 		E3C638E21CD129F2000C5CC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C638E11CD129F2000C5CC9 /* User.swift */; };
+		E3CDD42D1CF2B89400820704 /* emojify.min.css in Resources */ = {isa = PBXBuildFile; fileRef = E3CDD42B1CF2B89400820704 /* emojify.min.css */; };
+		E3CDD42E1CF2B89400820704 /* emojify.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E3CDD42C1CF2B89400820704 /* emojify.min.js */; };
 		E3D0C1571CBFD880006A48EA /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C1561CBFD880006A48EA /* EditorViewController.swift */; };
 		E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D0C1581CBFD891006A48EA /* Editor.storyboard */; };
 		E3D0C15D1CBFDE98006A48EA /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D0C15C1CBFDE98006A48EA /* Window.swift */; };
@@ -149,6 +151,8 @@
 		E3AA87C01CCCD4A700195E69 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E3C638DF1CD129CB000C5CC9 /* GET_User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GET_User.swift; sourceTree = "<group>"; };
 		E3C638E11CD129F2000C5CC9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E3CDD42B1CF2B89400820704 /* emojify.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = emojify.min.css; sourceTree = "<group>"; };
+		E3CDD42C1CF2B89400820704 /* emojify.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = emojify.min.js; sourceTree = "<group>"; };
 		E3D0C1561CBFD880006A48EA /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		E3D0C1581CBFD891006A48EA /* Editor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Editor.storyboard; sourceTree = "<group>"; };
 		E3D0C15C1CBFDE98006A48EA /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 		E37402C71CBD43CA00E4659B /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				E3CDD42B1CF2B89400820704 /* emojify.min.css */,
+				E3CDD42C1CF2B89400820704 /* emojify.min.js */,
 				E37402CA1CBD446A00E4659B /* Preview.storyboard */,
 				E37402C81CBD445D00E4659B /* PreviewViewController.swift */,
 				E354608A1CBEC1DD00BE7952 /* github-markdown.css */,
@@ -613,11 +619,13 @@
 			files = (
 				E3D166941CD9C8500062480C /* Pods-acknowledgements.plist in Resources */,
 				E3D0C1591CBFD891006A48EA /* Editor.storyboard in Resources */,
+				E3CDD42E1CF2B89400820704 /* emojify.min.js in Resources */,
 				E33412C11CB4288500F455BE /* PostTableViewCell.xib in Resources */,
 				E3D0C1741CC362B5006A48EA /* MemberTableViewCell.xib in Resources */,
 				E3D9A5B11CA7D29B00B43F37 /* LaunchScreen.storyboard in Resources */,
 				E35181181CC39FB2008B141D /* SettingTableViewCell.xib in Resources */,
 				E354608B1CBEC1DD00BE7952 /* marked.js in Resources */,
+				E3CDD42D1CF2B89400820704 /* emojify.min.css in Resources */,
 				E354608C1CBEC1DD00BE7952 /* github-markdown.css in Resources */,
 				E3D9A5AE1CA7D29B00B43F37 /* Assets.xcassets in Resources */,
 				E33599571CA80331001A3C8D /* Members.storyboard in Resources */,
