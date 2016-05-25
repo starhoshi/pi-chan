@@ -10,6 +10,9 @@
 		3C9FB46EDC0CFA89CFE4349D /* Pods_pi_chan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F735B90EC8B554F8EB36E76B /* Pods_pi_chan.framework */; };
 		E30B0E631CCBBE490088D43A /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0E621CCBBE490088D43A /* Authorization.swift */; };
 		E30B0E651CCBBF2F0088D43A /* Authorization.sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B0E641CCBBF2F0088D43A /* Authorization.sample.swift */; };
+		E328ADC01CF5C9940080B354 /* DELETE_Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328ADBF1CF5C9940080B354 /* DELETE_Posts.swift */; };
+		E328ADC21CF5D9730080B354 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328ADC11CF5D9730080B354 /* UIImage+Extension.swift */; };
+		E328ADC41CF5F6BF0080B354 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E328ADC31CF5F6BF0080B354 /* Delete.swift */; };
 		E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */; };
 		E33412BC1CB40CF500F455BE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412BB1CB40CF500F455BE /* View.swift */; };
 		E33412C01CB4288500F455BE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33412BE1CB4288500F455BE /* PostTableViewCell.swift */; };
@@ -108,6 +111,9 @@
 		D42D9F7198932C8E74FC4FDD /* Pods-pi-chan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-chan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pi-chan/Pods-pi-chan.debug.xcconfig"; sourceTree = "<group>"; };
 		E30B0E621CCBBE490088D43A /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		E30B0E641CCBBF2F0088D43A /* Authorization.sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.sample.swift; sourceTree = "<group>"; };
+		E328ADBF1CF5C9940080B354 /* DELETE_Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DELETE_Posts.swift; sourceTree = "<group>"; };
+		E328ADC11CF5D9730080B354 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		E328ADC31CF5F6BF0080B354 /* Delete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
 		E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor+Extension.swift"; sourceTree = "<group>"; };
 		E33412BB1CB40CF500F455BE /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E33412BE1CB4288500F455BE /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -438,6 +444,7 @@
 			children = (
 				E335997D1CB2CC23001A3C8D /* CreatedBy.swift */,
 				E3D0C16E1CC359B1006A48EA /* Member.swift */,
+				E328ADC31CF5F6BF0080B354 /* Delete.swift */,
 				E3D0C16C1CC359AB006A48EA /* Members.swift */,
 				E33599791CB2C956001A3C8D /* Post.swift */,
 				E33599811CB2D2D0001A3C8D /* Posts.swift */,
@@ -463,6 +470,7 @@
 				E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */,
 				E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */,
 				E33412C41CB8B5E000F455BE /* UIScrollView+Extension.swift */,
+				E328ADC11CF5D9730080B354 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -503,6 +511,7 @@
 				E3C638DF1CD129CB000C5CC9 /* GET_User.swift */,
 				E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */,
 				E3D0C1601CC1186D006A48EA /* POST_Posts.swift */,
+				E328ADBF1CF5C9940080B354 /* DELETE_Posts.swift */,
 				E3D166801CD6166F0062480C /* POST_Revoke.swift */,
 			);
 			path = Apis;
@@ -743,6 +752,7 @@
 				E3D0C1611CC1186D006A48EA /* POST_Posts.swift in Sources */,
 				E38A0F6E1CA7DE6700ED99B6 /* Storyboard+Extension.swift in Sources */,
 				E33599821CB2D2D0001A3C8D /* Posts.swift in Sources */,
+				E328ADC01CF5C9940080B354 /* DELETE_Posts.swift in Sources */,
 				E33599761CB2B706001A3C8D /* GET_Posts.swift in Sources */,
 				E351811A1CC3A8DD008B141D /* CellConfigrations.swift in Sources */,
 				E33412BA1CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift in Sources */,
@@ -757,6 +767,7 @@
 				E335995E1CA80EDF001A3C8D /* MainTabBarController.swift in Sources */,
 				E38A0F6C1CA7DDF900ED99B6 /* Esa.swift in Sources */,
 				E3D0C16F1CC359B1006A48EA /* Member.swift in Sources */,
+				E328ADC41CF5F6BF0080B354 /* Delete.swift in Sources */,
 				E35181171CC39FB2008B141D /* SettingTableViewCell.swift in Sources */,
 				E335994B1CA7E5DA001A3C8D /* PostsViewController.swift in Sources */,
 				E335996C1CA9A681001A3C8D /* KeychainManager.swift in Sources */,
@@ -764,6 +775,7 @@
 				E3D0C1761CC3657B006A48EA /* UIImageView+Extension.swift in Sources */,
 				E33599801CB2CC2E001A3C8D /* UpdatedBy.swift in Sources */,
 				E33599721CB030CC001A3C8D /* GET_Team.swift in Sources */,
+				E328ADC21CF5D9730080B354 /* UIImage+Extension.swift in Sources */,
 				E33599741CB15E48001A3C8D /* Decodable+Extension.swift in Sources */,
 				E3D0C16D1CC359AB006A48EA /* Members.swift in Sources */,
 				E3D0C1671CC236D4006A48EA /* String+Extension.swift in Sources */,

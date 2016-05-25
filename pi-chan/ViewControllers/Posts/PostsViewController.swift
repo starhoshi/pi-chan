@@ -11,6 +11,10 @@ import SVProgressHUD
 import DGElasticPullToRefresh
 import DZNEmptyDataSet
 import Cent
+import MGSwipeTableCell
+import Font_Awesome_Swift
+import SDCAlertView
+import JLToast
 
 class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate, UISearchBarDelegate{
   
@@ -108,6 +112,12 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell:PostTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("PostCell")! as! PostTableViewCell
     cell.setItems(posts[indexPath.row])
+    let deleteIcon = UIImage(icon: .FATrash, size: CGSize(width: 45,height: 45)).fillAlpha(.whiteColor())
+    cell.rightButtons = [MGSwipeButton(title: "", icon: deleteIcon, backgroundColor: UIColor.redColor(), callback: { (sender: MGSwipeTableCell!) -> Bool in
+      self.deletePosts(self.posts[indexPath.row])
+      return true
+    })]
+    cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
     if (posts.count - 1) == indexPath.row {
       loadPostApi(nextPage)
     }
@@ -121,6 +131,15 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     let previewViewController:PreviewViewController = segue.destinationViewController as! PreviewViewController
     previewViewController.postNumber = sender as! Int
+  }
+  
+  func deletePosts(post: Post) {
+    let alert = AlertController(title: "記事削除", message: "\(post.fullName) を本当に削除しますか？", preferredStyle: .Alert)
+    alert.addAction(AlertAction(title: "削除する", style: .Preferred){
+      _ in self.loadDeleteApi(post)
+      })
+    alert.addAction(AlertAction(title: "キャンセル", style: .Default))
+    alert.present()
   }
   
   func resetAndLoadApi(){
@@ -146,6 +165,22 @@ class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         ErrorHandler.errorAlert(error, controller: self)
       }
       self.loading = false
+    }
+  }
+  
+  func loadDeleteApi(post:Post){
+    loading = true
+    SVProgressHUD.showWithStatus("Loading...")
+    Esa(token: KeychainManager.getToken()!, currentTeam: KeychainManager.getTeamName()!).deletePost(post.number){ result in
+      SVProgressHUD.dismiss()
+      self.loading = false
+      switch result {
+      case .Success(_):
+        self.resetAndLoadApi()
+        JLToast.showPichanToast("記事を削除しました (\\( ⁰⊖⁰)/)")
+      case .Failure(let error):
+        ErrorHandler.errorAlert(error, controller: self)
+      }
     }
   }
   

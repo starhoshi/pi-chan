@@ -11,8 +11,9 @@ import Kingfisher
 import Font_Awesome_Swift
 import SwiftDate
 import NSDate_TimeAgo
+import MGSwipeTableCell
 
-class PostTableViewCell: UITableViewCell {
+class PostTableViewCell: MGSwipeTableCell {
   
   @IBOutlet weak var contentsView: UIView!
   @IBOutlet weak var circleThumbnail: UIImageView!

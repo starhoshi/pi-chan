@@ -26,7 +26,7 @@ class Esa{
   static func authorization(controller:UIViewController, success:(credential:OAuthSwiftCredential) -> Void, failure:(error:NSError) -> Void){
     Authorization.oauth2(controller, success:success, failure: failure)
   }
-
+  
   func revoke(handler:(Result<Revoke, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = PostRevokeRequest(esa: self)
     return Session.sendRequest(request, handler:handler)
@@ -41,7 +41,7 @@ class Esa{
     let request = GetTeamRequest(esa: self, name: name)
     return Session.sendRequest(request, handler:handler)
   }
-
+  
   func user(handler:(Result<User, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = GetUserRequest(esa: self)
     return Session.sendRequest(request, handler:handler)
@@ -64,6 +64,11 @@ class Esa{
   
   func patchPost(postsParameters:PostsParameters,handler:(Result<Post, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
     let request = PatchPostsRequest(esa: self, postsParameters: postsParameters)
+    return Session.sendRequest(request, handler:handler)
+  }
+  
+  func deletePost(postNumber:Int,handler:(Result<Delete, APIError>) -> Void = {r in}) -> NSURLSessionDataTask?{
+    let request = DeletePostsRequest(esa: self, postNumber: postNumber)
     return Session.sendRequest(request, handler:handler)
   }
   
