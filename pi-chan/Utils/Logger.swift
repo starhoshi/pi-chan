@@ -6,23 +6,12 @@
 //  Copyright © 2016年 star__hoshi. All rights reserved.
 //
 
-import Foundation
-import XCGLogger
+import Log
 
-let log: XCGLogger? = {
+let log: Logger? = {
   #if DEBUG
-    let log = XCGLogger.defaultInstance()
-    log.xcodeColorsEnabled = true
-    log.xcodeColors = [
-      .Verbose: .lightGrey,
-      .Debug: .white,
-      .Info: .green,
-      .Warning: .orange,
-      .Error: XCGLogger.XcodeColor(fg: UIColor.redColor(), bg: UIColor.whiteColor()),
-      .Severe: XCGLogger.XcodeColor(fg: (255, 255, 255), bg: (255, 0, 0))
-    ]
-    log.setup(.Verbose, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: .Debug)
-    return log
+    let Log = Logger(formatter: .Detailed, theme: .TomorrowNight)
+    return Log
   #else
     return nil
   #endif

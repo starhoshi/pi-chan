@@ -18,7 +18,7 @@ class ErrorHandler {
   }
   
   static func errorAlert(error: APIError, controller: UIViewController) {
-    log?.error("\(error)")
+    log?.error(error)
     
     switch error {
     case .InvalidBaseURL:

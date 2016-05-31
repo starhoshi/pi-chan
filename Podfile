@@ -15,7 +15,6 @@ target 'pi-chan' do
   pod 'SwiftDate'
   pod 'NSDate+TimeAgo'
   pod 'DZNEmptyDataSet'
-  pod 'XCGLogger', '~> 3.2'
   pod 'Kingfisher', '~> 2.2'
   pod 'APIKit', '~> 1.3.0'
   pod "Himotoki", "~> 1.7"
@@ -30,6 +29,7 @@ target 'pi-chan' do
   pod 'Crashlytics'
   pod 'JLToast'
   pod 'MGSwipeTableCell'
+  pod 'Log'
 end
 
 target 'pi-chanTests' do
