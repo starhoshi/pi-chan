@@ -408,8 +408,8 @@
 			isa = PBXGroup;
 			children = (
 				E3D9A5D81CA7D6C700B43F37 /* Apis */,
+				E3D9A5D41CA7D54300B43F37 /* Entities */,
 				E3D9A5D51CA7D63800B43F37 /* Extensions */,
-				E3D9A5D41CA7D54300B43F37 /* Models */,
 				E38A0F681CA7D74900ED99B6 /* Resources */,
 				E33599451CA7E363001A3C8D /* Utils */,
 				E3D9A5D71CA7D6B600B43F37 /* ViewControllers */,
@@ -437,7 +437,7 @@
 			path = "pi-chanUITests";
 			sourceTree = "<group>";
 		};
-		E3D9A5D41CA7D54300B43F37 /* Models */ = {
+		E3D9A5D41CA7D54300B43F37 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				E335997D1CB2CC23001A3C8D /* CreatedBy.swift */,
@@ -454,7 +454,7 @@
 				E335997F1CB2CC2E001A3C8D /* UpdatedBy.swift */,
 				E3C638E11CD129F2000C5CC9 /* User.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		E3D9A5D51CA7D63800B43F37 /* Extensions */ = {
