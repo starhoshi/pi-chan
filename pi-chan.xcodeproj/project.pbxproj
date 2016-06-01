@@ -331,10 +331,10 @@
 		E37402C71CBD43CA00E4659B /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				E3CDD42B1CF2B89400820704 /* emojify.min.css */,
-				E3CDD42C1CF2B89400820704 /* emojify.min.js */,
 				E37402CA1CBD446A00E4659B /* Preview.storyboard */,
 				E37402C81CBD445D00E4659B /* PreviewViewController.swift */,
+				E3CDD42B1CF2B89400820704 /* emojify.min.css */,
+				E3CDD42C1CF2B89400820704 /* emojify.min.js */,
 				E354608A1CBEC1DD00BE7952 /* github-markdown.css */,
 				E35460891CBEC1DD00BE7952 /* marked.js */,
 				E35460861CBE97EF00BE7952 /* md.html */,
@@ -441,8 +441,8 @@
 			isa = PBXGroup;
 			children = (
 				E335997D1CB2CC23001A3C8D /* CreatedBy.swift */,
-				E3D0C16E1CC359B1006A48EA /* Member.swift */,
 				E328ADC31CF5F6BF0080B354 /* Delete.swift */,
+				E3D0C16E1CC359B1006A48EA /* Member.swift */,
 				E3D0C16C1CC359AB006A48EA /* Members.swift */,
 				E33599791CB2C956001A3C8D /* Post.swift */,
 				E33599811CB2D2D0001A3C8D /* Posts.swift */,
@@ -466,9 +466,9 @@
 				E38A0F6D1CA7DE6700ED99B6 /* Storyboard+Extension.swift */,
 				E3D0C1661CC236D4006A48EA /* String+Extension.swift */,
 				E33412B91CB4074D00F455BE /* UIColor+DynamicColor+Extension.swift */,
+				E328ADC11CF5D9730080B354 /* UIImage+Extension.swift */,
 				E3D0C1751CC3657B006A48EA /* UIImageView+Extension.swift */,
 				E33412C41CB8B5E000F455BE /* UIScrollView+Extension.swift */,
-				E328ADC11CF5D9730080B354 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -499,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				E30B0E641CCBBF2F0088D43A /* Authorization.swift */,
+				E328ADBF1CF5C9940080B354 /* DELETE_Posts.swift */,
 				E38A0F6B1CA7DDF900ED99B6 /* Esa.swift */,
 				E3D0C16A1CC35959006A48EA /* GET_Members.swift */,
 				E33599771CB2C148001A3C8D /* GET_Post.swift */,
@@ -508,7 +509,6 @@
 				E3C638DF1CD129CB000C5CC9 /* GET_User.swift */,
 				E3D0C1621CC12900006A48EA /* PATCH_Posts.swift */,
 				E3D0C1601CC1186D006A48EA /* POST_Posts.swift */,
-				E328ADBF1CF5C9940080B354 /* DELETE_Posts.swift */,
 				E3D166801CD6166F0062480C /* POST_Revoke.swift */,
 			);
 			path = Apis;
