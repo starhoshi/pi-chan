@@ -33,7 +33,8 @@ target 'pi-chan' do
 end
 
 target 'pi-chanTests' do
-
+  pod 'Nimble'
+  pod 'Quick'
 end
 
 target 'pi-chanUITests' do

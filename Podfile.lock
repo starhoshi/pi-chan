@@ -18,8 +18,10 @@ PODS:
   - Kingfisher (2.3.1)
   - Log (0.5)
   - MGSwipeTableCell (1.5.5)
+  - Nimble (4.0.1)
   - NSDate+TimeAgo (1.0.6)
   - OAuthSwift (0.5.2)
+  - Quick (0.9.2)
   - Result (2.0.0)
   - SCLAlertView (0.5.6)
   - SDCAlertView (5.0)
@@ -49,8 +51,10 @@ DEPENDENCIES:
   - Kingfisher (~> 2.2)
   - Log
   - MGSwipeTableCell
+  - Nimble
   - NSDate+TimeAgo
   - OAuthSwift (~> 0.5.0)
+  - Quick
   - SCLAlertView
   - SDCAlertView (~> 5.0)
   - Siren
@@ -77,8 +81,10 @@ SPEC CHECKSUMS:
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   Log: 5972312cb85cffbc56407b612936b610eb4af8a5
   MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
   NSDate+TimeAgo: 35601c619b2d59290055e4fe76e61d97677a2360
   OAuthSwift: 1ef042d4362e755e24a78f158d817245641a5d24
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
   Result: 9e75e1111c774c6ac594e14907b15057053a7959
   SCLAlertView: c2b916952520d96cf5e886a38053f1b8c3da502e
   SDCAlertView: e552dd803a1ea47ffda9f718b046e307cfd6b82a
