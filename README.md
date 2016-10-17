@@ -1,6 +1,6 @@
 #  <img width="35" alt="pi-chan.icon.png (98.6 kB)" src="https://img.esa.io/uploads/production/attachments/3411/2016/05/08/10462/06ac1103-25c2-4973-803f-9f656669086f.png">ピーちゃんとは
 
-<a href="https://geo.itunes.apple.com/jp/app/pichan-unofficial-esa.io-client./id1107328970?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/ja-jp/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
+[ピーちゃん 〜 Unofficial esa\.io Client\.を App Store で](https://itunes.apple.com/jp/app/pichan-unofficial-esa.io-client./id1107328970?mt=8)
 
 [esa.io](https://esa.io/) の非公式 iPhone アプリです。
 あなたのチームの記事が見れたり投稿できたりします。
