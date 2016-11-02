@@ -1,0 +1,6 @@
+framework module Pods_pi_chanUITests {
+  umbrella header "Pods-pi-chanUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
