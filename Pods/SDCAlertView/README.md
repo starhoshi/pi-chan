@@ -28,10 +28,10 @@
 
 # Requirements
 
- - Xcode 7.3 or higher
+ - Swift 3
  - iOS 8 or higher
 
-If you want to use the library on iOS 7, please use version 2.5.4 (the latest 2.x release). SDCAlertView is not available on iOS 6.1 or below.
+If you want to use the library on iOS 7, please use version 2.5.4 (the latest 2.x release).
 
 # Installation
 
@@ -43,7 +43,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyApp' do
-  pod 'SDCAlertView', '~> 5.1'
+  pod 'SDCAlertView', '~> 7.1'
 end
 ```
 
@@ -53,7 +53,7 @@ Then run `pod install`.
 To install with Carthage, add the following line to your `Cartfile`:
 
 ```ruby
-github "sberrevoets/SDCAlertView" ~> 5.1
+github "sberrevoets/SDCAlertView" ~> 7.1
 ```
 
 Run `carthage update` and drag `SDCAlertView.framework` in the `Build` folder into your project.
@@ -63,7 +63,7 @@ SPM does not yet support iOS, but SDCAlertView will be available there once it d
 
 # Alerts vs. Action Sheets
 
-Starting with version 4.0, `SDCAlertController` also supports the presentation of action sheets. Some things to keep in mind when using action sheets:
+`SDCAlertController` supports the presentation of action sheets, but there are some limitations and things to keep in mind when using action sheets:
 
 - It does not properly adapt on iPad. This is because iOS doesn't support `UIModalPresentationStyle.Custom` for adaptive presentations (such as when presenting an action sheet from a bar button item).
 - The new `AlertBehaviors` is, due to limitations in the Swift/Objective-C interop, not available when using `SDCAlertController` from Swift. This affects `AlertControllerStyle.Alert` as well.
@@ -76,20 +76,20 @@ Starting with version 4.0, `SDCAlertController` also supports the presentation o
 
 ```swift
 let alert = AlertController(title: "Title", message: "This is a message", preferredStyle: .Alert)
-alert.addAction(AlertAction(title: "Cancel", style: .Default))
-alert.addAction(AlertAction(title: "OK", style: .Preferred))
+alert.add(AlertAction(title: "Cancel", style: .default))
+alert.add(AlertAction(title: "OK", style: .preferred))
 alert.present()
 
 // or use the convenience methods:
 
-AlertController.alertWithTitle("Title", message: "This is a message", actionTitle: "OK")
-AlertController.sheetWithTitle("Action sheet title", "Action sheet message", actions: ["OK", "Cancel"])
+AlertController.alert(withTitle: "Title", message: "This is a message", actionTitle: "OK")
+AlertController.sheet(withTitle: "Action sheet title", "Action sheet message", actions: ["OK", "Cancel"])
 ```
 
 ## Custom Content Views
 
 ```swift
-let spinner = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 spinner.translatesAutoresizingMaskIntoConstraints = false
 spinner.startAnimating()
 
@@ -107,8 +107,8 @@ alert.present()
 
 ```swift
 let alert = AlertController(title: "Title", message: "This is a message")
-alert.addAction(AlertAction(title: "Dismiss", style: .Preferred))
-alert.addAction(AlertAction(title: "Don't dismiss", style: .Default))
+alert.add(AlertAction(title: "Dismiss", style: .preferred))
+alert.add(AlertAction(title: "Don't dismiss", style: .default))
 alert.shouldDismissHandler = { $0.title == "Dismiss" }
 alert.present()
 ```
@@ -120,9 +120,7 @@ alert.present()
 If you are looking for more customizations, create a subclass of `AlertVisualStyle` and use `visualStyle` on the `AlertController` instance. You can also create an instance of `AlertVisualStyle` and overwrite the attributes you need (this is mainly intended to be used from Objective-C). Note that after an alert has been presented, changing any of these settings is ignored.
 
 # Support
-I'm pretty active on [Stack Overflow](http://stackoverflow.com/users/751268/scott-berrevoets), so please use that if you have any questions. You can also use [Twitter](http://twitter.com/ScottBerrevoets) to contact me directly.
-
-If you are experiencing bugs, feel free to post an issue or submit a pull request.
+I'm pretty active on [Stack Overflow](http://stackoverflow.com/users/751268/scott-berrevoets), so please use that if you have any questions. If you are experiencing bugs, feel free to post an issue or submit a pull request.
 
 # License
 

@@ -15,15 +15,15 @@ target 'pi-chan' do
   pod 'SwiftDate'
   pod 'NSDate+TimeAgo'
   pod 'DZNEmptyDataSet'
-  pod 'Kingfisher', '~> 2.2'
-  pod 'APIKit', '~> 1.3.0'
-  pod "Himotoki", "~> 1.7"
-  pod 'DynamicColor', '~> 2.4.0'
+  pod 'Kingfisher'
+  pod 'APIKit'
+  pod "Himotoki"
+  pod 'DynamicColor'
   pod 'UITextView+Placeholder', '~> 1.2'
   pod 'SCLAlertView'
-  pod 'SDCAlertView', '~> 5.0'
+  pod 'SDCAlertView'
   pod 'IQKeyboardManagerSwift'
-  pod "OAuthSwift", "~> 0.5.0"
+  pod "OAuthSwift"
   pod 'XLActionController/Twitter'
   pod 'Fabric'
   pod 'Crashlytics'
