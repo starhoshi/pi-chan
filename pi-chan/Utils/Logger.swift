@@ -9,10 +9,11 @@
 import Log
 
 let log: Logger? = {
-  #if DEBUG
-    let Log = Logger(formatter: .Detailed, theme: .TomorrowNight)
-    return Log
-  #else
-    return nil
-  #endif
+    #if DEBUG
+//        let Log = Logger(formatter: .detailed, theme: .TomorrowNight)
+        return nil
+//        return Log
+    #else
+        return nil
+    #endif
 }()

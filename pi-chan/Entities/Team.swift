@@ -18,7 +18,7 @@ struct Team {
 }
 
 extension Team : Decodable {
-  static func decode(e: Extractor) throws -> Team {
+  static func decode(_ e: Extractor) throws -> Team {
     let privacyString = try e.value("privacy") as String
     let privacy: Privacy = Privacy.init(rawValue: privacyString)!
     

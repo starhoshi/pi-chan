@@ -9,11 +9,11 @@
 import Foundation
 import Himotoki
 
-extension NSURL : Decodable {
-  public static func decode(e: Extractor) throws -> NSURL {
-    guard let url = try NSURL(string: String.decode(e)) else {
-      throw typeMismatch("NSURL", actual: e.rawValue, keyPath: nil)
+extension URL: Decodable {
+    public static func decode(_ e: Extractor) throws -> URL {
+        guard let url = try URL(string: String.decode(e)) else {
+            throw typeMismatch("NSURL", actual: e.rawValue, keyPath: nil)
+        }
+        return url
     }
-    return url
-  }
 }

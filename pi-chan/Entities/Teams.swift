@@ -17,7 +17,7 @@ struct Teams {
 }
 
 extension Teams : Decodable {
-  static func decode(e: Extractor) throws -> Teams {
+  static func decode(_ e: Extractor) throws -> Teams {
     return try Teams(
       prevPage: e <|? "prev_page",
       nextPage: e <|? "next_page",

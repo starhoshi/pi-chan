@@ -12,7 +12,7 @@ struct Revoke{
 }
 
 extension Revoke: Decodable {
-  static func decode(e: Extractor) throws -> Revoke {
+  static func decode(_ e: Extractor) throws -> Revoke {
     return Revoke()
   }
 }

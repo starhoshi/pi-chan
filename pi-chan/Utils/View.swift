@@ -10,9 +10,9 @@ import Foundation
 import DGElasticPullToRefresh
 
 struct View {
-  static func refreshLoading() -> DGElasticPullToRefreshLoadingViewCircle{
-    let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-    loadingView.tintColor = UIColor.whiteColor()
-    return loadingView
-  }
+    static func refreshLoading() -> DGElasticPullToRefreshLoadingViewCircle {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor.white
+        return loadingView
+    }
 }

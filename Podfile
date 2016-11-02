@@ -31,15 +31,6 @@ target 'pi-chan' do
   pod 'Log'
 end
 
-target 'pi-chanTests' do
-  pod 'Nimble'
-  pod 'Quick'
-end
-
-target 'pi-chanUITests' do
-
-end
-
 post_install do |installer|
   puts("Update debug pod settings to speed up build time")
   Dir.glob(File.join("Pods", "**", "Pods*{debug,Private}.xcconfig")).each do |file|

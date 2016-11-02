@@ -10,17 +10,17 @@ import Foundation
 import Himotoki
 
 struct CreatedBy {
-  let name: String
-  let screenName: String
-  let icon: NSURL
+    let name: String
+    let screenName: String
+    let icon: URL
 }
 
-extension CreatedBy : Decodable {
-  static func decode(e: Extractor) throws -> CreatedBy {
-    return try CreatedBy(
-      name: e <| "name",
-      screenName: e <| "screen_name",
-      icon: e <| "icon"
-    )
-  }
+extension CreatedBy: Decodable {
+    static func decode(_ e: Extractor) throws -> CreatedBy {
+        return try CreatedBy(
+            name: e <| "name",
+            screenName: e <| "screen_name",
+            icon: e <| "icon"
+        )
+    }
 }

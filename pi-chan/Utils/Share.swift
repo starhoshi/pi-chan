@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class Share {
-  static func openBrowser(url:NSURL){
-    if UIApplication.sharedApplication().canOpenURL(url){
-      UIApplication.sharedApplication().openURL(url)
+    static func openBrowser(url: URL) {
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
     }
-  }
 
-  static func openAppStore(url:NSURL){
-    UIApplication.sharedApplication().openURL(url)
-  }
+    static func openAppStore(url: URL) {
+        UIApplication.shared.openURL(url)
+    }
 
 }
