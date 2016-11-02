@@ -19,7 +19,6 @@ target 'pi-chan' do
   pod 'APIKit'
   pod "Himotoki"
   pod 'DynamicColor'
-  pod 'UITextView+Placeholder', '~> 1.2'
   pod 'SCLAlertView'
   pod 'SDCAlertView'
   pod 'IQKeyboardManagerSwift'
@@ -27,7 +26,7 @@ target 'pi-chan' do
   pod 'XLActionController/Twitter'
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'JLToast'
+  pod 'Toaster'
   pod 'MGSwipeTableCell'
   pod 'Log'
 end
@@ -41,3 +40,14 @@ target 'pi-chanUITests' do
 
 end
 
+post_install do |installer|
+  puts("Update debug pod settings to speed up build time")
+  Dir.glob(File.join("Pods", "**", "Pods*{debug,Private}.xcconfig")).each do |file|
+    File.open(file, 'a') { |f| f.puts "\nDEBUG_INFORMATION_FORMAT = dwarf" }
+  end
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
